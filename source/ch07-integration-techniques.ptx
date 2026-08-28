@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<chapter xml:id="ch-integration-techniques">
+  <title>Techniques of Integration</title>
+
+  <section xml:id="sec-substitution">
+    <title>The Substitution Rule</title>
+    <p>Content coming soon.</p>
+  </section>
+
+  <section xml:id="sec-integration-by-parts">
+    <title>Integration by Parts</title>
+    <p>Content coming soon.</p>
+  </section>
+
+  <section xml:id="sec-partial-fractions">
+    <title>Rational Functions and Partial Fractions</title>
+    <p>Content coming soon.</p>
+  </section>
+
+  <section xml:id="sec-improper-integrals">
+    <title>Improper Integrals</title>
+    <p>Content coming soon.</p>
+  </section>
+
+</chapter>

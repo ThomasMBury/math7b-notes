@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<chapter xml:id="ch-definite-integrals">
+  <title>Definite Integrals</title>
+
+  <section xml:id="sec-accumulation">
+    <title>Accumulation and Area</title>
+
+    <p>
+      Antiderivatives allow us to recover a quantity from its rate of
+      change. A closely related problem is to determine how much of a
+      quantity accumulates over an interval.
+    </p>
+
+    <p>
+      Suppose, for example, that we know the growth rate of a population.
+      Over a short time interval, the change in population can be
+      approximated by
+    </p>
+
+    <me>
+      \text{change in population}
+      \approx
+      \text{growth rate}\times\text{time interval}.
+    </me>
+
+    <p>
+      If the growth rate varies with time, we can divide the time interval
+      into smaller pieces and add the contributions from each piece.
+      This idea leads to Riemann sums and the definite integral.
+    </p>
+
+  </section>
+
+  <section xml:id="sec-riemann-sums">
+    <title>Riemann Sums</title>
+
+    <p>
+      Let <m>f</m> be a function on an interval <m>[a,b]</m>.
+      Divide the interval into <m>n</m> equal subintervals.
+      The width of each subinterval is
+    </p>
+
+    <me>
+      \Delta x=\frac{b-a}{n}.
+    </me>
+
+    <p>
+      On each subinterval, choose a sample point <m>x_i^*</m>.
+      The area of the corresponding rectangle is approximately
+    </p>
+
+    <me>
+      f(x_i^*)\Delta x.
+    </me>
+
+    <p>
+      Adding the rectangle areas gives the Riemann sum
+    </p>
+
+    <me>
+      \sum_{i=1}^{n} f(x_i^*)\Delta x.
+    </me>
+
+    <example xml:id="ex-riemann-x2">
+      <title>Rectangle approximation for <m>y=x^2</m></title>
+
+      <statement>
+        <p>
+          Consider <m>f(x)=x^2</m> on the interval <m>[0,1]</m>.
+          Approximate the area under the graph by dividing the interval
+          into equal pieces and using rectangles.
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          If the interval is divided into <m>n</m> equal subintervals,
+          then
+        </p>
+
+        <me>
+          \Delta x=\frac{1}{n}.
+        </me>
+
+        <p>
+          Using a sample point <m>x_i^*</m> from each subinterval,
+          the corresponding Riemann sum is
+        </p>
+
+        <me>
+          \sum_{i=1}^{n}(x_i^*)^2\Delta x.
+        </me>
+
+        <p>
+          As the subintervals become narrower, the rectangle
+          approximation becomes more accurate.
+        </p>
+      </solution>
+    </example>
+
+  </section>
+
+  <section xml:id="sec-definite-integral">
+    <title>The Definite Integral</title>
+
+    <definition xml:id="def-definite-integral">
+      <title>Definite integral</title>
+      <statement>
+        <p>
+          If the limit exists, the definite integral of <m>f</m>
+          from <m>a</m> to <m>b</m> is
+        </p>
+
+        <me>
+          \int_a^b f(x)\,dx
+          =
+          \lim_{n\to\infty}
+          \sum_{i=1}^{n}f(x_i^*)\Delta x.
+        </me>
+      </statement>
+    </definition>
+
+    <p>
+      The definite integral represents a net accumulation.
+      When <m>f(x)</m> is positive, the integral contributes positively;
+      when <m>f(x)</m> is negative, it contributes negatively.
+    </p>
+
+  </section>
+
+  <section xml:id="sec-integral-properties">
+    <title>Signed Area and Properties of Definite Integrals</title>
+
+    <p>
+      A definite integral represents signed area. Regions above the
+      horizontal axis contribute positively, while regions below the
+      horizontal axis contribute negatively.
+    </p>
+
+    <example xml:id="ex-signed-area">
+      <title>Evaluating an integral geometrically</title>
+
+      <statement>
+        <p>
+          If the graph of a function is made from simple geometric
+          regions, a definite integral can sometimes be evaluated by
+          computing their signed areas.
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          Add the areas of regions lying above the horizontal axis and
+          subtract the areas of regions lying below the horizontal axis.
+        </p>
+      </solution>
+    </example>
+
+    <theorem xml:id="thm-integral-properties">
+      <title>Properties of definite integrals</title>
+
+      <statement>
+        <p>
+          For suitable functions <m>f</m> and <m>g</m> and a constant
+          <m>c</m>, the following properties hold.
+        </p>
+
+        <me>
+          \int_a^b f(x)\,dx
+          +
+          \int_b^c f(x)\,dx
+          =
+          \int_a^c f(x)\,dx.
+        </me>
+
+        <me>
+          \int_b^a f(x)\,dx
+          =
+          -\int_a^b f(x)\,dx.
+        </me>
+
+        <me>
+          \int_a^b c f(x)\,dx
+          =
+          c\int_a^b f(x)\,dx.
+        </me>
+
+        <me>
+          \int_a^b \left(f(x)+g(x)\right)\,dx
+          =
+          \int_a^b f(x)\,dx
+          +
+          \int_a^b g(x)\,dx.
+        </me>
+      </statement>
+    </theorem>
+
+    <theorem xml:id="thm-integral-symmetry">
+      <title>Symmetry</title>
+
+      <statement>
+        <p>
+          If <m>f</m> is odd, then on a symmetric interval,
+        </p>
+
+        <me>
+          \int_{-a}^{a} f(x)\,dx=0.
+        </me>
+
+        <p>
+          If <m>f</m> is even, then
+        </p>
+
+        <me>
+          \int_{-a}^{a} f(x)\,dx
+          =
+          2\int_0^a f(x)\,dx.
+        </me>
+      </statement>
+    </theorem>
+
+  </section>
+
+</chapter>

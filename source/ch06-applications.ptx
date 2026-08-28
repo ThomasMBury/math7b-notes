@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<chapter xml:id="ch-applications-integration">
+  <title>Applications of Integration</title>
+
+  <section xml:id="sec-cumulative-change">
+    <title>Cumulative Change</title>
+    <p>Content coming soon.</p>
+  </section>
+
+  <section xml:id="sec-average-values">
+    <title>Average Values</title>
+    <p>Content coming soon.</p>
+  </section>
+
+  <section xml:id="sec-mean-value-theorem-integrals">
+    <title>The Mean Value Theorem for Integrals</title>
+    <p>Content coming soon.</p>
+  </section>
+
+  <section xml:id="sec-area-between-curves">
+    <title>Areas</title>
+    <p>Content coming soon.</p>
+  </section>
+
+  <section xml:id="sec-volumes">
+    <title>Volumes of Solids</title>
+    <p>Content coming soon.</p>
+  </section>
+
+</chapter>

@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<chapter xml:id="ch-ftc">
+  <title>The Fundamental Theorem of Calculus</title>
+
+  <section xml:id="sec-area-function">
+    <title>The Area Function</title>
+
+    <p>
+      Let <m>f</m> be a continuous function. Define a new function by
+    </p>
+
+    <me>
+      A(x)=\int_a^x f(t)\,dt.
+    </me>
+
+    <p>
+      The value <m>A(x)</m> represents the net area accumulated under
+      <m>f</m> between <m>a</m> and <m>x</m>.
+    </p>
+
+    <p>
+      To understand how <m>A</m> changes, compare <m>A(x+h)</m> and
+      <m>A(x)</m>:
+    </p>
+
+    <me>
+      A(x+h)-A(x)
+      =
+      \int_x^{x+h} f(t)\,dt.
+    </me>
+
+    <p>
+      If <m>h</m> is small, the area over this short interval is
+      approximately the area of a rectangle of height <m>f(x)</m>
+      and width <m>h</m>:
+    </p>
+
+    <me>
+      A(x+h)-A(x)\approx f(x)h.
+    </me>
+
+    <p>
+      Dividing by <m>h</m> gives
+    </p>
+
+    <me>
+      \frac{A(x+h)-A(x)}{h}\approx f(x).
+    </me>
+
+    <p>
+      Taking the limit as <m>h\to 0</m> leads to the Fundamental
+      Theorem of Calculus.
+    </p>
+
+  </section>
+
+  <section xml:id="sec-ftc-part-one">
+    <title>The Fundamental Theorem of Calculus, Part I</title>
+
+    <theorem xml:id="thm-ftc-one">
+      <title>Fundamental Theorem of Calculus, Part I</title>
+
+      <statement>
+        <p>
+          If <m>f</m> is continuous and
+        </p>
+
+        <me>
+          A(x)=\int_a^x f(t)\,dt,
+        </me>
+
+        <p>
+          then
+        </p>
+
+        <me>
+          A'(x)=f(x).
+        </me>
+      </statement>
+    </theorem>
+
+    <p>
+      In words, differentiating an accumulated integral returns the
+      original function.
+    </p>
+
+    <example xml:id="ex-ftc-direct">
+      <title>Differentiating an integral</title>
+
+      <statement>
+        <p>
+          Differentiate
+        </p>
+
+        <me>
+          F(x)=\int_a^x f(t)\,dt.
+        </me>
+      </statement>
+
+      <solution>
+        <p>
+          By the Fundamental Theorem of Calculus,
+        </p>
+
+        <me>
+          F'(x)=f(x).
+        </me>
+      </solution>
+    </example>
+
+  </section>
+
+  <section xml:id="sec-leibniz-rule">
+    <title>Variable Limits and the Leibniz Rule</title>
+
+    <p>
+      If the upper limit of integration is a function of <m>x</m>,
+      we combine the Fundamental Theorem of Calculus with the chain rule.
+    </p>
+
+    <example xml:id="ex-ftc-chain-rule">
+      <title>A variable upper limit</title>
+
+      <statement>
+        <p>
+          Differentiate
+        </p>
+
+        <me>
+          F(x)=\int_a^{g(x)} f(t)\,dt.
+        </me>
+      </statement>
+
+      <solution>
+        <p>
+          The Fundamental Theorem of Calculus gives the value of the
+          integrand at the upper limit, and the chain rule contributes
+          the derivative of the upper limit:
+        </p>
+
+        <me>
+          F'(x)=f(g(x))g'(x).
+        </me>
+      </solution>
+    </example>
+
+    <p>
+      If the lower limit depends on <m>x</m>, reversing the limits
+      introduces a minus sign.
+    </p>
+
+    <example xml:id="ex-ftc-lower-limit">
+      <title>A variable lower limit</title>
+
+      <statement>
+        <p>
+          Differentiate
+        </p>
+
+        <me>
+          F(x)=\int_{g(x)}^b f(t)\,dt.
+        </me>
+      </statement>
+
+      <solution>
+        <p>
+          Reverse the order of integration:
+        </p>
+
+        <me>
+          F(x)
+          =
+          -\int_b^{g(x)}f(t)\,dt.
+        </me>
+
+        <p>
+          Therefore,
+        </p>
+
+        <me>
+          F'(x)=-f(g(x))g'(x).
+        </me>
+      </solution>
+    </example>
+
+    <theorem xml:id="thm-leibniz-variable-limits">
+      <title>Variable upper and lower limits</title>
+
+      <statement>
+        <p>
+          If
+        </p>
+
+        <me>
+          F(x)=\int_{u(x)}^{v(x)}f(t)\,dt,
+        </me>
+
+        <p>
+          then
+        </p>
+
+        <me>
+          F'(x)
+          =
+          f(v(x))v'(x)
+          -
+          f(u(x))u'(x).
+        </me>
+      </statement>
+    </theorem>
+
+  </section>
+
+</chapter>

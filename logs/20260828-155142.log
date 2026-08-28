@@ -1,0 +1,12 @@
+INFO    : Building target web
+INFO    : XSL conversion of /Users/tbury/Documents/teaching/math7b-pretext/source/main.ptx by /Users/tbury/.ptx/2.51.0/core/xsl/utilities/pretext-enhanced-source.xsl
+ERROR   : Error assembling source file: Namespace prefix xi on include is not defined, line 7, column 39 (main.ptx, line 7)
+FATAL   : XML syntax for source file is invalid
+INFO    : ------------------------
+exit    : Failed to build without errors.  Exiting...
+INFO    : 
+----------------------------------------------------
+INFO    : While running pretext, the following errors occurred:
+
+INFO    : (see log messages above or in the 'logs' folder for more information)
+INFO    : ----------------------------------------------------

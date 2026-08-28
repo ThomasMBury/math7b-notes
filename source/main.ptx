@@ -1,22 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<pretext xml:lang="en-US" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <!-- we first include a file which contains the docinfo element: -->
+<pretext xml:lang="en-US"
+         xmlns:xi="http://www.w3.org/2001/XInclude">
+
   <xi:include href="./docinfo.ptx" />
 
-  <book xml:id="my-great-book">
-    <title>My Great Book</title>
-    <subtitle>An example to get you started</subtitle>
+  <book xml:id="math7b-notes">
 
-    <!-- Include frontmatter -->
+    <title>Calculus for Life Sciences II</title>
+    <subtitle>Course Notes for MATH 007B</subtitle>
+
     <xi:include href="./frontmatter.ptx" />
 
-    <!-- Include chapters -->
-    <xi:include href="./ch-chapter-title.ptx" />
+    <xi:include href="./ch05-antiderivatives.ptx" />
+    <xi:include href="./ch06-definite-integrals.ptx" />
+    <xi:include href="./ch06-ftc.ptx" />
+    <xi:include href="./ch06-applications.ptx" />
+    <xi:include href="./ch07-integration-techniques.ptx" />
+    <xi:include href="./ch07-trig-integration.ptx" />
+    <xi:include href="./ch08-differential-equations.ptx" />
 
-
-    <!-- Include backmatter -->
     <xi:include href="./backmatter.ptx" />
 
   </book>
+
 </pretext>

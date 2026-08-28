@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<chapter xml:id="ch-differential-equations">
+  <title>Differential Equations</title>
+
+  <section xml:id="sec-separable-differential-equations">
+    <title>Solving Separable Differential Equations</title>
+    <p>Content coming soon.</p>
+  </section>
+
+  <section xml:id="sec-equilibria-stability">
+    <title>Equilibria and Their Stability</title>
+    <p>Content coming soon.</p>
+  </section>
+
+  <section xml:id="sec-differential-equation-models">
+    <title>Differential Equation Models</title>
+    <p>Content coming soon.</p>
+  </section>
+
+</chapter>
