@@ -1,26 +1,788 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <chapter xml:id="ch-integration-techniques">
-  <title>Techniques of Integration</title>
+    <title>Techniques of Integration</title>
 
-  <section xml:id="sec-substitution">
-    <title>The Substitution Rule</title>
-    <p>Content coming soon.</p>
-  </section>
+    <section xml:id="sec-substitution">
+        <title>The Substitution Rule</title>
 
-  <section xml:id="sec-integration-by-parts">
-    <title>Integration by Parts</title>
-    <p>Content coming soon.</p>
-  </section>
+        <p>
+            Antidifferentiation is often more difficult than differentiation.
+            One useful strategy is to recognize when an integrand has been
+            produced by the chain rule and reverse that process.
+        </p>
 
-  <section xml:id="sec-partial-fractions">
-    <title>Rational Functions and Partial Fractions</title>
-    <p>Content coming soon.</p>
-  </section>
+        <p>
+            Recall that the chain rule gives
+        </p>
 
-  <section xml:id="sec-improper-integrals">
-    <title>Improper Integrals</title>
-    <p>Content coming soon.</p>
-  </section>
+        <me>
+            \frac{d}{dx}F(g(x))
+            =
+            F'(g(x))g'(x).
+        </me>
+
+        <p>
+            Reversing this relationship leads to the substitution rule:
+        </p>
+
+        <me>
+            \int F'(g(x))g'(x)\,dx
+            =
+            F(g(x))+C.
+        </me>
+
+        <p>
+            We introduce a new variable
+        </p>
+
+        <me>
+            u=g(x),
+        </me>
+
+        <p>
+            so that
+        </p>
+
+        <me>
+            du=g'(x)\,dx.
+        </me>
+
+        <p>
+            The goal is to rewrite the entire integral in terms of
+            <m>u</m>.
+        </p>
+
+        <theorem xml:id="thm-substitution-indefinite">
+            <title>Substitution Rule for Indefinite Integrals</title>
+
+            <statement>
+                <p>
+                    If <m>u=g(x)</m> is differentiable, then
+                </p>
+
+                <me>
+                    \int f(g(x))g'(x)\,dx
+                    =
+                    \int f(u)\,du.
+                </me>
+            </statement>
+        </theorem>
+
+        <remark xml:id="rem-substitution-chain-rule">
+            <title>Substitution reverses the chain rule</title>
+
+            <p>
+                A useful way to identify a substitution is to look for a
+                function inside another function together with its derivative,
+                possibly up to a constant factor.
+            </p>
+        </remark>
+
+        <example xml:id="ex-substitution-basic">
+            <title>A basic substitution</title>
+
+            <statement>
+                <p>
+                    Evaluate
+                </p>
+
+                <me>
+                    \int 2x\cos(x^2)\,dx.
+                </me>
+            </statement>
+
+            <solution>
+                <p>
+                    The expression <m>x^2</m> appears inside the cosine, and
+                    its derivative is <m>2x</m>. Let
+                </p>
+
+                <me>
+                    u=x^2.
+                </me>
+
+                <p>
+                    Then
+                </p>
+
+                <me>
+                    du=2x\,dx.
+                </me>
+
+                <p>
+                    Therefore,
+                </p>
+
+                <me>
+                    \int 2x\cos(x^2)\,dx
+                    =
+                    \int \cos u\,du.
+                </me>
+
+                <p>
+                    Integrating,
+                </p>
+
+                <me>
+                    \int \cos u\,du
+                    =
+                    \sin u+C.
+                </me>
+
+                <p>
+                    Substituting back,
+                </p>
+
+                <me>
+                    \int 2x\cos(x^2)\,dx
+                    =
+                    \sin(x^2)+C.
+                </me>
+            </solution>
+        </example>
+
+        <example xml:id="ex-substitution-exp">
+            <title>Substitution with an exponential</title>
+
+            <statement>
+                <p>
+                    Evaluate
+                </p>
+
+                <me>
+                    \int x e^{x^2}\,dx.
+                </me>
+            </statement>
+
+            <solution>
+                <p>
+                    Let
+                </p>
+
+                <me>
+                    u=x^2.
+                </me>
+
+                <p>
+                    Then
+                </p>
+
+                <me>
+                    du=2x\,dx,
+                </me>
+
+                <p>
+                    so
+                </p>
+
+                <me>
+                    x\,dx=\frac{1}{2}\,du.
+                </me>
+
+                <p>
+                    Thus,
+                </p>
+
+                <me>
+                    \int x e^{x^2}\,dx
+                    =
+                    \frac{1}{2}\int e^u\,du.
+                </me>
+
+                <p>
+                    Therefore,
+                </p>
+
+                <me>
+                    \int x e^{x^2}\,dx
+                    =
+                    \frac{1}{2}e^u+C
+                    =
+                    \frac{1}{2}e^{x^2}+C.
+                </me>
+            </solution>
+        </example>
+
+        <example xml:id="ex-substitution-power">
+            <title>Substitution with a power</title>
+
+            <statement>
+                <p>
+                    Evaluate
+                </p>
+
+                <me>
+                    \int x(x^2+1)^5\,dx.
+                </me>
+            </statement>
+
+            <solution>
+                <p>
+                    Let
+                </p>
+
+                <me>
+                    u=x^2+1.
+                </me>
+
+                <p>
+                    Then
+                </p>
+
+                <me>
+                    du=2x\,dx,
+                </me>
+
+                <p>
+                    and hence
+                </p>
+
+                <me>
+                    x\,dx=\frac{1}{2}\,du.
+                </me>
+
+                <p>
+                    The integral becomes
+                </p>
+
+                <me>
+                    \frac{1}{2}\int u^5\,du.
+                </me>
+
+                <p>
+                    Therefore,
+                </p>
+
+                <me>
+                    \frac{1}{2}\int u^5\,du
+                    =
+                    \frac{1}{12}u^6+C.
+                </me>
+
+                <p>
+                    Substituting back gives
+                </p>
+
+                <me>
+                    \int x(x^2+1)^5\,dx
+                    =
+                    \frac{1}{12}(x^2+1)^6+C.
+                </me>
+            </solution>
+        </example>
+
+        <example xml:id="ex-substitution-log">
+            <title>Substitution leading to a logarithm</title>
+
+            <statement>
+                <p>
+                    Evaluate
+                </p>
+
+                <me>
+                    \int \frac{x}{x^2+4}\,dx.
+                </me>
+            </statement>
+
+            <solution>
+                <p>
+                    Let
+                </p>
+
+                <me>
+                    u=x^2+4.
+                </me>
+
+                <p>
+                    Then
+                </p>
+
+                <me>
+                    du=2x\,dx.
+                </me>
+
+                <p>
+                    Thus,
+                </p>
+
+                <me>
+                    \int \frac{x}{x^2+4}\,dx
+                    =
+                    \frac{1}{2}
+                    \int \frac{1}{u}\,du.
+                </me>
+
+                <p>
+                    Therefore,
+                </p>
+
+                <me>
+                    \int \frac{x}{x^2+4}\,dx
+                    =
+                    \frac{1}{2}\ln|u|+C.
+                </me>
+
+                <p>
+                    Since <m>x^2+4&gt;0</m>, this may be written as
+                </p>
+
+                <me>
+                    \frac{1}{2}\ln(x^2+4)+C.
+                </me>
+            </solution>
+        </example>
+
+        <remark xml:id="rem-substitution-choice">
+            <title>Choosing <m>u</m></title>
+
+            <p>
+                There is no single rule that always tells us which
+                substitution to choose. A good first choice is often an
+                expression that appears inside another function, especially
+                when its derivative also appears elsewhere in the integrand.
+            </p>
+        </remark>
+
+        <example xml:id="ex-substitution-rewrite">
+            <title>Rewriting before substituting</title>
+
+            <statement>
+                <p>
+                    Evaluate
+                </p>
+
+                <me>
+                    \int \frac{x^3}{x^2+1}\,dx.
+                </me>
+            </statement>
+
+            <solution>
+                <p>
+                    The expression <m>x^2+1</m> suggests the substitution
+                </p>
+
+                <me>
+                    u=x^2+1.
+                </me>
+
+                <p>
+                    Since
+                </p>
+
+                <me>
+                    du=2x\,dx,
+                </me>
+
+                <p>
+                    we first rewrite
+                </p>
+
+                <me>
+                    x^3\,dx
+                    =
+                    x^2(x\,dx).
+                </me>
+
+                <p>
+                    Also, from <m>u=x^2+1</m>,
+                </p>
+
+                <me>
+                    x^2=u-1.
+                </me>
+
+                <p>
+                    Therefore,
+                </p>
+
+                <me>
+                    \int \frac{x^3}{x^2+1}\,dx
+                    =
+                    \frac{1}{2}
+                    \int \frac{u-1}{u}\,du.
+                </me>
+
+                <p>
+                    Simplifying,
+                </p>
+
+                <me>
+                    \frac{1}{2}
+                    \int
+                    \left(
+                    1-\frac{1}{u}
+                    \right)\,du.
+                </me>
+
+                <p>
+                    Hence,
+                </p>
+
+                <me>
+                    \int \frac{x^3}{x^2+1}\,dx
+                    =
+                    \frac{1}{2}
+                    \left(
+                    u-\ln|u|
+                    \right)+C.
+                </me>
+
+                <p>
+                    Substituting back,
+                </p>
+
+                <me>
+                    \int \frac{x^3}{x^2+1}\,dx
+                    =
+                    \frac{1}{2}
+                    \left(
+                    x^2+1-\ln(x^2+1)
+                    \right)+C.
+                </me>
+            </solution>
+        </example>
+
+    </section>
+
+    <section xml:id="sec-substitution-definite">
+        <title>Substitution in Definite Integrals</title>
+
+        <p>
+            The substitution rule can also be used with definite integrals.
+            There are two valid approaches.
+        </p>
+
+        <p>
+            We can either perform the substitution, integrate in terms of
+            <m>u</m>, then substitute back to <m>x</m> before evaluating the
+            original bounds, or we can change the bounds to the corresponding
+            <m>u</m>-values and complete the entire calculation in terms of
+            <m>u</m>.
+        </p>
+
+        <theorem xml:id="thm-substitution-definite">
+            <title>Substitution Rule for Definite Integrals</title>
+
+            <statement>
+                <p>
+                    If <m>u=g(x)</m>, then
+                </p>
+
+                <me>
+                    \int_a^b f(g(x))g'(x)\,dx
+                    =
+                    \int_{g(a)}^{g(b)} f(u)\,du.
+                </me>
+            </statement>
+        </theorem>
+
+        <example xml:id="ex-substitution-definite-basic">
+            <title>Changing the bounds</title>
+
+            <statement>
+                <p>
+                    Evaluate
+                </p>
+
+                <me>
+                    \int_0^1 2x e^{x^2}\,dx.
+                </me>
+            </statement>
+
+            <solution>
+                <p>
+                    Let
+                </p>
+
+                <me>
+                    u=x^2,
+                </me>
+
+                <p>
+                    so that
+                </p>
+
+                <me>
+                    du=2x\,dx.
+                </me>
+
+                <p>
+                    We now change the limits. When <m>x=0</m>,
+                </p>
+
+                <me>
+                    u=0,
+                </me>
+
+                <p>
+                    and when <m>x=1</m>,
+                </p>
+
+                <me>
+                    u=1.
+                </me>
+
+                <p>
+                    Therefore,
+                </p>
+
+                <me>
+                    \int_0^1 2x e^{x^2}\,dx
+                    =
+                    \int_0^1 e^u\,du.
+                </me>
+
+                <p>
+                    Hence,
+                </p>
+
+                <me>
+                    \int_0^1 e^u\,du
+                    =
+                    [e^u]_0^1
+                    =
+                    e-1.
+                </me>
+            </solution>
+        </example>
+
+        <example xml:id="ex-substitution-definite-polynomial">
+            <title>A definite integral with new bounds</title>
+
+            <statement>
+                <p>
+                    Evaluate
+                </p>
+
+                <me>
+                    \int_0^2 x(x^2+1)^2\,dx.
+                </me>
+            </statement>
+
+            <solution>
+                <p>
+                    Let
+                </p>
+
+                <me>
+                    u=x^2+1.
+                </me>
+
+                <p>
+                    Then
+                </p>
+
+                <me>
+                    du=2x\,dx,
+                </me>
+
+                <p>
+                    so
+                </p>
+
+                <me>
+                    x\,dx=\frac{1}{2}\,du.
+                </me>
+
+                <p>
+                    Change the bounds:
+                </p>
+
+                <me>
+                    x=0
+                    \quad\Longrightarrow\quad
+                    u=1,
+                </me>
+
+                <me>
+                    x=2
+                    \quad\Longrightarrow\quad
+                    u=5.
+                </me>
+
+                <p>
+                    Therefore,
+                </p>
+
+                <me>
+                    \int_0^2 x(x^2+1)^2\,dx
+                    =
+                    \frac{1}{2}
+                    \int_1^5 u^2\,du.
+                </me>
+
+                <p>
+                    Evaluating,
+                </p>
+
+                <me>
+                    \frac{1}{2}
+                    \left[
+                    \frac{u^3}{3}
+                    \right]_1^5
+                    =
+                    \frac{1}{6}(125-1)
+                    =
+                    \frac{62}{3}.
+                </me>
+            </solution>
+        </example>
+
+        <remark xml:id="rem-definite-substitution-bounds">
+            <title>Do not mix variables and bounds</title>
+
+            <p>
+                Once the integral has been rewritten entirely in terms of
+                <m>u</m>, the limits of integration should also be
+                <m>u</m>-values. Alternatively, substitute back to
+                <m>x</m> before using the original <m>x</m>-limits.
+            </p>
+        </remark>
+
+        <example xml:id="ex-substitution-definite-trig">
+            <title>A trigonometric definite integral</title>
+
+            <statement>
+                <p>
+                    Evaluate
+                </p>
+
+                <me>
+                    \int_0^{\pi/2}
+                    \sin x\,e^{\cos x}\,dx.
+                </me>
+            </statement>
+
+            <solution>
+                <p>
+                    Let
+                </p>
+
+                <me>
+                    u=\cos x.
+                </me>
+
+                <p>
+                    Then
+                </p>
+
+                <me>
+                    du=-\sin x\,dx.
+                </me>
+
+                <p>
+                    Change the bounds:
+                </p>
+
+                <me>
+                    x=0
+                    \quad\Longrightarrow\quad
+                    u=1,
+                </me>
+
+                <me>
+                    x=\frac{\pi}{2}
+                    \quad\Longrightarrow\quad
+                    u=0.
+                </me>
+
+                <p>
+                    Therefore,
+                </p>
+
+                <me>
+                    \int_0^{\pi/2}
+                    \sin x\,e^{\cos x}\,dx
+                    =
+                    -\int_1^0 e^u\,du.
+                </me>
+
+                <p>
+                    Reversing the limits,
+                </p>
+
+                <me>
+                    -\int_1^0 e^u\,du
+                    =
+                    \int_0^1 e^u\,du.
+                </me>
+
+                <p>
+                    Hence,
+                </p>
+
+                <me>
+                    \int_0^{\pi/2}
+                    \sin x\,e^{\cos x}\,dx
+                    =
+                    e-1.
+                </me>
+            </solution>
+        </example>
+
+        <remark xml:id="rem-substitution-steps">
+            <title>A useful substitution workflow</title>
+
+            <p>
+                When using substitution, the following sequence is often
+                helpful:
+            </p>
+
+            <ol>
+                <li>
+                    <p>
+                        Choose an expression for <m>u</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Compute <m>du</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Rewrite the entire integrand in terms of <m>u</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        If the integral is definite, change the bounds to
+                        <m>u</m>-values.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Integrate and simplify.
+                    </p>
+                </li>
+            </ol>
+        </remark>
+
+    </section>
+
+    <section xml:id="sec-integration-by-parts">
+        <title>Integration by Parts</title>
+
+        <p>
+            This section will be developed in the next set of notes.
+        </p>
+    </section>
+
+    <section xml:id="sec-partial-fractions">
+        <title>Partial Fractions</title>
+
+        <p>
+            This section will be developed in the next set of notes.
+        </p>
+    </section>
+
+    <section xml:id="sec-improper-integrals">
+        <title>Improper Integrals</title>
+
+        <p>
+            This section will be developed in the next set of notes.
+        </p>
+    </section>
 
 </chapter>

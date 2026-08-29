@@ -1,0 +1,19 @@
+# PreTeXt build output (regenerate with `pretext build`)
+/output/
+/generated-assets/
+
+# PreTeXt build cache
+/.cache/
+
+# Build logs
+/logs/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db

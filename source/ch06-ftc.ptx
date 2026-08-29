@@ -1,215 +1,717 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <chapter xml:id="ch-ftc">
-  <title>The Fundamental Theorem of Calculus</title>
+    <title>The Fundamental Theorem of Calculus</title>
 
-  <section xml:id="sec-area-function">
-    <title>The Area Function</title>
+    <section xml:id="sec-area-function">
+        <title>The Area Function</title>
 
-    <p>
-      Let <m>f</m> be a continuous function. Define a new function by
-    </p>
-
-    <me>
-      A(x)=\int_a^x f(t)\,dt.
-    </me>
-
-    <p>
-      The value <m>A(x)</m> represents the net area accumulated under
-      <m>f</m> between <m>a</m> and <m>x</m>.
-    </p>
-
-    <p>
-      To understand how <m>A</m> changes, compare <m>A(x+h)</m> and
-      <m>A(x)</m>:
-    </p>
-
-    <me>
-      A(x+h)-A(x)
-      =
-      \int_x^{x+h} f(t)\,dt.
-    </me>
-
-    <p>
-      If <m>h</m> is small, the area over this short interval is
-      approximately the area of a rectangle of height <m>f(x)</m>
-      and width <m>h</m>:
-    </p>
-
-    <me>
-      A(x+h)-A(x)\approx f(x)h.
-    </me>
-
-    <p>
-      Dividing by <m>h</m> gives
-    </p>
-
-    <me>
-      \frac{A(x+h)-A(x)}{h}\approx f(x).
-    </me>
-
-    <p>
-      Taking the limit as <m>h\to 0</m> leads to the Fundamental
-      Theorem of Calculus.
-    </p>
-
-  </section>
-
-  <section xml:id="sec-ftc-part-one">
-    <title>The Fundamental Theorem of Calculus, Part I</title>
-
-    <theorem xml:id="thm-ftc-one">
-      <title>Fundamental Theorem of Calculus, Part I</title>
-
-      <statement>
         <p>
-          If <m>f</m> is continuous and
+            The definite integral can be defined as a limit of Riemann sums,
+            but evaluating a definite integral directly from this definition
+            can be cumbersome. The Fundamental Theorem of Calculus connects
+            definite integrals with antiderivatives and gives us a much more
+            efficient way to compute them.
+        </p>
+
+        <p>
+            Let <m>f</m> be a continuous function, and define
         </p>
 
         <me>
-          A(x)=\int_a^x f(t)\,dt,
+            A(x)=\int_a^x f(t)\,dt.
         </me>
 
         <p>
-          then
+            The function <m>A(x)</m> measures the net accumulation of
+            <m>f</m> from the fixed point <m>a</m> to the variable point
+            <m>x</m>.
         </p>
 
-        <me>
-          A'(x)=f(x).
-        </me>
-      </statement>
-    </theorem>
-
-    <p>
-      In words, differentiating an accumulated integral returns the
-      original function.
-    </p>
-
-    <example xml:id="ex-ftc-direct">
-      <title>Differentiating an integral</title>
-
-      <statement>
         <p>
-          Differentiate
+            To determine how quickly this accumulated area changes, compare
+            <m>A(x+h)</m> and <m>A(x)</m>:
         </p>
 
         <me>
-          F(x)=\int_a^x f(t)\,dt.
-        </me>
-      </statement>
-
-      <solution>
-        <p>
-          By the Fundamental Theorem of Calculus,
-        </p>
-
-        <me>
-          F'(x)=f(x).
-        </me>
-      </solution>
-    </example>
-
-  </section>
-
-  <section xml:id="sec-leibniz-rule">
-    <title>Variable Limits and the Leibniz Rule</title>
-
-    <p>
-      If the upper limit of integration is a function of <m>x</m>,
-      we combine the Fundamental Theorem of Calculus with the chain rule.
-    </p>
-
-    <example xml:id="ex-ftc-chain-rule">
-      <title>A variable upper limit</title>
-
-      <statement>
-        <p>
-          Differentiate
-        </p>
-
-        <me>
-          F(x)=\int_a^{g(x)} f(t)\,dt.
-        </me>
-      </statement>
-
-      <solution>
-        <p>
-          The Fundamental Theorem of Calculus gives the value of the
-          integrand at the upper limit, and the chain rule contributes
-          the derivative of the upper limit:
-        </p>
-
-        <me>
-          F'(x)=f(g(x))g'(x).
-        </me>
-      </solution>
-    </example>
-
-    <p>
-      If the lower limit depends on <m>x</m>, reversing the limits
-      introduces a minus sign.
-    </p>
-
-    <example xml:id="ex-ftc-lower-limit">
-      <title>A variable lower limit</title>
-
-      <statement>
-        <p>
-          Differentiate
-        </p>
-
-        <me>
-          F(x)=\int_{g(x)}^b f(t)\,dt.
-        </me>
-      </statement>
-
-      <solution>
-        <p>
-          Reverse the order of integration:
-        </p>
-
-        <me>
-          F(x)
-          =
-          -\int_b^{g(x)}f(t)\,dt.
+            A(x+h)-A(x)
+            =
+            \int_x^{x+h} f(t)\,dt.
         </me>
 
         <p>
-          Therefore,
+            If <m>h</m> is small, this additional area is approximately the
+            area of a rectangle with width <m>h</m> and height <m>f(x)</m>.
+            Thus,
         </p>
 
         <me>
-          F'(x)=-f(g(x))g'(x).
-        </me>
-      </solution>
-    </example>
-
-    <theorem xml:id="thm-leibniz-variable-limits">
-      <title>Variable upper and lower limits</title>
-
-      <statement>
-        <p>
-          If
-        </p>
-
-        <me>
-          F(x)=\int_{u(x)}^{v(x)}f(t)\,dt,
+            A(x+h)-A(x)\approx h f(x).
         </me>
 
         <p>
-          then
+            Dividing by <m>h</m> gives
         </p>
 
         <me>
-          F'(x)
-          =
-          f(v(x))v'(x)
-          -
-          f(u(x))u'(x).
+            \frac{A(x+h)-A(x)}{h}\approx f(x).
         </me>
-      </statement>
-    </theorem>
 
-  </section>
+        <p>
+            Taking the limit as <m>h\to 0</m> leads to the first part of the
+            Fundamental Theorem of Calculus.
+        </p>
+
+    </section>
+
+    <section xml:id="sec-ftc-part-one">
+        <title>The Fundamental Theorem of Calculus, Part I</title>
+
+        <theorem xml:id="thm-ftc-one">
+            <title>Fundamental Theorem of Calculus, Part I</title>
+
+            <statement>
+                <p>
+                    If <m>f</m> is continuous on an interval containing
+                    <m>a</m> and <m>x</m>, and
+                </p>
+
+                <me>
+                    A(x)=\int_a^x f(t)\,dt,
+                </me>
+
+                <p>
+                    then
+                </p>
+
+                <me>
+                    A'(x)=f(x).
+                </me>
+            </statement>
+        </theorem>
+
+        <p>
+            In words, differentiating an accumulated integral returns the
+            original function.
+        </p>
+
+        <example xml:id="ex-ftc-direct">
+            <title>Differentiating an integral</title>
+
+            <statement>
+                <p>
+                    Let
+                </p>
+
+                <me>
+                    y=\int_0^x \sqrt{1+t^2}\,dt.
+                </me>
+
+                <p>
+                    Find <m>dy/dx</m>.
+                </p>
+            </statement>
+
+            <solution>
+                <p>
+                    The integral has the form
+                </p>
+
+                <me>
+                    \int_a^x f(t)\,dt
+                </me>
+
+                <p>
+                    with <m>f(t)=\sqrt{1+t^2}</m>. Therefore, by the
+                    Fundamental Theorem of Calculus,
+                </p>
+
+                <me>
+                    \frac{dy}{dx}=\sqrt{1+x^2}.
+                </me>
+            </solution>
+        </example>
+
+        <example xml:id="ex-ftc-direct-two">
+            <title>Another application of FTC Part I</title>
+
+            <statement>
+                <p>
+                    Differentiate
+                </p>
+
+                <me>
+                    F(x)=\int_0^x \left(\sin t-e^{-t}\right)\,dt.
+                </me>
+            </statement>
+
+            <solution>
+                <p>
+                    By the Fundamental Theorem of Calculus,
+                </p>
+
+                <me>
+                    F'(x)=\sin x-e^{-x}.
+                </me>
+            </solution>
+        </example>
+
+    </section>
+
+    <section xml:id="sec-leibniz-rule">
+        <title>Variable Limits and the Leibniz Rule</title>
+
+        <p>
+            The Fundamental Theorem of Calculus can be combined with the
+            chain rule when a limit of integration is itself a function of
+            <m>x</m>.
+        </p>
+
+        <example xml:id="ex-variable-upper-limit">
+            <title>A variable upper limit</title>
+
+            <statement>
+                <p>
+                    Differentiate
+                </p>
+
+                <me>
+                    F(x)=\int_0^{x^2}\sin t\,dt.
+                </me>
+            </statement>
+
+            <solution>
+                <p>
+                    Let
+                </p>
+
+                <me>
+                    u=x^2.
+                </me>
+
+                <p>
+                    The Fundamental Theorem of Calculus gives
+                </p>
+
+                <me>
+                    \frac{d}{du}\left(\int_0^u \sin t\,dt\right)=\sin u.
+                </me>
+
+                <p>
+                    Using the chain rule,
+                </p>
+
+                <me>
+                    F'(x)=\sin(x^2)\cdot 2x.
+                </me>
+            </solution>
+        </example>
+
+        <example xml:id="ex-variable-upper-limit-two">
+            <title>Another variable upper limit</title>
+
+            <statement>
+                <p>
+                    Differentiate
+                </p>
+
+                <me>
+                    F(x)=\int_0^{\sin x} e^t\,dt.
+                </me>
+            </statement>
+
+            <solution>
+                <p>
+                    The upper limit is <m>\sin x</m>. Applying FTC Part I
+                    together with the chain rule gives
+                </p>
+
+                <me>
+                    F'(x)=e^{\sin x}\cos x.
+                </me>
+            </solution>
+        </example>
+
+        <p>
+            If the lower limit depends on <m>x</m>, reversing the limits
+            introduces a minus sign.
+        </p>
+
+        <example xml:id="ex-variable-lower-limit">
+            <title>A variable lower limit</title>
+
+            <statement>
+                <p>
+                    Differentiate
+                </p>
+
+                <me>
+                    F(x)=\int_{x^2}^{5} t^2\,dt.
+                </me>
+            </statement>
+
+            <solution>
+                <p>
+                    Reverse the limits:
+                </p>
+
+                <me>
+                    F(x)=-\int_5^{x^2} t^2\,dt.
+                </me>
+
+                <p>
+                    Then use FTC Part I and the chain rule:
+                </p>
+
+                <me>
+                    F'(x)
+                    =
+                    -\left((x^2)^2\right)(2x)
+                    =
+                    -2x^5.
+                </me>
+            </solution>
+        </example>
+
+        <theorem xml:id="thm-leibniz-variable-limits">
+            <title>Leibniz Rule for Variable Limits</title>
+
+            <statement>
+                <p>
+                    If
+                </p>
+
+                <me>
+                    F(x)=\int_{u(x)}^{v(x)} f(t)\,dt,
+                </me>
+
+                <p>
+                    then, under suitable continuity and differentiability
+                    assumptions,
+                </p>
+
+                <me>
+                    F'(x)
+                    =
+                    f(v(x))v'(x)
+                    -
+                    f(u(x))u'(x).
+                </me>
+            </statement>
+        </theorem>
+
+    </section>
+
+    <section xml:id="sec-ftc-part-two">
+        <title>The Fundamental Theorem of Calculus, Part II</title>
+
+        <p>
+            FTC Part I tells us that the accumulation function
+        </p>
+
+        <me>
+            A(x)=\int_a^x f(t)\,dt
+        </me>
+
+        <p>
+            is an antiderivative of <m>f</m>. Therefore, any other
+            antiderivative <m>F</m> of <m>f</m> differs from <m>A</m>
+            by a constant:
+        </p>
+
+        <me>
+            F(x)=A(x)+C.
+        </me>
+
+        <p>
+            Evaluating at <m>a</m> and <m>b</m> gives
+        </p>
+
+        <me>
+            F(b)-F(a)
+            =
+            A(b)-A(a).
+        </me>
+
+        <p>
+            Since
+        </p>
+
+        <me>
+            A(b)=\int_a^b f(t)\,dt
+        </me>
+
+        <p>
+            and
+        </p>
+
+        <me>
+            A(a)=\int_a^a f(t)\,dt=0,
+        </me>
+
+        <p>
+            we obtain FTC Part II.
+        </p>
+
+        <theorem xml:id="thm-ftc-two">
+            <title>Fundamental Theorem of Calculus, Part II</title>
+
+            <statement>
+                <p>
+                    If <m>f</m> is continuous on <m>[a,b]</m> and
+                    <m>F</m> is any antiderivative of <m>f</m>, then
+                </p>
+
+                <me>
+                    \int_a^b f(x)\,dx
+                    =
+                    F(b)-F(a).
+                </me>
+            </statement>
+        </theorem>
+
+        <remark xml:id="rem-ftc-antiderivative-choice">
+            <title>Choice of antiderivative</title>
+
+            <p>
+                It does not matter which antiderivative of <m>f</m> is used.
+                Any constant of integration cancels when computing
+                <m>F(b)-F(a)</m>.
+            </p>
+        </remark>
+
+        <example xml:id="ex-ftc-evaluation">
+            <title>Evaluating a definite integral</title>
+
+            <statement>
+                <p>
+                    Evaluate
+                </p>
+
+                <me>
+                    \int_1^4 (x+2)\,dx.
+                </me>
+            </statement>
+
+            <solution>
+                <p>
+                    An antiderivative of <m>x+2</m> is
+                </p>
+
+                <me>
+                    F(x)=\frac{1}{2}x^2+2x.
+                </me>
+
+                <p>
+                    By FTC Part II,
+                </p>
+
+                <me>
+                    \int_1^4 (x+2)\,dx
+                    =
+                    \left[\frac{1}{2}x^2+2x\right]_1^4.
+                </me>
+
+                <p>
+                    Therefore,
+                </p>
+
+                <me>
+                    \int_1^4 (x+2)\,dx
+                    =
+                    \left(8+8\right)
+                    -
+                    \left(\frac{1}{2}+2\right)
+                    =
+                    \frac{27}{2}.
+                </me>
+            </solution>
+        </example>
+
+    </section>
+
+    <section xml:id="sec-evaluation-notation">
+        <title>Evaluation Notation</title>
+
+        <p>
+            The expression <m>F(b)-F(a)</m> occurs frequently, so we use the
+            shorthand notation
+        </p>
+
+        <me>
+            \left.F(x)\right|_a^b
+            =
+            [F(x)]_a^b
+            =
+            F(b)-F(a).
+        </me>
+
+        <example xml:id="ex-evaluation-notation-polynomial">
+            <title>Using evaluation notation</title>
+
+            <statement>
+                <p>
+                    Evaluate
+                </p>
+
+                <me>
+                    \int_1^2 x^4\,dx.
+                </me>
+            </statement>
+
+            <solution>
+                <p>
+                    An antiderivative of <m>x^4</m> is
+                    <m>\frac{1}{5}x^5</m>. Therefore,
+                </p>
+
+                <me>
+                    \int_1^2 x^4\,dx
+                    =
+                    \left[\frac{1}{5}x^5\right]_1^2
+                    =
+                    \frac{1}{5}(32-1)
+                    =
+                    \frac{31}{5}.
+                </me>
+            </solution>
+        </example>
+
+        <example xml:id="ex-evaluation-notation-trig">
+            <title>A trigonometric example</title>
+
+            <statement>
+                <p>
+                    Evaluate
+                </p>
+
+                <me>
+                    \int_{-\pi/2}^{\pi/2} \cos x\,dx.
+                </me>
+            </statement>
+
+            <solution>
+                <p>
+                    Since an antiderivative of <m>\cos x</m> is
+                    <m>\sin x</m>,
+                </p>
+
+                <me>
+                    \int_{-\pi/2}^{\pi/2} \cos x\,dx
+                    =
+                    [\sin x]_{-\pi/2}^{\pi/2}
+                    =
+                    1-(-1)
+                    =
+                    2.
+                </me>
+            </solution>
+        </example>
+
+        <example xml:id="ex-evaluation-notation-odd">
+            <title>An odd-function example</title>
+
+            <statement>
+                <p>
+                    Evaluate
+                </p>
+
+                <me>
+                    \int_{-2}^{2} x^3\,dx.
+                </me>
+            </statement>
+
+            <solution>
+                <p>
+                    Using FTC Part II,
+                </p>
+
+                <me>
+                    \int_{-2}^{2}x^3\,dx
+                    =
+                    \left[\frac{1}{4}x^4\right]_{-2}^{2}
+                    =
+                    \frac{1}{4}(16-16)
+                    =
+                    0.
+                </me>
+
+                <p>
+                    This is also consistent with the symmetry property for
+                    odd functions on symmetric intervals.
+                </p>
+            </solution>
+        </example>
+
+    </section>
+
+    <section xml:id="sec-indefinite-integral">
+        <title>The Indefinite Integral</title>
+
+        <p>
+            The symbol for a definite integral includes limits of integration
+            and represents a single number. The indefinite integral has no
+            limits and represents a family of antiderivatives.
+        </p>
+
+        <definition xml:id="def-indefinite-integral">
+            <title>Indefinite Integral</title>
+
+            <statement>
+                <p>
+                    If <m>F'(x)=f(x)</m>, then
+                </p>
+
+                <me>
+                    \int f(x)\,dx
+                    =
+                    F(x)+C,
+                </me>
+
+                <p>
+                    where <m>C</m> is an arbitrary constant.
+                </p>
+            </statement>
+        </definition>
+
+        <example xml:id="ex-indefinite-integral-power">
+            <title>An indefinite integral</title>
+
+            <statement>
+                <p>
+                    Evaluate
+                </p>
+
+                <me>
+                    \int 2\sqrt{x^5}\,dx.
+                </me>
+            </statement>
+
+            <solution>
+                <p>
+                    Rewrite the integrand using exponents:
+                </p>
+
+                <me>
+                    2\sqrt{x^5}
+                    =
+                    2x^{5/2}.
+                </me>
+
+                <p>
+                    Therefore,
+                </p>
+
+                <me>
+                    \int 2x^{5/2}\,dx
+                    =
+                    2\left(\frac{x^{7/2}}{7/2}\right)+C
+                    =
+                    \frac{4}{7}x^{7/2}+C.
+                </me>
+            </solution>
+        </example>
+
+        <remark xml:id="rem-definite-indefinite">
+            <title>Definite versus indefinite integrals</title>
+
+            <p>
+                A definite integral
+                <m>\int_a^b f(x)\,dx</m> gives a single numerical value.
+                An indefinite integral
+                <m>\int f(x)\,dx</m> gives a family of functions.
+            </p>
+        </remark>
+
+    </section>
+
+    <section xml:id="sec-net-absolute-area">
+        <title>Net Area and Absolute Area</title>
+
+        <p>
+            A definite integral gives the net, or signed, area between the
+            graph of a function and the horizontal axis. Regions where
+            <m>f(x)&gt;0</m> contribute positively, while regions where
+            <m>f(x)&lt;0</m> contribute negatively.
+        </p>
+
+        <p>
+            If we want the total geometric area between the graph and the
+            horizontal axis, negative contributions must also be counted
+            positively. This is accomplished using the absolute value:
+        </p>
+
+        <me>
+            \text{absolute area}
+            =
+            \int_a^b |f(x)|\,dx.
+        </me>
+
+        <p>
+            To evaluate such an integral, split the interval at points where
+            <m>f</m> changes sign.
+        </p>
+
+        <example xml:id="ex-absolute-area-sine">
+            <title>Absolute area under a sine curve</title>
+
+            <statement>
+                <p>
+                    Find the total area between
+                    <m>y=\sin x</m> and the horizontal axis from
+                    <m>x=0</m> to <m>x=2\pi</m>.
+                </p>
+            </statement>
+
+            <solution>
+                <p>
+                    The function <m>\sin x</m> is positive on
+                    <m>[0,\pi]</m> and negative on
+                    <m>[\pi,2\pi]</m>. Therefore,
+                </p>
+
+                <me>
+                    \int_0^{2\pi}|\sin x|\,dx
+                    =
+                    \int_0^\pi \sin x\,dx
+                    +
+                    \int_\pi^{2\pi}(-\sin x)\,dx.
+                </me>
+
+                <p>
+                    Evaluating each integral,
+                </p>
+
+                <me>
+                    \int_0^\pi \sin x\,dx
+                    =
+                    [-\cos x]_0^\pi
+                    =
+                    2,
+                </me>
+
+                <p>
+                    and
+                </p>
+
+                <me>
+                    \int_\pi^{2\pi}(-\sin x)\,dx
+                    =
+                    [\cos x]_\pi^{2\pi}
+                    =
+                    2.
+                </me>
+
+                <p>
+                    Hence the total area is
+                </p>
+
+                <me>
+                    2+2=4.
+                </me>
+            </solution>
+        </example>
+
+    </section>
 
 </chapter>
