@@ -2,6 +2,10 @@
 
 Course notes for MATH 007B (Calculus for Life Sciences II), written in [PreTeXt](https://pretextbook.org/).
 
+**Hosted at: https://thomasmbury.github.io/math7b-notes/**
+
+Licensed under [CC BY-SA 4.0](LICENSE).
+
 ## Structure
 
 The source lives in `source/`, starting from `source/main.ptx`, which includes the chapters:
@@ -40,10 +44,14 @@ Build a PDF:
 pretext build print
 ```
 
-Deploy the web version to GitHub Pages:
+## Deployment
+
+Pushing to `main` automatically builds and deploys the web version to GitHub Pages via [`.github/workflows/pretext-deploy.yml`](.github/workflows/pretext-deploy.yml). To trigger a deploy manually instead:
 
 ```bash
 pretext deploy
 ```
+
+## Notes
 
 Build output (`output/`), the PreTeXt cache (`.cache/`), and build logs (`logs/`) are git-ignored since they're regenerated from `source/`.
