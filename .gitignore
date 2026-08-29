@@ -1,9 +1,12 @@
 # PreTeXt build output (regenerate with `pretext build`)
 /output/
-/generated-assets/
 
-# PreTeXt build cache
-/.cache/
+# NOTE: /generated-assets/ and /.cache/ are intentionally tracked, not ignored.
+# They hold Asymptote/Sage/LaTeX-generated diagrams. The CI container that
+# deploys the site has no `asy`/`sage`, so it relies on these being committed
+# to avoid regenerating diagrams during the build. Run `pretext build` locally
+# (where those tools are installed) and commit the results after adding or
+# changing any diagram.
 
 # Build logs
 /logs/
