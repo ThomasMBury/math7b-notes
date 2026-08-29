@@ -4,7 +4,7 @@ Course notes for MATH 007B (Calculus for Life Sciences II), written in [PreTeXt]
 
 **Hosted at: https://thomasmbury.github.io/math7b-notes/**
 
-Licensed under [CC BY-SA 4.0](LICENSE).
+Licensed under [CC BY 4.0](LICENSE).
 
 ## Structure
 
