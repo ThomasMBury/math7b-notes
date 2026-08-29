@@ -1,21 +1,1154 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <chapter xml:id="ch-differential-equations">
-  <title>Differential Equations</title>
+    <title>Differential Equations</title>
 
-  <section xml:id="sec-separable-differential-equations">
-    <title>Solving Separable Differential Equations</title>
-    <p>Content coming soon.</p>
-  </section>
+    <section xml:id="sec-intro-de">
+        <title>Introduction to Differential Equations</title>
 
-  <section xml:id="sec-equilibria-stability">
-    <title>Equilibria and Their Stability</title>
-    <p>Content coming soon.</p>
-  </section>
+        <p>
+            A differential equation is an equation that relates a function
+            to one or more of its derivatives.
+        </p>
 
-  <section xml:id="sec-differential-equation-models">
-    <title>Differential Equation Models</title>
-    <p>Content coming soon.</p>
-  </section>
+        <p>
+            For example,
+        </p>
+
+        <me>
+            \frac{dy}{dt}=3y
+        </me>
+
+        <p>
+            is a differential equation relating the unknown function
+            <m>y(t)</m> to its derivative.
+        </p>
+
+        <definition xml:id="def-solution-de">
+            <title>Solution of a Differential Equation</title>
+
+            <statement>
+                <p>
+                    To solve a differential equation means to find a function
+                    that satisfies the equation.
+                </p>
+            </statement>
+        </definition>
+
+        <p>
+            We will consider three important types of first-order differential
+            equations:
+        </p>
+
+        <ol>
+            <li>
+                <p>
+                    pure-time differential equations,
+                </p>
+            </li>
+            <li>
+                <p>
+                    autonomous differential equations,
+                </p>
+            </li>
+            <li>
+                <p>
+                    general separable differential equations.
+                </p>
+            </li>
+        </ol>
+
+    </section>
+
+    <section xml:id="sec-pure-time-de">
+        <title>Pure-Time Differential Equations</title>
+
+        <p>
+            A pure-time differential equation has the form
+        </p>
+
+        <me>
+            \frac{dy}{dt}=f(t),
+        </me>
+
+        <p>
+            where the right-hand side depends only on time.
+        </p>
+
+        <p>
+            These equations can be solved directly by integration:
+        </p>
+
+        <me>
+            y(t)=\int f(t)\,dt.
+        </me>
+
+        <example xml:id="ex-pure-time-cell-volume">
+            <title>Cell volume</title>
+
+            <statement>
+                <p>
+                    Suppose the volume <m>V(t)</m> of a cell changes according
+                    to
+                </p>
+
+                <me>
+                    \frac{dV}{dt}=\sin t,
+                    \qquad
+                    V(0)=3.
+                </me>
+
+                <p>
+                    Find <m>V(t)</m>.
+                </p>
+            </statement>
+
+            <solution>
+                <p>
+                    Integrating,
+                </p>
+
+                <me>
+                    V(t)=-\cos t+C.
+                </me>
+
+                <p>
+                    Apply the initial condition:
+                </p>
+
+                <me>
+                    3=V(0)=-\cos 0+C=-1+C.
+                </me>
+
+                <p>
+                    Hence <m>C=4</m>, so
+                </p>
+
+                <me>
+                    V(t)=4-\cos t.
+                </me>
+            </solution>
+        </example>
+
+    </section>
+
+    <section xml:id="sec-autonomous-de">
+        <title>Autonomous Differential Equations</title>
+
+        <p>
+            An autonomous differential equation has the form
+        </p>
+
+        <me>
+            \frac{dy}{dt}=g(y),
+        </me>
+
+        <p>
+            where the rate of change depends only on the current state
+            <m>y</m>, not explicitly on time.
+        </p>
+
+        <p>
+            If the equation can be rearranged so that all terms involving
+            <m>y</m> are on one side and all terms involving <m>t</m> are on
+            the other, we can solve it by separation of variables.
+        </p>
+
+        <me>
+            \frac{1}{g(y)}\,dy=dt.
+        </me>
+
+        <p>
+            Integrating both sides gives
+        </p>
+
+        <me>
+            \int\frac{1}{g(y)}\,dy
+            =
+            \int dt.
+        </me>
+
+        <example xml:id="ex-exponential-growth">
+            <title>Exponential growth and decay</title>
+
+            <statement>
+                <p>
+                    Suppose a population <m>N(t)</m> satisfies
+                </p>
+
+                <me>
+                    \frac{dN}{dt}=rN,
+                    \qquad
+                    N(0)=100.
+                </me>
+
+                <p>
+                    Find <m>N(t)</m>.
+                </p>
+            </statement>
+
+            <solution>
+                <p>
+                    Separate variables:
+                </p>
+
+                <me>
+                    \frac{1}{N}\,dN=r\,dt.
+                </me>
+
+                <p>
+                    Integrating,
+                </p>
+
+                <me>
+                    \ln|N|=rt+C.
+                </me>
+
+                <p>
+                    Exponentiating,
+                </p>
+
+                <me>
+                    |N|=e^{rt+C}=e^Ce^{rt}.
+                </me>
+
+                <p>
+                    Absorb the sign and the factor <m>e^C</m> into a single
+                    constant <m>A</m>:
+                </p>
+
+                <me>
+                    N(t)=Ae^{rt}.
+                </me>
+
+                <p>
+                    Using <m>N(0)=100</m>,
+                </p>
+
+                <me>
+                    A=100.
+                </me>
+
+                <p>
+                    Therefore,
+                </p>
+
+                <me>
+                    N(t)=100e^{rt}.
+                </me>
+            </solution>
+        </example>
+
+        <remark xml:id="rem-exp-growth-decay">
+            <title>Growth and decay</title>
+
+            <p>
+                In the model
+                <m>N(t)=N_0e^{rt}</m>:
+            </p>
+
+            <ul>
+                <li>
+                    <p>
+                        if <m>r&gt;0</m>, the population grows exponentially;
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        if <m>r=0</m>, the population remains constant;
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        if <m>r&lt;0</m>, the population decays exponentially.
+                    </p>
+                </li>
+            </ul>
+        </remark>
+
+        <example xml:id="ex-von-bertalanffy">
+            <title>Von Bertalanffy growth model</title>
+
+            <statement>
+                <p>
+                    Suppose the length <m>L(t)</m> of a fish satisfies
+                </p>
+
+                <me>
+                    \frac{dL}{dt}
+                    =
+                    k(34-L),
+                    \qquad
+                    L(0)=2,
+                </me>
+
+                <p>
+                    where <m>k&gt;0</m>. Find <m>L(t)</m>.
+                </p>
+            </statement>
+
+            <solution>
+                <p>
+                    Separate variables:
+                </p>
+
+                <me>
+                    \frac{1}{34-L}\,dL
+                    =
+                    k\,dt.
+                </me>
+
+                <p>
+                    Integrating,
+                </p>
+
+                <me>
+                    -\ln|34-L|
+                    =
+                    kt+C.
+                </me>
+
+                <p>
+                    Rearranging and exponentiating gives
+                </p>
+
+                <me>
+                    |34-L|
+                    =
+                    Ae^{-kt}.
+                </me>
+
+                <p>
+                    Absorbing the sign into the constant,
+                </p>
+
+                <me>
+                    L=34-Ae^{-kt}.
+                </me>
+
+                <p>
+                    Apply the initial condition:
+                </p>
+
+                <me>
+                    2=34-A,
+                </me>
+
+                <p>
+                    so <m>A=32</m>. Therefore,
+                </p>
+
+                <me>
+                    L(t)=34-32e^{-kt}.
+                </me>
+            </solution>
+        </example>
+
+    </section>
+
+    <section xml:id="sec-separable-de">
+        <title>Separable Differential Equations</title>
+
+        <p>
+            A general separable differential equation has the form
+        </p>
+
+        <me>
+            \frac{dy}{dt}=f(t)g(y).
+        </me>
+
+        <p>
+            The right-hand side is a product of a function of time and a
+            function of the state variable.
+        </p>
+
+        <p>
+            Rearranging,
+        </p>
+
+        <me>
+            \frac{1}{g(y)}\,dy
+            =
+            f(t)\,dt.
+        </me>
+
+        <p>
+            We then integrate both sides.
+        </p>
+
+        <example xml:id="ex-general-separable">
+            <title>A general separable equation</title>
+
+            <statement>
+                <p>
+                    Solve
+                </p>
+
+                <me>
+                    \frac{dy}{dx}
+                    =
+                    \frac{xy}{x+1},
+                    \qquad
+                    y(0)=1.
+                </me>
+            </statement>
+
+            <solution>
+                <p>
+                    Separate variables:
+                </p>
+
+                <me>
+                    \frac{1}{y}\,dy
+                    =
+                    \frac{x}{x+1}\,dx.
+                </me>
+
+                <p>
+                    Rewrite
+                </p>
+
+                <me>
+                    \frac{x}{x+1}
+                    =
+                    1-\frac{1}{x+1}.
+                </me>
+
+                <p>
+                    Integrating,
+                </p>
+
+                <me>
+                    \ln|y|
+                    =
+                    x-\ln|x+1|+C.
+                </me>
+
+                <p>
+                    Exponentiating,
+                </p>
+
+                <me>
+                    |y|
+                    =
+                    e^x e^{-\ln|x+1|}e^C.
+                </me>
+
+                <p>
+                    Absorbing constants and signs into a constant <m>A</m>,
+                </p>
+
+                <me>
+                    y
+                    =
+                    A\frac{e^x}{x+1}.
+                </me>
+
+                <p>
+                    Since <m>y(0)=1</m>,
+                </p>
+
+                <me>
+                    A=1.
+                </me>
+
+                <p>
+                    Therefore,
+                </p>
+
+                <me>
+                    y(x)=\frac{e^x}{x+1}.
+                </me>
+            </solution>
+        </example>
+
+        <example xml:id="ex-periodic-cell-growth">
+            <title>Cell division with a circadian rhythm</title>
+
+            <statement>
+                <p>
+                    Suppose the number of cells <m>N(t)</m> satisfies
+                </p>
+
+                <me>
+                    \frac{dN}{dt}
+                    =
+                    \frac{1}{2}
+                    \left(
+                    1+\sin(2\pi t)
+                    \right)N,
+                    \qquad
+                    N(0)=N_0.
+                </me>
+
+                <p>
+                    Find <m>N(t)</m>.
+                </p>
+            </statement>
+
+            <solution>
+                <p>
+                    Separate variables:
+                </p>
+
+                <me>
+                    \frac{1}{N}\,dN
+                    =
+                    \frac{1}{2}
+                    \left(
+                    1+\sin(2\pi t)
+                    \right)\,dt.
+                </me>
+
+                <p>
+                    Integrating,
+                </p>
+
+                <me>
+                    \ln|N|
+                    =
+                    \frac{t}{2}
+                    -
+                    \frac{1}{4\pi}\cos(2\pi t)
+                    +
+                    C.
+                </me>
+
+                <p>
+                    Therefore,
+                </p>
+
+                <me>
+                    N(t)
+                    =
+                    A
+                    \exp
+                    \left(
+                    \frac{t}{2}
+                    -
+                    \frac{1}{4\pi}\cos(2\pi t)
+                    \right).
+                </me>
+
+                <p>
+                    Applying <m>N(0)=N_0</m> gives
+                </p>
+
+                <me>
+                    A
+                    =
+                    N_0e^{1/(4\pi)}.
+                </me>
+
+                <p>
+                    Hence,
+                </p>
+
+                <me>
+                    N(t)
+                    =
+                    N_0
+                    \exp
+                    \left(
+                    \frac{t}{2}
+                    +
+                    \frac{1}{4\pi}
+                    \left(
+                    1-\cos(2\pi t)
+                    \right)
+                    \right).
+                </me>
+            </solution>
+        </example>
+
+    </section>
+
+    <section xml:id="sec-equilibria-stability">
+        <title>Equilibria and Stability</title>
+
+        <p>
+            For an autonomous differential equation
+        </p>
+
+        <me>
+            \frac{dy}{dt}=f(y),
+        </me>
+
+        <p>
+            an equilibrium is a state at which the solution does not change
+            with time.
+        </p>
+
+        <definition xml:id="def-equilibrium">
+            <title>Equilibrium</title>
+
+            <statement>
+                <p>
+                    A value <m>y^*</m> is an equilibrium if
+                </p>
+
+                <me>
+                    f(y^*)=0.
+                </me>
+
+                <p>
+                    The corresponding solution is constant:
+                </p>
+
+                <me>
+                    y(t)=y^*.
+                </me>
+            </statement>
+        </definition>
+
+        <example xml:id="ex-find-equilibria">
+            <title>Finding equilibria</title>
+
+            <statement>
+                <p>
+                    Find all equilibria of
+                </p>
+
+                <me>
+                    \frac{dy}{dt}
+                    =
+                    y^3-3y^2+2y.
+                </me>
+            </statement>
+
+            <solution>
+                <p>
+                    Set the right-hand side equal to zero:
+                </p>
+
+                <me>
+                    y^3-3y^2+2y=0.
+                </me>
+
+                <p>
+                    Factor:
+                </p>
+
+                <me>
+                    y(y-1)(y-2)=0.
+                </me>
+
+                <p>
+                    Therefore, the equilibria are
+                </p>
+
+                <me>
+                    y^*=0,
+                    \qquad
+                    y^*=1,
+                    \qquad
+                    y^*=2.
+                </me>
+            </solution>
+        </example>
+
+        <definition xml:id="def-stability">
+            <title>Stable and Unstable Equilibria</title>
+
+            <statement>
+                <p>
+                    An equilibrium is <term>stable</term> if nearby solutions
+                    move toward it.
+                </p>
+
+                <p>
+                    An equilibrium is <term>unstable</term> if nearby solutions
+                    move away from it.
+                </p>
+            </statement>
+        </definition>
+
+        <p>
+            Stability can often be determined without solving the differential
+            equation. We examine the sign of <m>f(y)</m>.
+        </p>
+
+        <ul>
+            <li>
+                <p>
+                    If <m>f(y)&gt;0</m>, then <m>dy/dt&gt;0</m>, so
+                    <m>y(t)</m> increases.
+                </p>
+            </li>
+            <li>
+                <p>
+                    If <m>f(y)&lt;0</m>, then <m>dy/dt&lt;0</m>, so
+                    <m>y(t)</m> decreases.
+                </p>
+            </li>
+        </ul>
+
+        <example xml:id="ex-logistic-stability">
+            <title>Stability in a bacterial population model</title>
+
+            <statement>
+                <p>
+                    Consider
+                </p>
+
+                <me>
+                    \frac{dN}{dt}=N(5-N).
+                </me>
+
+                <p>
+                    Find the equilibria and determine their stability.
+                </p>
+            </statement>
+
+            <solution>
+                <p>
+                    The equilibria satisfy
+                </p>
+
+                <me>
+                    N(5-N)=0.
+                </me>
+
+                <p>
+                    Hence,
+                </p>
+
+                <me>
+                    N^*=0
+                    \qquad\text{or}\qquad
+                    N^*=5.
+                </me>
+
+                <p>
+                    For <m>0&lt;N&lt;5</m>,
+                </p>
+
+                <me>
+                    \frac{dN}{dt}&gt;0,
+                </me>
+
+                <p>
+                    so solutions move to the right, toward <m>N=5</m>.
+                </p>
+
+                <p>
+                    For <m>N&gt;5</m>,
+                </p>
+
+                <me>
+                    \frac{dN}{dt}&lt;0,
+                </me>
+
+                <p>
+                    so solutions move to the left, again toward <m>N=5</m>.
+                </p>
+
+                <p>
+                    Thus, <m>N=5</m> is stable.
+                </p>
+
+                <p>
+                    Near <m>N=0</m>, solutions move away from zero, so
+                    <m>N=0</m> is unstable.
+                </p>
+            </solution>
+        </example>
+
+        <remark xml:id="rem-carrying-capacity">
+            <title>Carrying capacity</title>
+
+            <p>
+                In a population model, a stable positive equilibrium is often
+                interpreted as the carrying capacity of the environment.
+            </p>
+        </remark>
+
+        <example xml:id="ex-allee-effect">
+            <title>A model with an Allee threshold</title>
+
+            <statement>
+                <p>
+                    Consider
+                </p>
+
+                <me>
+                    \frac{dN}{dt}
+                    =
+                    N(N-1)
+                    \left(
+                    1-\frac{N}{3}
+                    \right).
+                </me>
+
+                <p>
+                    Find the equilibria and determine their stability.
+                </p>
+            </statement>
+
+            <solution>
+                <p>
+                    The equilibria satisfy
+                </p>
+
+                <me>
+                    N(N-1)
+                    \left(
+                    1-\frac{N}{3}
+                    \right)
+                    =
+                    0.
+                </me>
+
+                <p>
+                    Therefore,
+                </p>
+
+                <me>
+                    N^*=0,
+                    \qquad
+                    N^*=1,
+                    \qquad
+                    N^*=3.
+                </me>
+
+                <p>
+                    Examining the sign of the right-hand side on the intervals
+                    separated by these equilibria shows that
+                </p>
+
+                <ul>
+                    <li>
+                        <p><m>N=0</m> is stable,</p>
+                    </li>
+                    <li>
+                        <p><m>N=1</m> is unstable,</p>
+                    </li>
+                    <li>
+                        <p><m>N=3</m> is stable.</p>
+                    </li>
+                </ul>
+
+                <p>
+                    The unstable equilibrium <m>N=1</m> acts as a threshold:
+                    populations below it tend toward extinction, while
+                    populations above it tend toward the positive stable
+                    equilibrium.
+                </p>
+            </solution>
+        </example>
+
+    </section>
+
+    <section xml:id="sec-eigenvalue-method">
+        <title>The Derivative Test for Stability</title>
+
+        <p>
+            There is also a non-graphical way to determine the stability of
+            an equilibrium.
+        </p>
+
+        <p>
+            Suppose
+        </p>
+
+        <me>
+            \frac{dy}{dt}=f(y)
+        </me>
+
+        <p>
+            and <m>y^*</m> is an equilibrium, so <m>f(y^*)=0</m>.
+        </p>
+
+        <theorem xml:id="thm-stability-derivative">
+            <title>Derivative Test for Stability</title>
+
+            <statement>
+                <p>
+                    Let <m>y^*</m> be an equilibrium of
+                    <m>dy/dt=f(y)</m>.
+                </p>
+
+                <ul>
+                    <li>
+                        <p>
+                            If <m>f'(y^*)&lt;0</m>, then
+                            <m>y^*</m> is stable.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            If <m>f'(y^*)&gt;0</m>, then
+                            <m>y^*</m> is unstable.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            If <m>f'(y^*)=0</m>, the test is inconclusive.
+                        </p>
+                    </li>
+                </ul>
+            </statement>
+        </theorem>
+
+        <remark xml:id="rem-eigenvalue-name">
+            <title>Eigenvalue</title>
+
+            <p>
+                In this one-dimensional setting, the quantity
+                <m>f'(y^*)</m> is often referred to as the eigenvalue of the
+                equilibrium.
+            </p>
+        </remark>
+
+        <example xml:id="ex-eigenvalue-logistic">
+            <title>Using the derivative test</title>
+
+            <statement>
+                <p>
+                    Determine the stability of the equilibria of
+                </p>
+
+                <me>
+                    \frac{dN}{dt}
+                    =
+                    N(5-N).
+                </me>
+            </statement>
+
+            <solution>
+                <p>
+                    Let
+                </p>
+
+                <me>
+                    f(N)=N(5-N)=5N-N^2.
+                </me>
+
+                <p>
+                    Then
+                </p>
+
+                <me>
+                    f'(N)=5-2N.
+                </me>
+
+                <p>
+                    At <m>N=0</m>,
+                </p>
+
+                <me>
+                    f'(0)=5&gt;0,
+                </me>
+
+                <p>
+                    so <m>N=0</m> is unstable.
+                </p>
+
+                <p>
+                    At <m>N=5</m>,
+                </p>
+
+                <me>
+                    f'(5)=-5&lt;0,
+                </me>
+
+                <p>
+                    so <m>N=5</m> is stable.
+                </p>
+            </solution>
+        </example>
+
+    </section>
+
+    <section xml:id="sec-long-term-behavior">
+        <title>Long-Term Behavior</title>
+
+        <p>
+            Once the equilibria and their stability are known, we can often
+            determine the long-term behavior of a solution without explicitly
+            solving the differential equation.
+        </p>
+
+        <example xml:id="ex-long-term-logistic">
+            <title>Long-term behavior from stability</title>
+
+            <statement>
+                <p>
+                    Consider
+                </p>
+
+                <me>
+                    \frac{dN}{dt}=N(5-N).
+                </me>
+
+                <p>
+                    Determine the long-term behavior for several initial
+                    conditions.
+                </p>
+            </statement>
+
+            <solution>
+                <p>
+                    The equilibrium <m>N=5</m> is stable, while
+                    <m>N=0</m> is unstable.
+                </p>
+
+                <p>
+                    If
+                </p>
+
+                <me>
+                    0&lt;N(0)&lt;5,
+                </me>
+
+                <p>
+                    then the solution increases toward <m>5</m>, so
+                </p>
+
+                <me>
+                    \lim_{t\to\infty}N(t)=5.
+                </me>
+
+                <p>
+                    If
+                </p>
+
+                <me>
+                    N(0)&gt;5,
+                </me>
+
+                <p>
+                    then the solution decreases toward <m>5</m>, so again
+                </p>
+
+                <me>
+                    \lim_{t\to\infty}N(t)=5.
+                </me>
+
+                <p>
+                    If a mathematically possible initial condition satisfies
+                    <m>N(0)&lt;0</m>, the vector field points away from zero
+                    toward more negative values, so the solution does not
+                    approach the positive equilibrium.
+                </p>
+            </solution>
+        </example>
+
+    </section>
+
+    <section xml:id="sec-de-models">
+        <title>Applications of Differential Equations</title>
+
+        <p>
+            Differential equations provide models for many biological
+            processes. The main task is often to translate a verbal
+            description of rates into an equation and then interpret the
+            resulting solution.
+        </p>
+
+        <example xml:id="ex-fish-restocking">
+            <title>A fish population with restocking and mortality</title>
+
+            <statement>
+                <p>
+                    Let <m>P(t)</m> be the fish population in a pond.
+                    Suppose fish are added at a constant rate <m>r</m> and
+                    die at a rate proportional to the current population,
+                    with constant <m>k&gt;0</m>. Then
+                </p>
+
+                <me>
+                    \frac{dP}{dt}
+                    =
+                    r-kP,
+                    \qquad
+                    P(0)=0.
+                </me>
+
+                <p>
+                    Find <m>P(t)</m>.
+                </p>
+            </statement>
+
+            <solution>
+                <p>
+                    Separate variables:
+                </p>
+
+                <me>
+                    \frac{1}{r-kP}\,dP
+                    =
+                    dt.
+                </me>
+
+                <p>
+                    Integrating,
+                </p>
+
+                <me>
+                    -\frac{1}{k}\ln|r-kP|
+                    =
+                    t+C.
+                </me>
+
+                <p>
+                    Rearranging,
+                </p>
+
+                <me>
+                    \ln|r-kP|
+                    =
+                    -kt+C_1.
+                </me>
+
+                <p>
+                    Exponentiating and absorbing constants,
+                </p>
+
+                <me>
+                    r-kP
+                    =
+                    Ae^{-kt}.
+                </me>
+
+                <p>
+                    Thus,
+                </p>
+
+                <me>
+                    P(t)
+                    =
+                    \frac{1}{k}
+                    \left(
+                    r-Ae^{-kt}
+                    \right).
+                </me>
+
+                <p>
+                    Apply <m>P(0)=0</m>:
+                </p>
+
+                <me>
+                    0
+                    =
+                    \frac{1}{k}(r-A),
+                </me>
+
+                <p>
+                    so <m>A=r</m>. Therefore,
+                </p>
+
+                <me>
+                    P(t)
+                    =
+                    \frac{r}{k}
+                    \left(
+                    1-e^{-kt}
+                    \right).
+                </me>
+            </solution>
+        </example>
+
+    </section>
 
 </chapter>

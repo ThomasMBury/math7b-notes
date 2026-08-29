@@ -765,24 +765,1613 @@
         <title>Integration by Parts</title>
 
         <p>
-            This section will be developed in the next set of notes.
+            The substitution rule can be viewed as reversing the chain rule.
+            Integration by parts is based on reversing another differentiation
+            rule: the product rule.
         </p>
+
+        <p>
+            Recall that
+        </p>
+
+        <me>
+            \frac{d}{dx}\left(u(x)v(x)\right)
+            =
+            u'(x)v(x)+u(x)v'(x).
+        </me>
+
+        <p>
+            Integrating both sides with respect to <m>x</m> gives
+        </p>
+
+        <me>
+            uv
+            =
+            \int u'v\,dx
+            +
+            \int uv'\,dx.
+        </me>
+
+        <p>
+            Rearranging gives the integration-by-parts formula.
+        </p>
+
+        <theorem xml:id="thm-integration-by-parts">
+            <title>Integration by Parts</title>
+
+            <statement>
+                <me>
+                    \int uv'\,dx
+                    =
+                    uv-\int vu'\,dx.
+                </me>
+
+                <p>
+                    Equivalently, using differential notation,
+                </p>
+
+                <me>
+                    \int u\,dv
+                    =
+                    uv-\int v\,du.
+                </me>
+            </statement>
+        </theorem>
+
+        <p>
+            The goal is to transform the original integral into a new integral
+            that is easier to evaluate.
+        </p>
+
+        <example xml:id="ex-ibp-x-exp">
+            <title>A first integration-by-parts example</title>
+
+            <statement>
+                <p>
+                    Evaluate
+                </p>
+
+                <me>
+                    \int xe^x\,dx.
+                </me>
+            </statement>
+
+            <solution>
+                <p>
+                    Choose
+                </p>
+
+                <me>
+                    u=x,
+                    \qquad
+                    dv=e^x\,dx.
+                </me>
+
+                <p>
+                    Then
+                </p>
+
+                <me>
+                    du=dx,
+                    \qquad
+                    v=e^x.
+                </me>
+
+                <p>
+                    Applying integration by parts,
+                </p>
+
+                <me>
+                    \int xe^x\,dx
+                    =
+                    xe^x-\int e^x\,dx.
+                </me>
+
+                <p>
+                    Therefore,
+                </p>
+
+                <me>
+                    \int xe^x\,dx
+                    =
+                    xe^x-e^x+C.
+                </me>
+            </solution>
+        </example>
+
+        <remark xml:id="rem-ibp-choice">
+            <title>Choosing <m>u</m> and <m>dv</m></title>
+
+            <p>
+                We must choose <m>dv</m> so that we can find its
+                antiderivative <m>v</m>. We would also like the derivative
+                <m>du</m> to simplify the remaining integral.
+            </p>
+        </remark>
+
+        <p>
+            A poor choice can make the new integral harder than the original
+            one. For example, in <m>\int xe^x\,dx</m>, choosing
+            <m>u=e^x</m> and <m>dv=x\,dx</m> produces an integral involving
+            <m>x^2e^x</m>, which is more complicated than where we started.
+        </p>
+
+        <example xml:id="ex-ibp-repeated">
+            <title>Applying integration by parts twice</title>
+
+            <statement>
+                <p>
+                    Evaluate
+                </p>
+
+                <me>
+                    \int x^2\sin x\,dx.
+                </me>
+            </statement>
+
+            <solution>
+                <p>
+                    Choose
+                </p>
+
+                <me>
+                    u=x^2,
+                    \qquad
+                    dv=\sin x\,dx.
+                </me>
+
+                <p>
+                    Then
+                </p>
+
+                <me>
+                    du=2x\,dx,
+                    \qquad
+                    v=-\cos x.
+                </me>
+
+                <p>
+                    Integration by parts gives
+                </p>
+
+                <me>
+                    \int x^2\sin x\,dx
+                    =
+                    -x^2\cos x
+                    +
+                    2\int x\cos x\,dx.
+                </me>
+
+                <p>
+                    The remaining integral also requires integration by parts.
+                    Let
+                </p>
+
+                <me>
+                    u=x,
+                    \qquad
+                    dv=\cos x\,dx.
+                </me>
+
+                <p>
+                    Then
+                </p>
+
+                <me>
+                    du=dx,
+                    \qquad
+                    v=\sin x.
+                </me>
+
+                <p>
+                    Hence
+                </p>
+
+                <me>
+                    \int x\cos x\,dx
+                    =
+                    x\sin x-\int\sin x\,dx
+                    =
+                    x\sin x+\cos x.
+                </me>
+
+                <p>
+                    Substituting into the original expression,
+                </p>
+
+                <me>
+                    \int x^2\sin x\,dx
+                    =
+                    -x^2\cos x
+                    +
+                    2x\sin x
+                    +
+                    2\cos x
+                    +
+                    C.
+                </me>
+            </solution>
+        </example>
+
+        <remark xml:id="rem-check-ibp">
+            <title>Check by differentiating</title>
+
+            <p>
+                Integration-by-parts calculations can involve several steps.
+                Differentiating the final answer is a useful way to check that
+                it reproduces the original integrand.
+            </p>
+        </remark>
+
+        <example xml:id="ex-ibp-log">
+            <title>A clever use of integration by parts</title>
+
+            <statement>
+                <p>
+                    Evaluate
+                </p>
+
+                <me>
+                    \int\ln x\,dx.
+                </me>
+            </statement>
+
+            <solution>
+                <p>
+                    Although the integrand does not visibly contain a product,
+                    write
+                </p>
+
+                <me>
+                    \int\ln x\,dx
+                    =
+                    \int 1\cdot\ln x\,dx.
+                </me>
+
+                <p>
+                    Choose
+                </p>
+
+                <me>
+                    u=\ln x,
+                    \qquad
+                    dv=dx.
+                </me>
+
+                <p>
+                    Then
+                </p>
+
+                <me>
+                    du=\frac{1}{x}\,dx,
+                    \qquad
+                    v=x.
+                </me>
+
+                <p>
+                    Therefore,
+                </p>
+
+                <me>
+                    \int\ln x\,dx
+                    =
+                    x\ln x
+                    -
+                    \int x\frac{1}{x}\,dx
+                    =
+                    x\ln x-x+C.
+                </me>
+            </solution>
+        </example>
+
+        <subsection xml:id="subsec-ibp-definite">
+            <title>Integration by Parts for Definite Integrals</title>
+
+            <p>
+                With limits of integration, the integration-by-parts formula
+                becomes
+            </p>
+
+            <me>
+                \int_a^b uv'\,dx
+                =
+                [uv]_a^b
+                -
+                \int_a^b vu'\,dx.
+            </me>
+
+            <p>
+                The boundary term <m>[uv]_a^b</m> must be evaluated at both
+                endpoints.
+            </p>
+        </subsection>
+
+        <subsection xml:id="subsec-choosing-integration-method">
+            <title>Choosing an Integration Method</title>
+
+            <p>
+                Determining whether to use substitution or integration by
+                parts often requires practice. A useful question is whether
+                differentiating part of the integrand simplifies the problem,
+                or whether an inner function and its derivative are both
+                present.
+            </p>
+
+            <p>
+                For example, an integral of the form
+            </p>
+
+            <me>
+                \int xe^{x^2}\,dx
+            </me>
+
+            <p>
+                suggests substitution because the derivative of
+                <m>x^2</m> appears in the integrand. In contrast,
+            </p>
+
+            <me>
+                \int x e^{2x}\,dx
+            </me>
+
+            <p>
+                is naturally handled by integration by parts.
+            </p>
+
+            <remark xml:id="rem-liate">
+                <title>A rule of thumb for choosing <m>u</m></title>
+
+                <p>
+                    A common mnemonic is LIATE. When possible, choose
+                    <m>u</m> from the first applicable category in the
+                    following order:
+                </p>
+
+                <ol>
+                    <li>
+                        <p>Logarithmic functions,</p>
+                    </li>
+                    <li>
+                        <p>Inverse trigonometric functions,</p>
+                    </li>
+                    <li>
+                        <p>Algebraic functions,</p>
+                    </li>
+                    <li>
+                        <p>Trigonometric functions,</p>
+                    </li>
+                    <li>
+                        <p>Exponential functions.</p>
+                    </li>
+                </ol>
+
+                <p>
+                    This is a useful guideline rather than a mathematical rule.
+                </p>
+            </remark>
+        </subsection>
+
+        <subsection xml:id="subsec-combining-methods">
+            <title>Combining Substitution and Integration by Parts</title>
+
+            <p>
+                Some integrals require more than one technique.
+            </p>
+
+            <example xml:id="ex-substitution-and-ibp">
+                <title>Using substitution and integration by parts together</title>
+
+                <statement>
+                    <p>
+                        Evaluate
+                    </p>
+
+                    <me>
+                        \int x^3e^{x^2}\,dx.
+                    </me>
+                </statement>
+
+                <solution>
+                    <p>
+                        The expression <m>x^2</m> inside the exponential
+                        suggests beginning with a substitution. Let
+                    </p>
+
+                    <me>
+                        w=x^2.
+                    </me>
+
+                    <p>
+                        Then
+                    </p>
+
+                    <me>
+                        dw=2x\,dx,
+                    </me>
+
+                    <p>
+                        so
+                    </p>
+
+                    <me>
+                        x\,dx=\frac{1}{2}\,dw.
+                    </me>
+
+                    <p>
+                        Since <m>x^2=w</m>,
+                    </p>
+
+                    <me>
+                        \int x^3e^{x^2}\,dx
+                        =
+                        \frac{1}{2}
+                        \int we^w\,dw.
+                    </me>
+
+                    <p>
+                        Now apply integration by parts to
+                        <m>\int we^w\,dw</m>. Choose
+                    </p>
+
+                    <me>
+                        u=w,
+                        \qquad
+                        dv=e^w\,dw.
+                    </me>
+
+                    <p>
+                        Then
+                    </p>
+
+                    <me>
+                        du=dw,
+                        \qquad
+                        v=e^w.
+                    </me>
+
+                    <p>
+                        Hence
+                    </p>
+
+                    <me>
+                        \int we^w\,dw
+                        =
+                        we^w-e^w+C.
+                    </me>
+
+                    <p>
+                        Therefore,
+                    </p>
+
+                    <me>
+                        \int x^3e^{x^2}\,dx
+                        =
+                        \frac{1}{2}
+                        \left(
+                        x^2e^{x^2}-e^{x^2}
+                        \right)
+                        +C.
+                    </me>
+
+                    <p>
+                        Factoring gives
+                    </p>
+
+                    <me>
+                        \int x^3e^{x^2}\,dx
+                        =
+                        \frac{1}{2}
+                        e^{x^2}(x^2-1)+C.
+                    </me>
+                </solution>
+            </example>
+        </subsection>
+
     </section>
 
     <section xml:id="sec-partial-fractions">
-        <title>Partial Fractions</title>
+        <title>Rational Functions and Partial Fractions</title>
 
         <p>
-            This section will be developed in the next set of notes.
+            Some rational functions are difficult to integrate directly but
+            can be rewritten as sums of simpler rational functions.
         </p>
+
+        <definition xml:id="def-rational-function">
+            <title>Rational Function</title>
+
+            <statement>
+                <p>
+                    A rational function is a quotient of two polynomials:
+                </p>
+
+                <me>
+                    f(x)=\frac{P(x)}{Q(x)}.
+                </me>
+            </statement>
+        </definition>
+
+        <definition xml:id="def-proper-rational-function">
+            <title>Proper Rational Function</title>
+
+            <statement>
+                <p>
+                    A rational function
+                </p>
+
+                <me>
+                    \frac{P(x)}{Q(x)}
+                </me>
+
+                <p>
+                    is proper if the degree of <m>P</m> is less than the
+                    degree of <m>Q</m>.
+                </p>
+            </statement>
+        </definition>
+
+        <remark xml:id="rem-partial-fractions-proper">
+            <title>First check whether the rational function is proper</title>
+
+            <p>
+                Partial-fraction decomposition is applied to proper rational
+                functions. If the numerator has degree greater than or equal
+                to the denominator, first use polynomial long division.
+            </p>
+        </remark>
+
+        <example xml:id="ex-long-division-rational">
+            <title>Long division before integration</title>
+
+            <statement>
+                <p>
+                    Rewrite
+                </p>
+
+                <me>
+                    \frac{3x^3+8x^2-x+7}{x+3}
+                </me>
+
+                <p>
+                    as a polynomial plus a proper rational function.
+                </p>
+            </statement>
+
+            <solution>
+                <p>
+                    Polynomial long division gives
+                </p>
+
+                <me>
+                    \frac{3x^3+8x^2-x+7}{x+3}
+                    =
+                    3x^2-x+2+\frac{1}{x+3}.
+                </me>
+
+                <p>
+                    The remaining rational term is now proper.
+                </p>
+            </solution>
+        </example>
+
+        <subsection xml:id="subsec-distinct-linear-factors">
+            <title>Distinct Linear Factors</title>
+
+            <p>
+                Suppose the denominator factors into distinct linear factors.
+                We assign one constant numerator to each factor.
+            </p>
+
+            <example xml:id="ex-pf-basic">
+                <title>A basic partial-fraction decomposition</title>
+
+                <statement>
+                    <p>
+                        Decompose
+                    </p>
+
+                    <me>
+                        \frac{1}{x(x-1)}.
+                    </me>
+                </statement>
+
+                <solution>
+                    <p>
+                        Write
+                    </p>
+
+                    <me>
+                        \frac{1}{x(x-1)}
+                        =
+                        \frac{A}{x}
+                        +
+                        \frac{B}{x-1}.
+                    </me>
+
+                    <p>
+                        Multiply through by <m>x(x-1)</m>:
+                    </p>
+
+                    <me>
+                        1=A(x-1)+Bx.
+                    </me>
+
+                    <p>
+                        Expanding,
+                    </p>
+
+                    <me>
+                        1=(A+B)x-A.
+                    </me>
+
+                    <p>
+                        Matching coefficients gives
+                    </p>
+
+                    <me>
+                        A+B=0,
+                        \qquad
+                        -A=1.
+                    </me>
+
+                    <p>
+                        Thus
+                    </p>
+
+                    <me>
+                        A=-1,
+                        \qquad
+                        B=1.
+                    </me>
+
+                    <p>
+                        Therefore,
+                    </p>
+
+                    <me>
+                        \frac{1}{x(x-1)}
+                        =
+                        -\frac{1}{x}
+                        +
+                        \frac{1}{x-1}.
+                    </me>
+                </solution>
+            </example>
+
+            <p>
+                Once the decomposition is known, integration becomes
+                straightforward:
+            </p>
+
+            <me>
+                \int\frac{1}{x(x-1)}\,dx
+                =
+                \ln|x-1|-\ln|x|+C.
+            </me>
+
+            <example xml:id="ex-pf-two-linear">
+                <title>Two distinct linear factors</title>
+
+                <statement>
+                    <p>
+                        Decompose
+                    </p>
+
+                    <me>
+                        \frac{2x+1}{(x-1)(x+3)}.
+                    </me>
+                </statement>
+
+                <solution>
+                    <p>
+                        Write
+                    </p>
+
+                    <me>
+                        \frac{2x+1}{(x-1)(x+3)}
+                        =
+                        \frac{A}{x-1}
+                        +
+                        \frac{B}{x+3}.
+                    </me>
+
+                    <p>
+                        Multiplying by <m>(x-1)(x+3)</m> gives
+                    </p>
+
+                    <me>
+                        2x+1
+                        =
+                        A(x+3)+B(x-1).
+                    </me>
+
+                    <p>
+                        One method is to compare coefficients. Expanding gives
+                    </p>
+
+                    <me>
+                        2x+1
+                        =
+                        (A+B)x+(3A-B).
+                    </me>
+
+                    <p>
+                        Hence
+                    </p>
+
+                    <me>
+                        A+B=2,
+                        \qquad
+                        3A-B=1.
+                    </me>
+
+                    <p>
+                        Solving,
+                    </p>
+
+                    <me>
+                        A=\frac{3}{4},
+                        \qquad
+                        B=\frac{5}{4}.
+                    </me>
+
+                    <p>
+                        Therefore,
+                    </p>
+
+                    <me>
+                        \frac{2x+1}{(x-1)(x+3)}
+                        =
+                        \frac{3}{4(x-1)}
+                        +
+                        \frac{5}{4(x+3)}.
+                    </me>
+                </solution>
+            </example>
+
+            <remark xml:id="rem-pf-strategic-values">
+                <title>Strategic values of <m>x</m></title>
+
+                <p>
+                    Instead of comparing coefficients, it is often faster to
+                    substitute values of <m>x</m> that make individual
+                    factors vanish. For the previous example,
+                    <m>x=1</m> isolates <m>A</m>, while
+                    <m>x=-3</m> isolates <m>B</m>.
+                </p>
+            </remark>
+        </subsection>
+
+        <subsection xml:id="subsec-repeated-linear-factors">
+            <title>Repeated Linear Factors</title>
+
+            <p>
+                If a linear factor is repeated, the decomposition must contain
+                a term for every power of that factor.
+            </p>
+
+            <p>
+                For example, a denominator containing
+                <m>(x+b)^n</m> requires terms of the form
+            </p>
+
+            <me>
+                \frac{A_1}{x+b}
+                +
+                \frac{A_2}{(x+b)^2}
+                +
+                \cdots
+                +
+                \frac{A_n}{(x+b)^n}.
+            </me>
+
+            <example xml:id="ex-pf-repeated">
+                <title>A repeated linear factor</title>
+
+                <statement>
+                    <p>
+                        Evaluate
+                    </p>
+
+                    <me>
+                        \int\frac{x}{(x+1)^2}\,dx.
+                    </me>
+                </statement>
+
+                <solution>
+                    <p>
+                        Write
+                    </p>
+
+                    <me>
+                        \frac{x}{(x+1)^2}
+                        =
+                        \frac{A}{x+1}
+                        +
+                        \frac{B}{(x+1)^2}.
+                    </me>
+
+                    <p>
+                        Multiplying by <m>(x+1)^2</m> gives
+                    </p>
+
+                    <me>
+                        x=A(x+1)+B.
+                    </me>
+
+                    <p>
+                        Comparing coefficients gives
+                    </p>
+
+                    <me>
+                        A=1,
+                        \qquad
+                        B=-1.
+                    </me>
+
+                    <p>
+                        Thus
+                    </p>
+
+                    <me>
+                        \frac{x}{(x+1)^2}
+                        =
+                        \frac{1}{x+1}
+                        -
+                        \frac{1}{(x+1)^2}.
+                    </me>
+
+                    <p>
+                        Therefore,
+                    </p>
+
+                    <me>
+                        \int\frac{x}{(x+1)^2}\,dx
+                        =
+                        \ln|x+1|
+                        +
+                        \frac{1}{x+1}
+                        +
+                        C.
+                    </me>
+                </solution>
+            </example>
+        </subsection>
+
+        <subsection xml:id="subsec-irreducible-quadratics">
+            <title>Irreducible Quadratic Factors</title>
+
+            <p>
+                A quadratic factor that has no real roots cannot be factored
+                into real linear factors. Such a factor is called
+                irreducible over the real numbers.
+            </p>
+
+            <p>
+                For an irreducible quadratic factor, the corresponding
+                numerator in a partial-fraction decomposition is linear.
+                For example,
+            </p>
+
+            <me>
+                \frac{Ax+B}{x^2+1}.
+            </me>
+
+            <example xml:id="ex-irreducible-quadratic">
+                <title>An integral with an irreducible quadratic</title>
+
+                <statement>
+                    <p>
+                        Consider
+                    </p>
+
+                    <me>
+                        \int\frac{x+2}{x^2+1}\,dx.
+                    </me>
+                </statement>
+
+                <solution>
+                    <p>
+                        Split the integral:
+                    </p>
+
+                    <me>
+                        \int\frac{x+2}{x^2+1}\,dx
+                        =
+                        \int\frac{x}{x^2+1}\,dx
+                        +
+                        2\int\frac{1}{x^2+1}\,dx.
+                    </me>
+
+                    <p>
+                        The first integral can be evaluated by substitution
+                        with <m>u=x^2+1</m>. The second involves the standard
+                        antiderivative associated with the inverse tangent
+                        function.
+                    </p>
+                </solution>
+            </example>
+        </subsection>
+
     </section>
 
     <section xml:id="sec-improper-integrals">
         <title>Improper Integrals</title>
 
         <p>
-            This section will be developed in the next set of notes.
+            So far, our definite integrals have involved finite intervals and
+            bounded integrands. We now consider integrals for which one of
+            these conditions fails.
         </p>
+
+        <p>
+            There are two common types:
+        </p>
+
+        <ol>
+            <li>
+                <p>
+                    one or both limits of integration are infinite;
+                </p>
+            </li>
+            <li>
+                <p>
+                    the integrand becomes unbounded at a point in the interval
+                    of integration.
+                </p>
+            </li>
+        </ol>
+
+        <p>
+            Such integrals are defined using limits.
+        </p>
+
+        <subsection xml:id="subsec-unbounded-intervals">
+            <title>Type I: Unbounded Intervals</title>
+
+            <definition xml:id="def-improper-infinite-upper">
+                <title>Improper Integral on an Unbounded Interval</title>
+
+                <statement>
+                    <p>
+                        We define
+                    </p>
+
+                    <me>
+                        \int_a^\infty f(x)\,dx
+                        =
+                        \lim_{b\to\infty}
+                        \int_a^b f(x)\,dx,
+                    </me>
+
+                    <p>
+                        provided the limit exists and is finite.
+                    </p>
+                </statement>
+            </definition>
+
+            <example xml:id="ex-improper-exp">
+                <title>A convergent improper integral</title>
+
+                <statement>
+                    <p>
+                        Evaluate
+                    </p>
+
+                    <me>
+                        \int_0^\infty e^{-x}\,dx.
+                    </me>
+                </statement>
+
+                <solution>
+                    <p>
+                        Replace the infinite endpoint by a finite value
+                        <m>b</m> and take a limit:
+                    </p>
+
+                    <me>
+                        \int_0^\infty e^{-x}\,dx
+                        =
+                        \lim_{b\to\infty}
+                        \int_0^b e^{-x}\,dx.
+                    </me>
+
+                    <p>
+                        The proper integral is
+                    </p>
+
+                    <me>
+                        \int_0^b e^{-x}\,dx
+                        =
+                        [-e^{-x}]_0^b
+                        =
+                        1-e^{-b}.
+                    </me>
+
+                    <p>
+                        Therefore,
+                    </p>
+
+                    <me>
+                        \int_0^\infty e^{-x}\,dx
+                        =
+                        \lim_{b\to\infty}
+                        (1-e^{-b})
+                        =
+                        1.
+                    </me>
+                </solution>
+            </example>
+
+            <definition xml:id="def-improper-convergence">
+                <title>Convergence and Divergence</title>
+
+                <statement>
+                    <p>
+                        An improper integral <term>converges</term> if the
+                        defining limit exists and is finite. Otherwise, the
+                        improper integral <term>diverges</term>.
+                    </p>
+                </statement>
+            </definition>
+
+            <example xml:id="ex-improper-one-over-x">
+                <title>A divergent improper integral</title>
+
+                <statement>
+                    <p>
+                        Determine whether
+                    </p>
+
+                    <me>
+                        \int_1^\infty\frac{1}{x}\,dx
+                    </me>
+
+                    <p>
+                        converges or diverges.
+                    </p>
+                </statement>
+
+                <solution>
+                    <me>
+                        \int_1^\infty\frac{1}{x}\,dx
+                        =
+                        \lim_{b\to\infty}
+                        \int_1^b\frac{1}{x}\,dx.
+                    </me>
+
+                    <p>
+                        Thus,
+                    </p>
+
+                    <me>
+                        \int_1^\infty\frac{1}{x}\,dx
+                        =
+                        \lim_{b\to\infty}
+                        [\ln x]_1^b
+                        =
+                        \lim_{b\to\infty}\ln b.
+                    </me>
+
+                    <p>
+                        This limit is infinite, so the improper integral
+                        diverges.
+                    </p>
+                </solution>
+            </example>
+
+            <p>
+                An integral over the entire real line must be split at a
+                finite point:
+            </p>
+
+            <me>
+                \int_{-\infty}^{\infty}f(x)\,dx
+                =
+                \int_{-\infty}^{c}f(x)\,dx
+                +
+                \int_c^\infty f(x)\,dx.
+            </me>
+
+            <p>
+                Both improper integrals must converge.
+            </p>
+
+            <example xml:id="ex-improper-both-infinite">
+                <title>Both limits unbounded</title>
+
+                <statement>
+                    <p>
+                        Evaluate
+                    </p>
+
+                    <me>
+                        \int_{-\infty}^{\infty}
+                        xe^{-x^2}\,dx.
+                    </me>
+                </statement>
+
+                <solution>
+                    <p>
+                        Split the integral at <m>0</m>:
+                    </p>
+
+                    <me>
+                        \int_{-\infty}^{\infty}
+                        xe^{-x^2}\,dx
+                        =
+                        \int_{-\infty}^{0}
+                        xe^{-x^2}\,dx
+                        +
+                        \int_0^\infty
+                        xe^{-x^2}\,dx.
+                    </me>
+
+                    <p>
+                        Using the substitution <m>u=x^2</m>, the two
+                        integrals evaluate to
+                    </p>
+
+                    <me>
+                        -\frac{1}{2}
+                        \qquad\text{and}\qquad
+                        \frac{1}{2},
+                    </me>
+
+                    <p>
+                        respectively. Therefore,
+                    </p>
+
+                    <me>
+                        \int_{-\infty}^{\infty}
+                        xe^{-x^2}\,dx
+                        =
+                        0.
+                    </me>
+
+                    <p>
+                        This result is also consistent with the fact that
+                        <m>xe^{-x^2}</m> is an odd function.
+                    </p>
+                </solution>
+            </example>
+        </subsection>
+
+        <subsection xml:id="subsec-unbounded-integrands">
+            <title>Type II: Unbounded Integrands</title>
+
+            <p>
+                An integral can also be improper when the interval is finite
+                but the integrand becomes unbounded at one of its endpoints
+                or at an interior point.
+            </p>
+
+            <example xml:id="ex-improper-sqrt">
+                <title>An unbounded integrand that converges</title>
+
+                <statement>
+                    <p>
+                        Determine whether
+                    </p>
+
+                    <me>
+                        \int_0^1\frac{1}{\sqrt{x}}\,dx
+                    </me>
+
+                    <p>
+                        converges or diverges.
+                    </p>
+                </statement>
+
+                <solution>
+                    <p>
+                        The integrand becomes unbounded as
+                        <m>x\to 0^+</m>. Define the integral by
+                    </p>
+
+                    <me>
+                        \int_0^1\frac{1}{\sqrt{x}}\,dx
+                        =
+                        \lim_{a\to 0^+}
+                        \int_a^1 x^{-1/2}\,dx.
+                    </me>
+
+                    <p>
+                        Evaluating the proper integral,
+                    </p>
+
+                    <me>
+                        \int_a^1 x^{-1/2}\,dx
+                        =
+                        [2\sqrt{x}]_a^1
+                        =
+                        2(1-\sqrt{a}).
+                    </me>
+
+                    <p>
+                        Therefore,
+                    </p>
+
+                    <me>
+                        \int_0^1\frac{1}{\sqrt{x}}\,dx
+                        =
+                        \lim_{a\to0^+}
+                        2(1-\sqrt{a})
+                        =
+                        2.
+                    </me>
+
+                    <p>
+                        The integral converges.
+                    </p>
+                </solution>
+            </example>
+
+            <example xml:id="ex-improper-right-endpoint">
+                <title>An unbounded integrand that diverges</title>
+
+                <statement>
+                    <p>
+                        Determine whether
+                    </p>
+
+                    <me>
+                        \int_0^1\frac{1}{1-x}\,dx
+                    </me>
+
+                    <p>
+                        converges or diverges.
+                    </p>
+                </statement>
+
+                <solution>
+                    <p>
+                        The integrand becomes unbounded as
+                        <m>x\to1^-</m>. Therefore,
+                    </p>
+
+                    <me>
+                        \int_0^1\frac{1}{1-x}\,dx
+                        =
+                        \lim_{b\to1^-}
+                        \int_0^b\frac{1}{1-x}\,dx.
+                    </me>
+
+                    <p>
+                        Since
+                    </p>
+
+                    <me>
+                        \int\frac{1}{1-x}\,dx
+                        =
+                        -\ln|1-x|+C,
+                    </me>
+
+                    <p>
+                        we obtain
+                    </p>
+
+                    <me>
+                        \lim_{b\to1^-}
+                        \left(
+                        -\ln(1-b)
+                        \right).
+                    </me>
+
+                    <p>
+                        This tends to infinity, so the improper integral
+                        diverges.
+                    </p>
+                </solution>
+            </example>
+
+
+
+        </subsection>
+
+        <subsection xml:id="subsec-interior-singularities">
+            <title>Interior Singularities</title>
+
+            <p>
+                An integrand may also become unbounded at a point inside the
+                interval of integration. In this case, we split the integral
+                at the point where the integrand becomes unbounded.
+            </p>
+
+            <example xml:id="ex-improper-interior-singularity">
+                <title>An unbounded integrand inside the interval</title>
+
+                <statement>
+                    <p>
+                        Determine whether
+                    </p>
+
+                    <me>
+                        \int_{-1}^{1}\frac{1}{x^2}\,dx
+                    </me>
+
+                    <p>
+                        converges or diverges.
+                    </p>
+                </statement>
+
+                <solution>
+                    <p>
+                        The integrand becomes unbounded at <m>x=0</m>, so we
+                        split the integral:
+                    </p>
+
+                    <me>
+                        \int_{-1}^{1}\frac{1}{x^2}\,dx
+                        =
+                        \int_{-1}^{0}\frac{1}{x^2}\,dx
+                        +
+                        \int_{0}^{1}\frac{1}{x^2}\,dx.
+                    </me>
+
+                    <p>
+                        Consider the first integral:
+                    </p>
+
+                    <me>
+                        \int_{-1}^{0}\frac{1}{x^2}\,dx
+                        =
+                        \lim_{a\to0^-}
+                        \int_{-1}^{a}x^{-2}\,dx.
+                    </me>
+
+                    <p>
+                        Therefore,
+                    </p>
+
+                    <me>
+                        \int_{-1}^{0}\frac{1}{x^2}\,dx
+                        =
+                        \lim_{a\to0^-}
+                        \left[
+                        -\frac{1}{x}
+                        \right]_{-1}^{a}
+                        =
+                        \lim_{a\to0^-}
+                        \left(
+                        -\frac{1}{a}-1
+                        \right)
+                        =
+                        \infty.
+                    </me>
+
+                    <p>
+                        Since one of the two improper integrals diverges, the
+                        original integral diverges. We do not need to evaluate
+                        the second integral.
+                    </p>
+                </solution>
+            </example>
+
+            <remark xml:id="rem-improper-split">
+                <title>Every improper piece must converge</title>
+
+                <p>
+                    When an improper integral must be split into several
+                    integrals, every piece must converge for the original
+                    integral to converge. If even one piece diverges, the
+                    entire integral diverges.
+                </p>
+            </remark>
+        </subsection>
+
+        <subsection xml:id="subsec-comparison-improper">
+            <title>Testing Convergence by Comparison</title>
+
+            <p>
+                Some improper integrals are difficult or impossible to
+                evaluate directly. We can sometimes determine whether they
+                converge by comparing them with an integral whose behavior
+                we already know.
+            </p>
+
+            <theorem xml:id="thm-comparison-improper">
+                <title>Comparison Test</title>
+
+                <statement>
+                    <p>
+                        Suppose
+                    </p>
+
+                    <me>
+                        0\leq f(x)\leq g(x).
+                    </me>
+
+                    <p>
+                        If
+                    </p>
+
+                    <me>
+                        \int_a^\infty g(x)\,dx
+                    </me>
+
+                    <p>
+                        converges, then
+                    </p>
+
+                    <me>
+                        \int_a^\infty f(x)\,dx
+                    </me>
+
+                    <p>
+                        also converges.
+                    </p>
+
+                    <p>
+                        Conversely, if
+                    </p>
+
+                    <me>
+                        0\leq g(x)\leq f(x)
+                    </me>
+
+                    <p>
+                        and
+                    </p>
+
+                    <me>
+                        \int_a^\infty g(x)\,dx
+                    </me>
+
+                    <p>
+                        diverges, then
+                    </p>
+
+                    <me>
+                        \int_a^\infty f(x)\,dx
+                    </me>
+
+                    <p>
+                        also diverges.
+                    </p>
+                </statement>
+            </theorem>
+
+            <example xml:id="ex-comparison-gaussian">
+                <title>Showing convergence by comparison</title>
+
+                <statement>
+                    <p>
+                        Determine whether
+                    </p>
+
+                    <me>
+                        \int_1^\infty e^{-x^2}\,dx
+                    </me>
+
+                    <p>
+                        converges.
+                    </p>
+                </statement>
+
+                <solution>
+                    <p>
+                        For <m>x&gt;1</m>,
+                    </p>
+
+                    <me>
+                        x^2&gt;x.
+                    </me>
+
+                    <p>
+                        Therefore,
+                    </p>
+
+                    <me>
+                        e^{x^2}&gt;e^x,
+                    </me>
+
+                    <p>
+                        and taking reciprocals gives
+                    </p>
+
+                    <me>
+                        0&lt;e^{-x^2}&lt;e^{-x}.
+                    </me>
+
+                    <p>
+                        We already know that
+                    </p>
+
+                    <me>
+                        \int_1^\infty e^{-x}\,dx
+                    </me>
+
+                    <p>
+                        converges. Therefore, by comparison,
+                    </p>
+
+                    <me>
+                        \int_1^\infty e^{-x^2}\,dx
+                    </me>
+
+                    <p>
+                        also converges.
+                    </p>
+                </solution>
+            </example>
+
+            <example xml:id="ex-comparison-divergence">
+                <title>Showing divergence by comparison</title>
+
+                <statement>
+                    <p>
+                        Show that
+                    </p>
+
+                    <me>
+                        \int_1^\infty
+                        \frac{1}{\sqrt{x+\sqrt{x}}}\,dx
+                    </me>
+
+                    <p>
+                        diverges.
+                    </p>
+                </statement>
+
+                <solution>
+                    <p>
+                        For <m>x\geq1</m>, we have
+                    </p>
+
+                    <me>
+                        \sqrt{x}\leq x,
+                    </me>
+
+                    <p>
+                        so
+                    </p>
+
+                    <me>
+                        x+\sqrt{x}\leq2x.
+                    </me>
+
+                    <p>
+                        Therefore,
+                    </p>
+
+                    <me>
+                        \frac{1}{\sqrt{x+\sqrt{x}}}
+                        \geq
+                        \frac{1}{\sqrt{2x}}.
+                    </me>
+
+                    <p>
+                        But
+                    </p>
+
+                    <me>
+                        \int_1^\infty
+                        \frac{1}{\sqrt{2x}}\,dx
+                        =
+                        \frac{1}{\sqrt{2}}
+                        \int_1^\infty x^{-1/2}\,dx
+                    </me>
+
+                    <p>
+                        diverges. Hence, by comparison,
+                    </p>
+
+                    <me>
+                        \int_1^\infty
+                        \frac{1}{\sqrt{x+\sqrt{x}}}\,dx
+                    </me>
+
+                    <p>
+                        also diverges.
+                    </p>
+                </solution>
+            </example>
+
+        </subsection>
+
+
     </section>
+
 
 </chapter>
