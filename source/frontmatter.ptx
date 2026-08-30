@@ -37,4 +37,25 @@
     <colophon-items />
   </colophon>
 
+  <preface xml:id="preface">
+    <title>Preface</title>
+
+    <p>
+      Hi! You've arrived at the course notes for Thomas Bury's section of
+      MATH 007B, Calculus for Life Sciences II, at the University of
+      California, Riverside.
+    </p>
+
+    <p>
+      These notes assume familiarity with the material from MATH 007A, including
+      limits, derivatives, and their basic applications. They are intended to
+      supplement, not replace, lectures and discussion sections.
+    </p>
+
+    <p>
+      The backmatter includes a formula sheet listing the equations provided during
+      exams, as well as a set of practice exam questions to help with exam preparation.
+    </p>
+  </preface>
+
 </frontmatter>
