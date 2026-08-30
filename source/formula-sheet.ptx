@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<appendix xml:id="formula-sheet">
+
+    <title>Formula Sheet</title>
+
+    <introduction>
+        <p>
+            The following sections provide the equations and formulas
+            that are included on the formula sheet provided during Math 007B exams.
+        </p>
+    </introduction>
+
+    <section xml:id="formula-basic-derivatives">
+        <title>Basic Derivatives</title>
+
+        <md>
+            <mrow>
+                \frac{d}{dx}(x^n) &amp;= nx^{n-1},
+                &amp;
+                \frac{d}{dx}(e^x) &amp;= e^x,
+            </mrow>
+            <mrow>
+                \frac{d}{dx}(a^x) &amp;= a^x\ln a,
+                &amp;
+                \frac{d}{dx}(\ln x) &amp;= \frac{1}{x},
+            </mrow>
+            <mrow>
+                \frac{d}{dx}(\sin x) &amp;= \cos x,
+                &amp;
+                \frac{d}{dx}(\cos x) &amp;= -\sin x,
+            </mrow>
+            <mrow>
+                \frac{d}{dx}(\tan x) &amp;= \sec^2 x,
+                &amp;
+                \frac{d}{dx}(\sec x) &amp;= \sec x\tan x.
+            </mrow>
+        </md>
+    </section>
+
+    <section xml:id="formula-trig-values">
+        <title>Trigonometric Values in Radians</title>
+
+        <table>
+            <title>Common Sine and Cosine Values</title>
+            <tabular>
+                <row header="yes">
+                    <cell>
+                        <m>x</m>
+                    </cell>
+                    <cell>
+                        <m>\sin x</m>
+                    </cell>
+                    <cell>
+                        <m>\cos x</m>
+                    </cell>
+                </row>
+                <row>
+                    <cell>
+                        <m>0</m>
+                    </cell>
+                    <cell>
+                        <m>0</m>
+                    </cell>
+                    <cell>
+                        <m>1</m>
+                    </cell>
+                </row>
+                <row>
+                    <cell>
+                        <m>\pi/6</m>
+                    </cell>
+                    <cell>
+                        <m>1/2</m>
+                    </cell>
+                    <cell>
+                        <m>\sqrt{3}/2</m>
+                    </cell>
+                </row>
+                <row>
+                    <cell>
+                        <m>\pi/4</m>
+                    </cell>
+                    <cell>
+                        <m>1/\sqrt{2}</m>
+                    </cell>
+                    <cell>
+                        <m>1/\sqrt{2}</m>
+                    </cell>
+                </row>
+                <row>
+                    <cell>
+                        <m>\pi/3</m>
+                    </cell>
+                    <cell>
+                        <m>\sqrt{3}/2</m>
+                    </cell>
+                    <cell>
+                        <m>1/2</m>
+                    </cell>
+                </row>
+                <row>
+                    <cell>
+                        <m>\pi/2</m>
+                    </cell>
+                    <cell>
+                        <m>1</m>
+                    </cell>
+                    <cell>
+                        <m>0</m>
+                    </cell>
+                </row>
+                <row>
+                    <cell>
+                        <m>\pi</m>
+                    </cell>
+                    <cell>
+                        <m>0</m>
+                    </cell>
+                    <cell>
+                        <m>-1</m>
+                    </cell>
+                </row>
+                <row>
+                    <cell>
+                        <m>3\pi/2</m>
+                    </cell>
+                    <cell>
+                        <m>-1</m>
+                    </cell>
+                    <cell>
+                        <m>0</m>
+                    </cell>
+                </row>
+            </tabular>
+        </table>
+    </section>
+
+    <section xml:id="formula-trig-identities">
+        <title>Trigonometric Identities</title>
+
+        <md>
+            <mrow>
+                \sin^2 x+\cos^2 x &amp;= 1,
+            </mrow>
+            <mrow>
+                1+\tan^2 x &amp;= \sec^2 x,
+            </mrow>
+            <mrow>
+                1+\cot^2 x &amp;= \csc^2 x.
+            </mrow>
+        </md>
+
+        <md>
+            <mrow>
+                \tan x &amp;= \frac{\sin x}{\cos x},
+                &amp;
+                \sec x &amp;= \frac{1}{\cos x},
+            </mrow>
+            <mrow>
+                \csc x &amp;= \frac{1}{\sin x},
+                &amp;
+                \cot x &amp;= \frac{1}{\tan x}.
+            </mrow>
+        </md>
+    </section>
+
+    <section xml:id="formula-double-angle">
+        <title>Double-Angle Formulas and Variants</title>
+
+        <md>
+            <mrow>
+                \sin(2x) &amp;= 2\sin x\cos x,
+            </mrow>
+            <mrow>
+                \cos(2x) &amp;= \cos^2x-\sin^2x,
+            </mrow>
+            <mrow>
+                \cos^2x &amp;= \frac{1}{2}(1+\cos(2x)),
+            </mrow>
+            <mrow>
+                \sin^2x &amp;= \frac{1}{2}(1-\cos(2x)).
+            </mrow>
+        </md>
+    </section>
+
+    <section xml:id="formula-exponent-rules">
+        <title>Exponent Rules</title>
+
+        <md>
+            <mrow>
+                a^m a^n &amp;= a^{m+n},
+            </mrow>
+            <mrow>
+                \frac{a^m}{a^n} &amp;= a^{m-n},
+            </mrow>
+            <mrow>
+                (a^m)^n &amp;= a^{mn}.
+            </mrow>
+        </md>
+    </section>
+
+    <section xml:id="formula-log-rules">
+        <title>Logarithm Rules</title>
+
+        <md>
+            <mrow>
+                \ln(ab) &amp;= \ln a+\ln b,
+            </mrow>
+            <mrow>
+                \ln\left(\frac{a}{b}\right) &amp;= \ln a-\ln b,
+            </mrow>
+            <mrow>
+                \ln(a^n) &amp;= n\ln a.
+            </mrow>
+        </md>
+    </section>
+
+</appendix>
