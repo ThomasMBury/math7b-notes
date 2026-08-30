@@ -1,0 +1,60 @@
+<exercise xml:id="practice-volumes-1">
+  <title>Rotation About the \(x\)-Axis</title>
+
+  <statement>
+    <p>
+      Find the volume of the solid obtained by rotating the region bounded
+      by
+      <m>y=x^3+2</m>,
+      <m>x=0</m>,
+      and
+      <m>x=1</m>
+      about the <m>x</m>-axis.
+    </p>
+  </statement>
+
+  <solution>
+    <p>
+      Using the disk method, the volume is
+    </p>
+
+    <me>
+      V
+      =
+      \pi\int_0^1 (x^3+2)^2\,dx.
+    </me>
+
+    <p>
+      Expanding the integrand,
+    </p>
+
+    <me>
+      V
+      =
+      \pi\int_0^1
+      \left(x^6+4x^3+4\right)\,dx.
+    </me>
+
+    <p>
+      Therefore,
+    </p>
+
+    <me>
+      V
+      =
+      \pi
+      \left[
+        \frac{x^7}{7}
+        +x^4
+        +4x
+      \right]_0^1
+      =
+      \frac{36\pi}{7}.
+    </me>
+
+    <p>
+      Thus, the volume is
+      <m>\frac{36\pi}{7}</m> cubic units.
+    </p>
+  </solution>
+</exercise>

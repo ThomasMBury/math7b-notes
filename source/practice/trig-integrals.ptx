@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="practice-trig-integrals">
+
+  <title>Trigonometric Integrals</title>
+
+  <exercise xml:id="practice-trig-integrals-1">
+    <title>Powers of Sine and Cosine</title>
+
+    <statement>
+      <p>
+        Evaluate the integral using an appropriate substitution:
+        <m>
+          \int \sin^5(x)\cos^8(x)\,dx.
+        </m>
+      </p>
+    </statement>
+
+    <solution>
+      <p>
+        Write
+        <m>\sin^5(x)=\sin(x)(1-\cos^2(x))^2</m>
+        and let <m>u=\cos(x)</m>, so
+        <m>du=-\sin(x)\,dx</m>. Then
+      </p>
+
+      <me>
+        \int \sin^5(x)\cos^8(x)\,dx
+        =
+        -\int (1-u^2)^2u^8\,du.
+      </me>
+
+      <p>
+        Expanding and integrating gives
+      </p>
+
+      <me>
+        -\frac{u^9}{9}
+        +
+        \frac{2u^{11}}{11}
+        -
+        \frac{u^{13}}{13}
+        +C.
+      </me>
+
+      <p>
+        Therefore,
+      </p>
+
+      <me>
+        -\frac{\cos^9(x)}{9}
+        +
+        \frac{2\cos^{11}(x)}{11}
+        -
+        \frac{\cos^{13}(x)}{13}
+        +C.
+      </me>
+    </solution>
+
+  </exercise>
+
+
+  <exercise xml:id="practice-trig-integrals-2">
+    <title>Powers of Tangent and Secant</title>
+
+    <statement>
+      <p>
+        Evaluate the integral using an appropriate substitution:
+        <m>
+          \int \tan^{15}(x)\sec^4(x)\,dx.
+        </m>
+      </p>
+    </statement>
+
+    <solution>
+      <p>
+        Write
+        <m>\sec^4(x)=\sec^2(x)\sec^2(x)</m>
+        and use
+        <m>\sec^2(x)=1+\tan^2(x)</m>.
+        Let <m>u=\tan(x)</m>, so
+        <m>du=\sec^2(x)\,dx</m>.
+      </p>
+
+      <me>
+        \int \tan^{15}(x)\sec^4(x)\,dx
+        =
+        \int u^{15}(1+u^2)\,du.
+      </me>
+
+      <p>
+        Hence,
+      </p>
+
+      <me>
+        \frac{u^{16}}{16}
+        +
+        \frac{u^{18}}{18}
+        +C.
+      </me>
+
+      <p>
+        Therefore,
+      </p>
+
+      <me>
+        \frac{\tan^{16}(x)}{16}
+        +
+        \frac{\tan^{18}(x)}{18}
+        +C.
+      </me>
+    </solution>
+
+  </exercise>
+
+</section>

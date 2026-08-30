@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="practice-trig-substitution">
+
+  <title>Trigonometric Substitution</title>
+
+  <exercise xml:id="practice-trig-substitution-1">
+    <title>Square Root of a Difference</title>
+
+    <statement>
+      <p>
+        Evaluate the integral using an appropriate trigonometric substitution:
+        <m>
+          \int \frac{x}{\sqrt{1-4x^2}}\,dx.
+        </m>
+      </p>
+    </statement>
+
+    <solution>
+      <p>
+        Let
+        <m>x=\frac{1}{2}\sin(\theta)</m>.
+        Then
+        <m>dx=\frac{1}{2}\cos(\theta)\,d\theta</m>
+        and
+        <m>\sqrt{1-4x^2}=\cos(\theta)</m>.
+      </p>
+
+      <me>
+        \int \frac{x}{\sqrt{1-4x^2}}\,dx
+        =
+        \frac{1}{4}\int \sin(\theta)\,d\theta
+        =
+        -\frac{1}{4}\cos(\theta)+C.
+      </me>
+
+      <p>
+        Since
+        <m>\cos(\theta)=\sqrt{1-4x^2}</m>,
+      </p>
+
+      <me>
+        -\frac{1}{4}\sqrt{1-4x^2}+C.
+      </me>
+    </solution>
+
+  </exercise>
+
+
+  <exercise xml:id="practice-trig-substitution-2">
+    <title>Quadratic Sum</title>
+
+    <statement>
+      <p>
+        Evaluate the integral using an appropriate trigonometric substitution:
+        <m>
+          \int \frac{1}{4+9x^2}\,dx.
+        </m>
+      </p>
+    </statement>
+
+    <solution>
+      <p>
+        Let
+        <m>x=\frac{2}{3}\tan(\theta)</m>.
+        Then
+        <m>dx=\frac{2}{3}\sec^2(\theta)\,d\theta</m>
+        and
+        <m>4+9x^2=4\sec^2(\theta)</m>.
+      </p>
+
+      <me>
+        \int \frac{1}{4+9x^2}\,dx
+        =
+        \frac{1}{6}\int d\theta
+        =
+        \frac{\theta}{6}+C.
+      </me>
+
+      <p>
+        Since
+        <m>\tan(\theta)=\frac{3x}{2}</m>,
+      </p>
+
+      <me>
+        \frac{1}{6}\tan^{-1}\left(\frac{3x}{2}\right)+C.
+      </me>
+    </solution>
+
+  </exercise>
+
+
+  <exercise xml:id="practice-trig-substitution-3">
+    <title>Square Root of a Difference of Squares</title>
+
+    <statement>
+      <p>
+        Evaluate the integral using an appropriate trigonometric substitution:
+        <m>
+          \int \frac{1}{\sqrt{x^2-9}}\,dx.
+        </m>
+      </p>
+
+      <p>
+        You may use the fact that
+      </p>
+
+      <me>
+        \int \sec(\theta)\,d\theta
+        =
+        \ln\left|\sec(\theta)+\tan(\theta)\right|+C.
+      </me>
+    </statement>
+
+    <solution>
+      <p>
+        Let <m>x=3\sec(\theta)</m>. Then
+        <m>dx=3\sec(\theta)\tan(\theta)\,d\theta</m>
+        and
+        <m>\sqrt{x^2-9}=3\tan(\theta)</m>.
+      </p>
+
+      <me>
+        \int \frac{1}{\sqrt{x^2-9}}\,dx
+        =
+        \int \sec(\theta)\,d\theta
+        =
+        \ln|\sec(\theta)+\tan(\theta)|+C.
+      </me>
+
+      <p>
+        Using
+        <m>\sec(\theta)=x/3</m>
+        and
+        <m>\tan(\theta)=\sqrt{x^2-9}/3</m>,
+      </p>
+
+      <me>
+        \ln\left|
+          \frac{x}{3}
+          +
+          \frac{\sqrt{x^2-9}}{3}
+        \right|
+        +C.
+      </me>
+    </solution>
+
+  </exercise>
+
+</section>

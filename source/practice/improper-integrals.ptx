@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="practice-improper-integrals">
+
+  <title>Improper Integrals</title>
+
+  <exercise xml:id="practice-improper-integrals-1">
+    <title>Convergence and Divergence</title>
+
+    <introduction>
+      <p>
+        Determine whether each improper integral converges or diverges.
+        If an integral converges, determine its value.
+      </p>
+    </introduction>
+
+    <task>
+      <statement>
+        <p>
+          Determine the convergence of
+          <m>
+            \int_0^2 \frac{2x}{x^2-4}\,dx.
+          </m>
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          The integrand is unbounded at <m>x=2</m>, so write
+        </p>
+
+        <me>
+          \int_0^2\frac{2x}{x^2-4}\,dx
+          =
+          \lim_{b\to2^-}
+          \int_0^b\frac{2x}{x^2-4}\,dx.
+        </me>
+
+        <p>
+          Since an antiderivative is
+          <m>\ln|x^2-4|</m>,
+        </p>
+
+        <me>
+          \lim_{b\to2^-}
+          \left(
+            \ln|b^2-4|-\ln 4
+          \right)
+          =
+          -\infty.
+        </me>
+
+        <p>
+          Therefore, the improper integral diverges.
+        </p>
+      </solution>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Determine the convergence of
+          <m>
+            \int_0^\infty xe^{-x^2/2}\,dx.
+          </m>
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          Let <m>u=x^2/2</m>, so <m>du=x\,dx</m>. Then
+        </p>
+
+        <me>
+          \int_0^\infty xe^{-x^2/2}\,dx
+          =
+          \int_0^\infty e^{-u}\,du
+          =
+          1.
+        </me>
+
+        <p>
+          Hence the integral converges to <m>1</m>.
+        </p>
+      </solution>
+    </task>
+
+  </exercise>
+
+
+  <exercise xml:id="practice-improper-integrals-2">
+    <title>Epidemic Model</title>
+
+    <statement>
+      <p>
+        The rate at which people get sick during an epidemic of the flu
+        can be approximated by
+      </p>
+
+      <me>
+        r(t)=1000te^{-0.5t},
+      </me>
+
+      <p>
+        where <m>r(t)</m> is measured in people per day and <m>t</m> is
+        measured in days since the start of the epidemic.
+        How many people get sick throughout the entire epidemic?
+      </p>
+    </statement>
+
+    <solution>
+      <p>
+        The total number of people who become sick is
+      </p>
+
+      <me>
+        \int_0^\infty1000te^{-0.5t}\,dt.
+      </me>
+
+      <p>
+        Integration by parts gives
+      </p>
+
+      <me>
+        \int_0^\infty te^{-0.5t}\,dt=4.
+      </me>
+
+      <p>
+        Therefore,
+      </p>
+
+      <me>
+        \int_0^\infty r(t)\,dt
+        =
+        1000(4)
+        =
+        4000.
+      </me>
+
+      <p>
+        Thus, the model predicts that <m>4000</m> people become sick.
+      </p>
+    </solution>
+
+  </exercise>
+
+
+  <exercise xml:id="practice-improper-integrals-3">
+    <title>Photon Detection</title>
+
+    <statement>
+      <p>
+        After a short laser pulse, the rate at which photons are detected
+        by a sensor is modeled by
+      </p>
+
+      <me>
+        r(t)=\frac{500}{(1+t)^2},
+      </me>
+
+      <p>
+        where <m>r(t)</m> is measured in photons per microsecond and
+        <m>t</m> is measured in microseconds since the pulse.
+        How many total photons are detected over all time?
+      </p>
+    </statement>
+
+    <solution>
+      <p>
+        The total number of detected photons is
+      </p>
+
+      <me>
+        500\int_0^\infty(1+t)^{-2}\,dt.
+      </me>
+
+      <p>
+        Hence,
+      </p>
+
+      <me>
+        500
+        \lim_{b\to\infty}
+        \left[
+          -\frac{1}{1+t}
+        \right]_0^b
+        =
+        500.
+      </me>
+
+      <p>
+        Therefore, a total of <m>500</m> photons are detected.
+      </p>
+    </solution>
+
+  </exercise>
+
+</section>

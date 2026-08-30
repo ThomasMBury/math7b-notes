@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<appendix xmlns:xi="http://www.w3.org/2001/XInclude"
+          xml:id="practice-problems">
+
+  <title>Practice Exam Questions</title>
+
+  <introduction>
+    <p>
+      This appendix contains a bank of exam-style practice questions
+      organized by topic. The collection contains more questions than
+      would appear on any individual exam.
+    </p>
+  </introduction>
+
+  <xi:include href="antiderivatives.ptx"/>
+  <xi:include href="definite-integrals.ptx"/>
+  <xi:include href="fundamental-theorem.ptx"/>
+
+  <xi:include href="substitution.ptx"/>
+  <xi:include href="integration-by-parts.ptx"/>
+  <xi:include href="partial-fractions.ptx"/>
+  <xi:include href="improper-integrals.ptx"/>
+
+  <xi:include href="area-between-curves.ptx"/>
+  <xi:include href="volumes.ptx"/>
+  <xi:include href="applications-integrals.ptx"/>
+
+  <xi:include href="trig-integrals.ptx"/>
+  <xi:include href="trig-substitution.ptx"/>
+
+  <xi:include href="differential-equations.ptx"/>
+
+</appendix>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="practice-area-between-curves">
+
+  <title>Area Between Curves</title>
+
+  <exercise xml:id="practice-area-between-curves-1">
+    <title>Area of a Bounded Region</title>
+
+    <statement>
+      <p>
+        Set up and evaluate an integral to find the area of the region
+        bounded by
+        <m>y=x^2-2x</m>
+        and
+        <m>y=-x+2</m>.
+        Sketch the region.
+      </p>
+    </statement>
+
+    <solution>
+      <p>
+        The curves intersect where
+      </p>
+
+      <me>
+        x^2-2x=-x+2.
+      </me>
+
+      <p>
+        Thus,
+      </p>
+
+      <me>
+        x^2-x-2=(x-2)(x+1)=0,
+      </me>
+
+      <p>
+        so the intersection points occur at <m>x=-1</m> and
+        <m>x=2</m>. Between these points, the line
+        <m>y=-x+2</m> lies above the parabola
+        <m>y=x^2-2x</m>.
+      </p>
+
+      <p>
+        Therefore, the area is
+      </p>
+
+      <me>
+        A
+        =
+        \int_{-1}^{2}
+        \left[(-x+2)-(x^2-2x)\right]\,dx
+        =
+        \int_{-1}^{2}
+        (-x^2+x+2)\,dx.
+      </me>
+
+      <p>
+        Evaluating,
+      </p>
+
+      <me>
+        A
+        =
+        \left[
+          -\frac{x^3}{3}
+          +\frac{x^2}{2}
+          +2x
+        \right]_{-1}^{2}
+        =
+        \frac{9}{2}.
+      </me>
+
+      <p>
+        Thus, the area of the bounded region is
+        <m>\frac{9}{2}</m> square units.
+      </p>
+    </solution>
+
+  </exercise>
+
+</section>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="practice-integration-by-parts">
+
+  <title>Integration by Parts</title>
+
+  <exercise xml:id="practice-integration-by-parts-1">
+    <title>Basic Integration by Parts</title>
+
+    <statement>
+      <p>
+        Evaluate
+        <m>\int xe^x\,dx</m>.
+      </p>
+    </statement>
+
+    <solution>
+      <p>
+        Take <m>u=x</m> and <m>dv=e^x\,dx</m>. Then
+        <m>du=dx</m> and <m>v=e^x</m>.
+      </p>
+
+      <me>
+        \int xe^x\,dx
+        =
+        xe^x-\int e^x\,dx
+        =
+        e^x(x-1)+C.
+      </me>
+    </solution>
+  </exercise>
+
+
+  <exercise xml:id="practice-integration-by-parts-2">
+    <title>A Definite Integral</title>
+
+    <statement>
+      <p>
+        Evaluate
+        <m>\int_0^1 xe^{-x}\,dx</m>.
+      </p>
+    </statement>
+
+    <solution>
+      <p>
+        Using integration by parts with
+        <m>u=x</m> and <m>dv=e^{-x}\,dx</m>,
+      </p>
+
+      <me>
+        \int_0^1 xe^{-x}\,dx
+        =
+        \left[-xe^{-x}\right]_0^1
+        +
+        \int_0^1e^{-x}\,dx.
+      </me>
+
+      <p>
+        Hence,
+      </p>
+
+      <me>
+        \int_0^1 xe^{-x}\,dx
+        =
+        1-\frac{2}{e}.
+      </me>
+    </solution>
+  </exercise>
+
+
+  <exercise xml:id="practice-integration-by-parts-3">
+    <title>Substitution Followed by Integration by Parts</title>
+
+    <statement>
+      <p>
+        Make an appropriate substitution and then use integration by parts
+        to evaluate
+        <m>\int \sin(x)\cos(x)e^{\sin(x)}\,dx</m>.
+      </p>
+    </statement>
+
+    <solution>
+      <p>
+        Let <m>w=\sin(x)</m>, so <m>dw=\cos(x)\,dx</m>.
+        Then the integral becomes
+        <m>\int we^w\,dw</m>.
+        Integration by parts gives
+      </p>
+
+      <me>
+        \int we^w\,dw
+        =
+        we^w-e^w+C.
+      </me>
+
+      <p>
+        Therefore,
+      </p>
+
+      <me>
+        \sin(x)e^{\sin(x)}-e^{\sin(x)}+C.
+      </me>
+    </solution>
+  </exercise>
+
+</section>

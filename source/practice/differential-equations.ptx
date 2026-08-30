@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="practice-differential-equations">
+
+  <title>Differential Equations</title>
+
+
+  <exercise xml:id="practice-differential-equations-1">
+    <title>Equilibria and Stability</title>
+
+    <introduction>
+      <p>
+        Consider the differential equation
+        <m>
+          \frac{dy}{dt}=y-y^3.
+        </m>
+      </p>
+    </introduction>
+
+    <task>
+      <statement>
+        <p>
+          Find all equilibria. By calculating the eigenvalue at each
+          equilibrium, determine which equilibria are stable and which
+          are unstable.
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          Equilibria satisfy
+          <m>y-y^3=0</m>, so
+        </p>
+
+        <me>
+          y(1-y^2)=0.
+        </me>
+
+        <p>
+          Hence the equilibria are
+          <m>y=-1,0,1</m>.
+          Let <m>f(y)=y-y^3</m>. Then
+          <m>f'(y)=1-3y^2</m>.
+        </p>
+
+        <p>
+          Since
+          <m>f'(-1)=-2</m>,
+          <m>f'(0)=1</m>, and
+          <m>f'(1)=-2</m>,
+          the equilibria <m>y=-1</m> and <m>y=1</m> are stable,
+          while <m>y=0</m> is unstable.
+        </p>
+      </solution>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Sketch the phase line for the differential equation.
+          Use it to verify your stability classifications.
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          The sign of <m>y-y^3</m> is positive for
+          <m>y&lt;-1</m> and <m>0&lt;y&lt;1</m>,
+          and negative for
+          <m>-1&lt;y&lt;0</m> and <m>y&gt;1</m>.
+          Thus the arrows point toward <m>y=\pm1</m> and away from
+          <m>y=0</m>, confirming the stability classifications.
+        </p>
+      </solution>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Given the initial condition <m>y(0)=0.5</m>, determine
+          <m>\lim_{t\to\infty}y(t)</m>.
+          You do not need to solve the differential equation.
+        </p>
+      </statement>
+
+      <solution>
+        <me>
+          \lim_{t\to\infty}y(t)=1.
+        </me>
+      </solution>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Given the initial condition <m>y(0)=-0.5</m>, determine
+          <m>\lim_{t\to\infty}y(t)</m>.
+          You do not need to solve the differential equation.
+        </p>
+      </statement>
+
+      <solution>
+        <me>
+          \lim_{t\to\infty}y(t)=-1.
+        </me>
+      </solution>
+    </task>
+
+  </exercise>
+
+
+  <exercise xml:id="practice-differential-equations-2">
+    <title>The Logistic Model</title>
+
+    <introduction>
+      <p>
+        The logistic model for population growth is
+      </p>
+
+      <me>
+        \frac{dN}{dt}
+        =
+        rN\left(1-\frac{N}{K}\right),
+      </me>
+
+      <p>
+        where <m>r&gt;0</m> is the per-capita growth rate and
+        <m>K&gt;0</m> is the carrying capacity.
+      </p>
+    </introduction>
+
+    <task>
+      <statement>
+        <p>
+          Find all equilibria of the model. By calculating the eigenvalue
+          at each equilibrium, determine which equilibria are stable and
+          which are unstable.
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          The equilibria satisfy
+        </p>
+
+        <me>
+          rN\left(1-\frac{N}{K}\right)=0,
+        </me>
+
+        <p>
+          so <m>N=0</m> and <m>N=K</m>.
+          Let
+          <m>f(N)=rN(1-N/K)</m>. Then
+        </p>
+
+        <me>
+          f'(N)=r-\frac{2r}{K}N.
+        </me>
+
+        <p>
+          Since <m>f'(0)=r&gt;0</m>,
+          <m>N=0</m> is unstable.
+          Since <m>f'(K)=-r&lt;0</m>,
+          <m>N=K</m> is stable.
+        </p>
+      </solution>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Sketch the phase line for the differential equation.
+          Use it to verify your stability classifications.
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          For <m>0&lt;N&lt;K</m>, the growth rate is positive, while
+          for <m>N&gt;K</m>, it is negative. Thus solutions move away
+          from <m>N=0</m> and toward <m>N=K</m>.
+        </p>
+      </solution>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Given the initial condition <m>N(0)=K/2</m>, determine
+          <m>\lim_{t\to\infty}N(t)</m>.
+          You do not need to solve the differential equation.
+        </p>
+      </statement>
+
+      <solution>
+        <me>
+          \lim_{t\to\infty}N(t)=K.
+        </me>
+      </solution>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Given the initial condition <m>N(0)=K+1</m>, determine
+          <m>\lim_{t\to\infty}N(t)</m>.
+          You do not need to solve the differential equation.
+        </p>
+      </statement>
+
+      <solution>
+        <me>
+          \lim_{t\to\infty}N(t)=K.
+        </me>
+      </solution>
+    </task>
+
+  </exercise>
+
+
+  <exercise xml:id="practice-differential-equations-3">
+    <title>Nutrient Dynamics in a Lake</title>
+
+    <introduction>
+      <p>
+        A lake receives nutrient runoff from nearby farmland at a constant
+        rate. The mass of nutrient in the lake at time <m>t</m>, denoted
+        <m>m(t)</m> and measured in kilograms, satisfies
+      </p>
+
+      <me>
+        \frac{dm}{dt}=r-km,
+      </me>
+
+      <p>
+        where <m>r&gt;0</m> is the rate at which nutrient enters the lake,
+        measured in kilograms per year, and <m>k&gt;0</m> is the fraction of
+        nutrient removed from the lake per year.
+      </p>
+    </introduction>
+
+    <task>
+      <statement>
+        <p>
+          Assuming <m>m(0)=0</m>, solve the differential equation to find
+          <m>m(t)</m>.
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          Separating variables gives
+        </p>
+
+        <me>
+          \frac{dm}{r-km}=dt.
+        </me>
+
+        <p>
+          Integrating yields
+        </p>
+
+        <me>
+          -\frac{1}{k}\ln|r-km|=t+C.
+        </me>
+
+        <p>
+          Solving for <m>m(t)</m> and using <m>m(0)=0</m> gives
+        </p>
+
+        <me>
+          m(t)=\frac{r}{k}\left(1-e^{-kt}\right).
+        </me>
+      </solution>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Find
+          <m>\lim_{t\to\infty}m(t)</m>.
+        </p>
+      </statement>
+
+      <solution>
+        <me>
+          \lim_{t\to\infty}m(t)=\frac{r}{k}.
+        </me>
+      </solution>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Suppose nutrient enters the lake at a rate of
+          <m>r=5</m> kilograms per year and that
+          <m>m(t)\to 25</m> kilograms as <m>t\to\infty</m>.
+          Calculate <m>k</m> and include units.
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          Since the limiting mass is <m>r/k</m>,
+        </p>
+
+        <me>
+          25=\frac{5}{k}.
+        </me>
+
+        <p>
+          Therefore,
+        </p>
+
+        <me>
+          k=\frac{1}{5}\text{ year}^{-1}.
+        </me>
+      </solution>
+    </task>
+
+  </exercise>
+
+
+  <exercise xml:id="practice-differential-equations-4">
+    <title>von Bertalanffy Fish Growth</title>
+
+    <introduction>
+      <p>
+        Let <m>L(t)</m> denote the length of a fish at time <m>t</m>.
+        Suppose the fish grows according to
+      </p>
+
+      <me>
+        \frac{dL}{dt}=k(28-L(t)),
+        \qquad
+        L(0)=4.
+      </me>
+    </introduction>
+
+    <task>
+      <statement>
+        <p>
+          Solve the differential equation.
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          Separating variables gives
+        </p>
+
+        <me>
+          \frac{dL}{28-L}=k\,dt.
+        </me>
+
+        <p>
+          Integrating and solving for <m>L</m> gives
+        </p>
+
+        <me>
+          L(t)=28-Ae^{-kt}.
+        </me>
+
+        <p>
+          Using <m>L(0)=4</m> gives <m>A=24</m>, so
+        </p>
+
+        <me>
+          L(t)=28-24e^{-kt}.
+        </me>
+      </solution>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Use your solution to determine <m>k</m> under the assumption
+          that <m>L(4)=12</m>.
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          Substituting <m>L(4)=12</m> gives
+        </p>
+
+        <me>
+          12=28-24e^{-4k}.
+        </me>
+
+        <p>
+          Thus
+          <m>e^{-4k}=2/3</m>, and therefore
+        </p>
+
+        <me>
+          k=\frac{1}{4}\ln\left(\frac{3}{2}\right).
+        </me>
+      </solution>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Find the asymptotic length of the fish; that is, determine
+          <m>\lim_{t\to\infty}L(t)</m>.
+        </p>
+      </statement>
+
+      <solution>
+        <me>
+          \lim_{t\to\infty}L(t)=28.
+        </me>
+      </solution>
+    </task>
+
+  </exercise>
+
+</section>

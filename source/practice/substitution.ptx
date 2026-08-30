@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="practice-substitution">
+
+  <title>Integration by Substitution</title>
+
+  <exercise xml:id="practice-substitution-1">
+    <title>Substitution</title>
+
+    <introduction>
+      <p>
+        Evaluate each integral using an appropriate substitution.
+      </p>
+    </introduction>
+
+    <task>
+      <statement>
+        <p>
+          Evaluate
+          <m>\int 4x^3(4-x^4)^{1/3}\,dx</m>.
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          Let <m>u=4-x^4</m>, so
+          <m>du=-4x^3\,dx</m>. Then
+        </p>
+
+        <me>
+          \int 4x^3(4-x^4)^{1/3}\,dx
+          =
+          -\int u^{1/3}\,du
+          =
+          -\frac{3}{4}u^{4/3}+C.
+        </me>
+
+        <p>
+          Therefore,
+        </p>
+
+        <me>
+          -\frac{3}{4}(4-x^4)^{4/3}+C.
+        </me>
+      </solution>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Evaluate
+          <m>\int_0^{1/2}5\sin(1-2x)\,dx</m>.
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          Let <m>u=1-2x</m>, so <m>du=-2\,dx</m>.
+          The limits become <m>u=1</m> and <m>u=0</m>.
+        </p>
+
+        <me>
+          \int_0^{1/2}5\sin(1-2x)\,dx
+          =
+          -\frac{5}{2}\int_1^0\sin(u)\,du
+          =
+          \frac{5}{2}\left(1-\cos(1)\right).
+        </me>
+      </solution>
+    </task>
+
+  </exercise>
+
+</section>

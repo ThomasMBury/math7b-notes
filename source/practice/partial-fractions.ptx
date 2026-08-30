@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="practice-partial-fractions">
+
+  <title>Partial Fractions</title>
+
+  <exercise xml:id="practice-partial-fractions-1">
+    <title>Distinct Linear Factors</title>
+
+    <introduction>
+      <p>
+        Consider the rational function
+        <m>
+          f(x)=\frac{7x-2}{x(x+1)}.
+        </m>
+      </p>
+    </introduction>
+
+    <task>
+      <statement>
+        <p>
+          Find the partial fraction decomposition of <m>f(x)</m>.
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          Write
+        </p>
+
+        <me>
+          \frac{7x-2}{x(x+1)}
+          =
+          \frac{A}{x}+\frac{B}{x+1}.
+        </me>
+
+        <p>
+          Then
+          <m>7x-2=A(x+1)+Bx</m>.
+          Setting <m>x=0</m> gives <m>A=-2</m>, and
+          setting <m>x=-1</m> gives <m>B=9</m>.
+        </p>
+
+        <me>
+          f(x)=-\frac{2}{x}+\frac{9}{x+1}.
+        </me>
+      </solution>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Evaluate
+          <m>\int f(x)\,dx</m>.
+        </p>
+      </statement>
+
+      <solution>
+        <me>
+          \int f(x)\,dx
+          =
+          -2\ln|x|+9\ln|x+1|+C.
+        </me>
+      </solution>
+    </task>
+
+  </exercise>
+
+
+  <exercise xml:id="practice-partial-fractions-2">
+    <title>Repeated Linear Factors</title>
+
+    <introduction>
+      <p>
+        Consider the rational function
+        <m>
+          h(x)=\frac{4x-1}{(x-2)^2}.
+        </m>
+      </p>
+    </introduction>
+
+    <task>
+      <statement>
+        <p>
+          Find the partial fraction decomposition of <m>h(x)</m>.
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          Write
+        </p>
+
+        <me>
+          \frac{4x-1}{(x-2)^2}
+          =
+          \frac{A}{x-2}
+          +
+          \frac{B}{(x-2)^2}.
+        </me>
+
+        <p>
+          Comparing coefficients in
+          <m>4x-1=A(x-2)+B</m> gives
+          <m>A=4</m> and <m>B=7</m>.
+        </p>
+
+        <me>
+          h(x)
+          =
+          \frac{4}{x-2}
+          +
+          \frac{7}{(x-2)^2}.
+        </me>
+      </solution>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Evaluate
+          <m>\int h(x)\,dx</m>.
+        </p>
+      </statement>
+
+      <solution>
+        <me>
+          \int h(x)\,dx
+          =
+          4\ln|x-2|
+          -
+          \frac{7}{x-2}
+          +C.
+        </me>
+      </solution>
+    </task>
+
+  </exercise>
+
+</section>

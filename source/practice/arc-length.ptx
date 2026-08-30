@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="practice-arc-length">
+
+  <title>Arc Length</title>
+
+  <exercise xml:id="practice-arc-length-1">
+    <statement>
+      <p>
+        Find the arc length of the curve
+        <m>y=\frac{2}{3}x^{3/2}</m>
+        from <m>x=0</m> to <m>x=3</m>.
+      </p>
+    </statement>
+
+    <solution>
+      <p>
+        The arc length of <m>y=f(x)</m> from <m>x=a</m> to
+        <m>x=b</m> is
+      </p>
+
+      <me>
+        L=\int_a^b\sqrt{1+\left(f'(x)\right)^2}\,dx.
+      </me>
+
+      <p>
+        Since
+        <m>y=\frac{2}{3}x^{3/2}</m>, we have
+        <m>y'=\sqrt{x}</m>. Therefore,
+      </p>
+
+      <me>
+        L=\int_0^3\sqrt{1+x}\,dx.
+      </me>
+
+      <p>
+        Evaluating the integral gives
+      </p>
+
+      <me>
+        L
+        =
+        \left[\frac{2}{3}(1+x)^{3/2}\right]_0^3
+        =
+        \frac{14}{3}.
+      </me>
+
+      <p>
+        Thus, the arc length is <m>\frac{14}{3}</m>.
+      </p>
+    </solution>
+
+  </exercise>
+
+</section>

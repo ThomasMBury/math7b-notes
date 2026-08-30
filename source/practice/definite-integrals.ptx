@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="practice-definite-integrals">
+
+    <title>Definite Integrals</title>
+
+    <exercise xml:id="practice-definite-integrals-1">
+        <title>Approximating and Evaluating a Definite Integral</title>
+
+        <introduction>
+            <p>
+                Let <m>f(x)=e^x+\cos(x)</m>.
+            </p>
+        </introduction>
+
+        <task>
+            <statement>
+                <p>
+                    Approximate <m>\int_0^\pi f(x)\,dx</m> using a midpoint
+                    Riemann sum with <m>n=4</m> equal subintervals.
+                    Give your answer in exact form.
+                </p>
+            </statement>
+
+            <solution>
+                <p>
+                    The width of each subinterval is
+                    <m>\Delta x=\pi/4</m>, and the midpoints are
+                </p>
+
+                <me>
+                    \frac{\pi}{8},\quad
+                    \frac{3\pi}{8},\quad
+                    \frac{5\pi}{8},\quad
+                    \frac{7\pi}{8}.
+                </me>
+
+                <p>
+                    Therefore, the midpoint sum is
+                </p>
+
+                <me>
+                    M_4
+                    =
+                    \frac{\pi}{4}
+                    \left[
+                    f\left(\frac{\pi}{8}\right)
+                    +f\left(\frac{3\pi}{8}\right)
+                    +f\left(\frac{5\pi}{8}\right)
+                    +f\left(\frac{7\pi}{8}\right)
+                    \right].
+                </me>
+
+                <p>
+                    The cosine terms cancel, so
+                </p>
+
+                <me>
+                    M_4
+                    =
+                    \frac{\pi}{4}
+                    \left(
+                    e^{\pi/8}
+                    +e^{3\pi/8}
+                    +e^{5\pi/8}
+                    +e^{7\pi/8}
+                    \right).
+                </me>
+            </solution>
+        </task>
+
+        <task>
+            <statement>
+                <p>
+                    Apply Part II of the Fundamental Theorem of Calculus
+                    to evaluate <m>\int_0^\pi f(x)\,dx</m> exactly.
+                </p>
+            </statement>
+
+            <solution>
+                <p>
+                    An antiderivative of <m>f(x)</m> is
+                    <m>F(x)=e^x+\sin(x)</m>. Therefore,
+                </p>
+
+                <me>
+                    \int_0^\pi
+                    \left(e^x+\cos(x)\right)\,dx
+                    =
+                    \left[e^x+\sin(x)\right]_0^\pi
+                    =
+                    e^\pi-1.
+                </me>
+            </solution>
+        </task>
+
+    </exercise>
+
+
+    <exercise xml:id="practice-definite-integrals-2">
+        <title>Evaluating an Integral Geometrically</title>
+
+        <statement>
+            <p>
+                Evaluate <m>\int_{-2}^{2}\sqrt{4-x^2}\,dx</m>.
+                Explain how the geometry of the graph allows you to
+                determine the value of the integral.
+            </p>
+        </statement>
+
+        <solution>
+            <p>
+                The graph
+                <m>y=\sqrt{4-x^2}</m>
+                is the upper semicircle of the circle
+                <m>x^2+y^2=4</m>, which has radius <m>2</m>.
+            </p>
+
+            <p>
+                Therefore, the integral is the area of a semicircle
+                of radius <m>2</m>:
+            </p>
+
+            <me>
+                \int_{-2}^{2}\sqrt{4-x^2}\,dx
+                =
+                \frac{1}{2}\pi(2)^2
+                =
+                2\pi.
+            </me>
+        </solution>
+    </exercise>
+
+</section>

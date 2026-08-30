@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="practice-applications-integrals">
+
+  <title>Applications of Integration</title>
+
+  <exercise xml:id="practice-applications-integrals-1">
+    <title>Oxygen Consumption</title>
+
+    <introduction>
+      <p>
+        A fish consumes oxygen at a rate that decreases over time as it
+        becomes less active. The rate of oxygen consumption, in milligrams
+        per minute, is modeled by
+      </p>
+
+      <me>
+        R(t)=3e^{-0.1t},
+      </me>
+
+      <p>
+        where <m>t</m> is the time in minutes since the fish was placed in a
+        respirometer.
+      </p>
+    </introduction>
+
+    <task>
+      <statement>
+        <p>
+          How much total oxygen, in milligrams, does the fish consume during
+          the first 10 minutes?
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          The total oxygen consumed is the integral of the rate:
+        </p>
+
+        <me>
+          \int_0^{10} 3e^{-0.1t}\,dt
+          =
+          \left[-30e^{-0.1t}\right]_0^{10}.
+        </me>
+
+        <p>
+          Therefore,
+        </p>
+
+        <me>
+          30\left(1-e^{-1}\right)
+          =
+          30\left(1-\frac{1}{e}\right)
+          \text{ mg}.
+        </me>
+      </solution>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Use your answer from the previous part to compute the average rate
+          of oxygen consumption during the first 10 minutes.
+          Include units in your answer.
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          The average rate is the total oxygen consumed divided by the
+          elapsed time:
+        </p>
+
+        <me>
+          \frac{1}{10}
+          \int_0^{10}3e^{-0.1t}\,dt
+          =
+          3\left(1-\frac{1}{e}\right)
+          \text{ mg/min}.
+        </me>
+      </solution>
+    </task>
+
+  </exercise>
+
+
+  <exercise xml:id="practice-applications-integrals-2">
+    <title>Fish Growth</title>
+
+    <introduction>
+      <p>
+        The von Bertalanffy growth model predicts that the growth rate of a
+        fish that is born with a length of 2 centimeters and has a maximum
+        length of 12 centimeters is
+      </p>
+
+      <me>
+        g(t)=10e^{-t}\text{ cm/year},
+      </me>
+
+      <p>
+        where <m>t</m> is the age of the fish in years.
+      </p>
+    </introduction>
+
+    <task>
+      <statement>
+        <p>
+          How much does the fish grow during its first year of life?
+          Include units.
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          The amount of growth during the first year is
+        </p>
+
+        <me>
+          \int_0^1 10e^{-t}\,dt
+          =
+          \left[-10e^{-t}\right]_0^1
+          =
+          10\left(1-\frac{1}{e}\right)
+          \text{ cm}.
+        </me>
+      </solution>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Let <m>\ell(t)</m> be the length of the fish at <m>t</m> years of
+          age. Find <m>\ell(t)</m> in exact form.
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          Since the fish is born with length <m>2</m> cm, its length at
+          time <m>t</m> is its initial length plus its accumulated growth:
+        </p>
+
+        <me>
+          \ell(t)
+          =
+          2+\int_0^t10e^{-s}\,ds.
+        </me>
+
+        <p>
+          Thus,
+        </p>
+
+        <me>
+          \ell(t)
+          =
+          2+10\left(1-e^{-t}\right)
+          =
+          12-10e^{-t}.
+        </me>
+      </solution>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          What is the average length of the fish over its first four years
+          of life? Include units in your answer.
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          The average value of <m>\ell(t)</m> on
+          <m>[0,4]</m> is
+        </p>
+
+        <me>
+          \frac{1}{4}
+          \int_0^4
+          \left(12-10e^{-t}\right)\,dt.
+        </me>
+
+        <p>
+          Therefore,
+        </p>
+
+        <me>
+          \frac{1}{4}
+          \left[
+            12t+10e^{-t}
+          \right]_0^4
+          =
+          \frac{19}{2}
+          +
+          \frac{5}{2e^4}
+          \text{ cm}.
+        </me>
+      </solution>
+    </task>
+
+  </exercise>
+
+</section>

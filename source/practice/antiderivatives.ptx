@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="practice-antiderivatives">
+
+  <title>Antiderivatives</title>
+
+  <exercise xml:id="practice-antiderivatives-1">
+    <title>Finding an Antiderivative</title>
+
+    <introduction>
+      <p>
+        Given the function
+        <m>
+          f(x)=\frac{1}{x}+\sqrt{x}+3\sin(\pi x),
+        </m>
+        answer the following questions.
+      </p>
+    </introduction>
+
+    <task>
+      <statement>
+        <p>
+          Find the general antiderivative <m>F(x)</m> such that
+          <m>F'(x)=f(x)</m>.
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          Integrating each term separately gives
+        </p>
+
+        <md>
+          <mrow>
+            \int \frac{1}{x}\,dx
+            &amp;= \ln|x|,
+          </mrow>
+          <mrow>
+            \int \sqrt{x}\,dx
+            &amp;= \frac{2}{3}x^{3/2},
+          </mrow>
+          <mrow>
+            \int 3\sin(\pi x)\,dx
+            &amp;= -\frac{3}{\pi}\cos(\pi x).
+          </mrow>
+        </md>
+
+        <p>
+          Therefore, the general antiderivative is
+        </p>
+
+        <me>
+          F(x)
+          =
+          \ln|x|
+          +
+          \frac{2}{3}x^{3/2}
+          -
+          \frac{3}{\pi}\cos(\pi x)
+          +
+          C.
+        </me>
+      </solution>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Find the particular antiderivative that satisfies
+          <m>F(1)=3/\pi</m>.
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          Substituting <m>x=1</m> into the general antiderivative gives
+        </p>
+
+        <me>
+          F(1)
+          =
+          \frac{2}{3}
+          +
+          \frac{3}{\pi}
+          +
+          C.
+        </me>
+
+        <p>
+          Since <m>F(1)=3/\pi</m>, we obtain
+          <m>C=-2/3</m>. Therefore,
+        </p>
+
+        <me>
+          F(x)
+          =
+          \ln|x|
+          +
+          \frac{2}{3}x^{3/2}
+          -
+          \frac{3}{\pi}\cos(\pi x)
+          -
+          \frac{2}{3}.
+        </me>
+      </solution>
+    </task>
+
+  </exercise>
+
+</section>

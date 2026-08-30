@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="practice-fundamental-theorem">
+
+  <title>Fundamental Theorem of Calculus</title>
+
+  <exercise xml:id="practice-ftc-1">
+    <title>Differentiating an Integral</title>
+
+    <introduction>
+      <p>
+        Use the Fundamental Theorem of Calculus and the chain rule to
+        determine <m>dy/dx</m> for each function.
+      </p>
+    </introduction>
+
+    <task>
+      <statement>
+        <p>
+          <m>
+            y=\int_1^{\sqrt{x}}\ln(t)\,dt.
+          </m>
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          By the Fundamental Theorem of Calculus and the chain rule,
+        </p>
+
+        <me>
+          \frac{dy}{dx}
+          =
+          \ln(\sqrt{x})\frac{d}{dx}(\sqrt{x})
+          =
+          \frac{\ln(\sqrt{x})}{2\sqrt{x}}.
+        </me>
+      </solution>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          <m>
+            y=\int_{\sin(x)}^0 \tan(u)\,du.
+          </m>
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          Since the variable limit is the lower limit, the Fundamental
+          Theorem of Calculus gives
+        </p>
+
+        <me>
+          \frac{dy}{dx}
+          =
+          -\tan(\sin x)\frac{d}{dx}(\sin x)
+          =
+          -\tan(\sin x)\cos x.
+        </me>
+      </solution>
+    </task>
+
+  </exercise>
+
+</section>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <pretext xml:lang="en-US"
-         xmlns:xi="http://www.w3.org/2001/XInclude">
+  xmlns:xi="http://www.w3.org/2001/XInclude">
 
   <xi:include href="./docinfo.ptx" />
 
@@ -21,6 +21,7 @@
     <xi:include href="./ch08-differential-equations.ptx" />
 
     <xi:include href="./backmatter.ptx" />
+
 
   </book>
 
