@@ -53,11 +53,13 @@
       supplement, not replace, lectures and discussion sections.
     </p>
 
+    <p> The <xref ref="learning-outcomes" text="title" /> describe the knowledge and skills students
+      are expected to develop in the course and indicate how the topics relate to the course
+      textbook and these course notes. </p>
 
     <p> The backmatter includes a <xref ref="formula-sheet" text="title" /> reproducing the
       equations and formulas provided during exams, as well as a bank of <xref
         ref="practice-problems" text="title" /> to help with exam preparation. </p>
-
   </preface>
 
   <xi:include href="learning-outcomes.ptx" />
