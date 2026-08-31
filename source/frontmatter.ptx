@@ -60,6 +60,6 @@
 
   </preface>
 
-  <xi:include href="learning-objectives.ptx" />
+  <xi:include href="learning-outcomes.ptx" />
 
 </frontmatter>
