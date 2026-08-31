@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<preface xml:id="learning-objectives">
+
+  <title>Learning Objectives</title>
+
+  <p>
+    The following learning objectives describe the knowledge and skills
+    students are expected to develop in MATH 007B. Textbook section references refer to
+    <em>Calculus for Biology and Medicine</em> by Neuhauser and Roper,
+    4th edition (2018), unless otherwise indicated.
+  </p>
+
+
+  <paragraphs xml:id="lo-antiderivatives">
+    <title>Antiderivatives</title>
+
+<p>
+  (<xref ref="ch-antiderivatives" />)
+  <em>Textbook:</em> Neuhauser and Roper, Section 5.10.
+</p>
+
+    <ol>
+      <li><p>State the definition of an antiderivative.</p></li>
+      <li>
+        <p>
+          Find general antiderivatives of power, exponential,
+          and trigonometric functions.
+        </p>
+      </li>
+      <li><p>Find general antiderivatives of simple composite functions.</p></li>
+      <li><p>Solve initial value problems involving antiderivatives.</p></li>
+    </ol>
+  </paragraphs>
+
+
+  <paragraphs xml:id="lo-definite-integral">
+    <title>The Definite Integral</title>
+
+<p>
+  (<xref ref="ch-definite-integrals" />)
+  <em>Textbook:</em> Neuhauser and Roper, Section 6.1.
+</p>
+
+    <ol>
+      <li><p>Interpret definite integrals geometrically as signed area.</p></li>
+      <li>
+        <p>
+          Approximate definite integrals using Riemann sums
+          with left endpoints.
+        </p>
+      </li>
+      <li><p>Evaluate definite integrals using geometric reasoning.</p></li>
+      <li>
+        <p>
+          Explain the definition of the definite integral as a limit
+          of Riemann sums.
+        </p>
+      </li>
+    </ol>
+  </paragraphs>
+
+
+  <paragraphs xml:id="lo-ftc">
+    <title>The Fundamental Theorem of Calculus</title>
+
+    <p>
+      (<xref ref="ch-ftc" />)
+      <em>Textbook:</em> Neuhauser and Roper, Section 6.2.
+    </p>
+
+    <ol>
+      <li>
+        <p>
+          State and apply Part 1 of the Fundamental Theorem of Calculus.
+        </p>
+      </li>
+      <li>
+        <p>
+          State and apply Part 2 of the Fundamental Theorem of Calculus.
+        </p>
+      </li>
+    </ol>
+  </paragraphs>
+
+
+  <paragraphs xml:id="lo-cumulative-change">
+    <title>Cumulative Change</title>
+
+    <p>
+      (<xref ref="sec-cumulative-change" />)
+      <em>Textbook:</em> Neuhauser and Roper, Section 6.3.1.
+    </p>
+
+    <ol>
+      <li>
+        <p>
+          Use definite integrals to calculate cumulative change
+          over an interval.
+        </p>
+      </li>
+      <li><p>Interpret cumulative change in applications.</p></li>
+    </ol>
+  </paragraphs>
+
+
+  <paragraphs xml:id="lo-average-values">
+    <title>Average Values</title>
+
+    <p>
+      (<xref ref="sec-average-values" />)
+      <em>Textbook:</em> Neuhauser and Roper, Section 6.3.2.
+    </p>
+
+    <ol>
+      <li>
+        <p>
+          State and explain the definition of the average value
+          of a function over an interval.
+        </p>
+      </li>
+      <li>
+        <p>
+          Calculate and interpret the average value of a function
+          over an interval.
+        </p>
+      </li>
+    </ol>
+  </paragraphs>
+
+
+  <paragraphs xml:id="lo-mvt">
+    <title>The Mean Value Theorem</title>
+
+    <p>
+      (<xref ref="sec-mean-value-theorem-integrals" />)
+      <em>Textbook:</em> Neuhauser and Roper, Section 6.3.3.
+    </p>
+
+    <ol>
+      <li>
+        <p>
+          State, illustrate, and apply the Mean Value Theorem for integrals.
+        </p>
+      </li>
+    </ol>
+  </paragraphs>
+
+
+  <paragraphs xml:id="lo-areas">
+    <title>Areas</title>
+
+    <p>
+      (<xref ref="sec-area-between-curves" />)
+      <em>Textbook:</em> Neuhauser and Roper, Section 6.3.4.
+    </p>
+
+    <ol>
+      <li><p>Calculate the area between two curves over a specified interval.</p></li>
+      <li>
+        <p>
+          Determine appropriate limits of integration from the
+          intersection points of two curves.
+        </p>
+      </li>
+      <li>
+        <p>
+          Calculate area when the upper and lower curves change
+          over the interval.
+        </p>
+      </li>
+    </ol>
+  </paragraphs>
+
+
+  <paragraphs xml:id="lo-volumes">
+    <title>Volumes of Solids</title>
+
+    <p>
+      (<xref ref="sec-volumes" />)
+      <em>Textbook:</em> Neuhauser and Roper, Section 6.3.5.
+    </p>
+
+    <ol>
+      <li>
+        <p>
+          Apply the Disk Method to calculate volumes of solids
+          of revolution about the <m>x</m>- or <m>y</m>-axis.
+        </p>
+      </li>
+      <li>
+        <p>
+          Apply the Washer Method to calculate volumes of solids
+          of revolution about the <m>x</m>- or <m>y</m>-axis.
+        </p>
+      </li>
+    </ol>
+  </paragraphs>
+
+
+  <paragraphs xml:id="lo-arc-length">
+    <title>Arc Length</title>
+
+    <p>
+      (<xref ref="sec-arc-length" />)
+      <em>Textbook:</em> Not covered in Neuhauser and Roper.
+    </p>
+
+    <ol>
+      <li><p>Set up and evaluate integrals for the arc length of a curve.</p></li>
+    </ol>
+  </paragraphs>
+
+
+  <paragraphs xml:id="lo-substitution">
+    <title>The Substitution Rule</title>
+
+    <p>
+      (<xref ref="sec-substitution" />)
+      <em>Textbook:</em> Neuhauser and Roper, Section 7.1.
+    </p>
+
+    <ol>
+      <li>
+        <p>
+          Apply <m>u</m>-substitution to evaluate indefinite
+          and definite integrals.
+        </p>
+      </li>
+      <li>
+        <p>
+          Recognize integrals for which <m>u</m>-substitution
+          is an appropriate method.
+        </p>
+      </li>
+    </ol>
+  </paragraphs>
+
+
+  <paragraphs xml:id="lo-integration-by-parts">
+    <title>Integration by Parts and Practicing Integration</title>
+
+    <p>
+      (<xref ref="sec-integration-by-parts" />)
+      <em>Textbook:</em> Neuhauser and Roper, Section 7.2.
+    </p>
+
+    <ol>
+      <li><p>Apply Integration by Parts to evaluate integrals.</p></li>
+      <li><p>Apply Integration by Parts repeatedly when necessary.</p></li>
+      <li>
+        <p>
+          Combine <m>u</m>-substitution and Integration by Parts
+          when appropriate.
+        </p>
+      </li>
+      <li>
+        <p>
+          Recognize whether <m>u</m>-substitution or Integration by Parts
+          is an appropriate integration method.
+        </p>
+      </li>
+    </ol>
+  </paragraphs>
+
+
+  <paragraphs xml:id="lo-partial-fractions">
+    <title>Rational Functions and Partial Fractions</title>
+
+    <p>
+      (<xref ref="sec-partial-fractions" />)
+      <em>Textbook:</em> Neuhauser and Roper, Section 7.3.
+    </p>
+
+    <ol>
+      <li>
+        <p>
+          Use Partial Fraction Decomposition to integrate rational functions
+          whose denominators contain distinct linear factors.
+        </p>
+      </li>
+      <li>
+        <p>
+          Use Partial Fraction Decomposition when the denominator
+          contains repeated linear factors.
+        </p>
+      </li>
+      <li>
+        <p>
+          Use Partial Fraction Decomposition when the denominator
+          contains irreducible quadratic factors.
+        </p>
+      </li>
+      <li>
+        <p>
+          Use polynomial long division before Partial Fraction Decomposition
+          when appropriate.
+        </p>
+      </li>
+      <li>
+        <p>
+          Recognize rational-function integrals that can be evaluated
+          without Partial Fraction Decomposition.
+        </p>
+      </li>
+    </ol>
+  </paragraphs>
+
+
+  <paragraphs xml:id="lo-improper-integrals">
+    <title>Improper Integrals</title>
+
+    <p>
+      (<xref ref="sec-improper-integrals" />)
+      <em>Textbook:</em> Neuhauser and Roper, Section 7.4.
+    </p>
+
+    <ol>
+      <li>
+        <p>
+          Recognize and evaluate improper integrals with infinite discontinuities.
+        </p>
+      </li>
+      <li>
+        <p>
+          Recognize and evaluate improper integrals over infinite intervals.
+        </p>
+      </li>
+      <li><p>Determine whether an improper integral converges or diverges.</p></li>
+      <li>
+        <p>
+          Apply the Direct Comparison Test to determine convergence or divergence.
+        </p>
+      </li>
+    </ol>
+  </paragraphs>
+
+
+  <paragraphs xml:id="lo-trig-integrals">
+    <title>Trigonometric Integrals</title>
+
+    <p>
+      (<xref ref="ch-trig-integration" />)
+      <em>Textbook:</em> APEX Calculus, Section 6.3.
+    </p>
+
+    <ol>
+      <li>
+        <p>
+          Evaluate integrals involving powers of
+          <m>\sin x</m> and <m>\cos x</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Evaluate integrals involving powers of
+          <m>\tan x</m> and <m>\sec x</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Use trigonometric identities to rewrite integrands
+          in a form that can be integrated.
+        </p>
+      </li>
+    </ol>
+  </paragraphs>
+
+
+  <paragraphs xml:id="lo-trig-substitution">
+    <title>Trigonometric Substitution</title>
+
+    <p>
+      (<xref ref="sec-trig-substitution" />)
+      <em>Textbook:</em> APEX Calculus, Section 6.4.
+    </p>
+
+    <ol>
+      <li>
+        <p>
+          Apply Trigonometric Substitution to integrals involving
+          expressions of the form <m>a^2-x^2</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Apply Trigonometric Substitution to integrals involving
+          expressions of the form <m>x^2+a^2</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Apply Trigonometric Substitution to integrals involving
+          expressions of the form <m>x^2-a^2</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Recognize when an integral involving one of these expressions
+          can be evaluated without Trigonometric Substitution.
+        </p>
+      </li>
+    </ol>
+  </paragraphs>
+
+
+  <paragraphs xml:id="lo-separable-de">
+    <title>Solving Separable Differential Equations</title>
+
+    <p>
+      (<xref ref="sec-separable-de" />)
+      <em>Textbook:</em> Neuhauser and Roper, Section 8.1.
+    </p>
+
+    <ol>
+      <li><p>Recognize separable differential equations.</p></li>
+      <li>
+        <p>
+          Find general and particular solutions to separable
+          differential equations.
+        </p>
+      </li>
+    </ol>
+  </paragraphs>
+
+
+  <paragraphs xml:id="lo-equilibria">
+    <title>Equilibria and Their Stability</title>
+
+    <p>
+      (<xref ref="sec-equilibria-stability" />)
+      <em>Textbook:</em> Neuhauser and Roper, Section 8.2.
+    </p>
+
+    <ol>
+      <li>
+        <p>
+          Determine the equilibria of an autonomous differential equation
+          algebraically and graphically.
+        </p>
+      </li>
+      <li>
+        <p>
+          Construct and interpret a phase line for an autonomous
+          differential equation.
+        </p>
+      </li>
+      <li>
+        <p>
+          Classify equilibria as stable or unstable from the direction
+          of the vector field.
+        </p>
+      </li>
+      <li>
+        <p>
+          Determine the long-term behavior of solutions from a phase line.
+        </p>
+      </li>
+    </ol>
+  </paragraphs>
+
+
+  <paragraphs xml:id="lo-de-models">
+    <title>Differential Equation Models</title>
+
+    <p>
+      (<xref ref="sec-de-models" />)
+      <em>Textbook:</em> Neuhauser and Roper, Section 8.3.
+    </p>
+
+    <ol>
+      <li>
+        <p>
+          Formulate and analyze differential equation models
+          arising from applications.
+        </p>
+      </li>
+      <li>
+        <p>
+          Interpret model parameters, solutions, equilibria,
+          and long-term behavior in context.
+        </p>
+      </li>
+    </ol>
+  </paragraphs>
+
+</preface>

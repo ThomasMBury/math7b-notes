@@ -40,11 +40,12 @@
   <preface xml:id="preface">
     <title>Preface</title>
 
-    <p>
-      Hi! You've arrived at the course notes for Thomas Bury's section of
-      MATH 007B, Calculus for Life Sciences II, at the University of
-      California, Riverside.
-    </p>
+    <p> Hi! You've arrived at the course notes for <url
+        href="https://www.thomasbury.net/"
+        visual="thomasbury.net">Thomas Bury</url>'s section of MATH 007B, Calculus for Life Sciences
+      II, at the <url
+        href="https://www.ucr.edu/"
+        visual="ucr.edu">University of California, Riverside</url>. </p>
 
     <p>
       These notes assume familiarity with the material from MATH 007A, including
@@ -52,10 +53,13 @@
       supplement, not replace, lectures and discussion sections.
     </p>
 
-    <p>
-      The backmatter includes a formula sheet listing the equations provided during
-      exams, as well as a set of practice exam questions to help with exam preparation.
-    </p>
+
+    <p> The backmatter includes a <xref ref="formula-sheet" text="title" /> reproducing the
+      equations and formulas provided during exams, as well as a bank of <xref
+        ref="practice-problems" text="title" /> to help with exam preparation. </p>
+
   </preface>
+
+  <xi:include href="learning-objectives.ptx" />
 
 </frontmatter>
