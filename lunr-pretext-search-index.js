@@ -34,14 +34,32 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.1",
   "title": "Antiderivatives",
-  "body": " Antiderivatives  In differential calculus, we learn how to find the rate of change of a function. Integral calculus begins by asking the reverse question: if we know a rate of change, can we recover the original quantity?  Examples from the natural sciences include:    growth rate to population size,    reaction rate to amount of product formed,    velocity to position.     Antiderivative   A function is an antiderivative of if      An antiderivative of   Find an antiderivative of .    A first guess might be , but   so this is not an antiderivative of . Instead, consider   Differentiating gives   Therefore is an antiderivative of .  It is not the only one. Adding any constant does not change the derivative, so the general antiderivative is   where is an arbitrary constant.     The constant of integration  If is an antiderivative of , then is also an antiderivative for every constant . We therefore include a constant of integration when writing a general antiderivative.    Finding a general antiderivative   Find the general antiderivative of     We antidifferentiate term by term.  Since    and   the general antiderivative is      Checking your answer  A useful way to check an antiderivative is to differentiate your answer. You should recover the original function.   "
+  "body": " Antiderivatives   Motivation  In differential calculus (Math 7A), we learn how to find the rate of change (derivative) of a function. Integral calculus (Math 7B) asks the reverse question: if we know a rate of change, can we recover the original quantity ?  Examples from the natural sciences include:    growth rate population size,    reaction rate amount of product formed,    velocity position.      A brief review of basic derivatives  Antidifferentiation reverses differentiation. The derivative rules most useful in this section are summarized below.   Basic derivatives                                                     We will also use the constant-multiple rule and the chain rule with a linear inside function. For example,     Poll: Reversing a derivative   Which of the following functions have derivative ? Select all that apply.                          Both and have derivative . More generally, every function of the form , where is any constant, has derivative .     Antiderivative   A function is an antiderivative of if      An antiderivative of   Find an antiderivative of .    A first guess might be , but   so this is not an antiderivative of . Instead, consider   Differentiating gives   Therefore is an antiderivative of .  It is not the only one. Adding any constant does not change the derivative, so the general antiderivative is   where is an arbitrary constant.     The constant of integration  If is an antiderivative of , then is also an antiderivative for every constant . We therefore include a constant of integration when writing a general antiderivative.   "
+},
+{
+  "id": "tab-basic-derivatives",
+  "level": "2",
+  "url": "sec-antiderivatives.html#tab-basic-derivatives",
+  "type": "Table",
+  "number": "1.1.1",
+  "title": "Basic derivatives",
+  "body": " Basic derivatives                                                    "
+},
+{
+  "id": "act-poll-antiderivatives",
+  "level": "2",
+  "url": "sec-antiderivatives.html#act-poll-antiderivatives",
+  "type": "Activity",
+  "number": "1.1.2",
+  "title": "Poll: Reversing a derivative.",
+  "body": " Poll: Reversing a derivative   Which of the following functions have derivative ? Select all that apply.                          Both and have derivative . More generally, every function of the form , where is any constant, has derivative .   "
 },
 {
   "id": "def-antiderivative",
   "level": "2",
   "url": "sec-antiderivatives.html#def-antiderivative",
   "type": "Definition",
-  "number": "1.1.1",
+  "number": "1.1.3",
   "title": "Antiderivative.",
   "body": " Antiderivative   A function is an antiderivative of if    "
 },
@@ -50,7 +68,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-antiderivatives.html#ex-antiderivative-x2",
   "type": "Example",
-  "number": "1.1.2",
+  "number": "1.1.4",
   "title": "An antiderivative of <span class=\"process-math\">\\(x^2\\)<\/span>.",
   "body": " An antiderivative of   Find an antiderivative of .    A first guess might be , but   so this is not an antiderivative of . Instead, consider   Differentiating gives   Therefore is an antiderivative of .  It is not the only one. Adding any constant does not change the derivative, so the general antiderivative is   where is an arbitrary constant.   "
 },
@@ -59,25 +77,61 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-antiderivatives.html#rem-constant-of-integration",
   "type": "Remark",
-  "number": "1.1.3",
+  "number": "1.1.5",
   "title": "The constant of integration.",
   "body": " The constant of integration  If is an antiderivative of , then is also an antiderivative for every constant . We therefore include a constant of integration when writing a general antiderivative.  "
 },
 {
+  "id": "sec-basic-antiderivative-rules",
+  "level": "1",
+  "url": "sec-basic-antiderivative-rules.html",
+  "type": "Section",
+  "number": "1.2",
+  "title": "Basic Antiderivative Rules",
+  "body": " Basic Antiderivative Rules  The basic derivative rules can be read in reverse to obtain antiderivative rules.   Basic antiderivative rules    Function  General antiderivative  Condition                                                      Antiderivatives may be found term by term, and constant multiples may be factored out. In particular, if and , then   Here, the expression on the right is an antiderivative of the expression on the left.   The case  The power rule for antiderivatives does not apply when , because it would require division by zero. Instead,     Accounting for a constant factor   Find the general antiderivative of .    We know that the derivative of is . This is twice the function we want. Multiplying by compensates for this extra factor:   Therefore, the general antiderivative is      Finding a general antiderivative   Find the general antiderivative of   Try to find the antiderivative before reading the solution. Remember to check your answer by differentiating.    We antidifferentiate term by term.  Since    and   the general antiderivative is   We check by differentiating:      Checking your answer  A useful way to check an antiderivative is to differentiate your answer. You should recover the original function.   "
+},
+{
+  "id": "tab-basic-antiderivatives",
+  "level": "2",
+  "url": "sec-basic-antiderivative-rules.html#tab-basic-antiderivatives",
+  "type": "Table",
+  "number": "1.2.1",
+  "title": "Basic antiderivative rules",
+  "body": " Basic antiderivative rules    Function  General antiderivative  Condition                                                     "
+},
+{
+  "id": "warn-power-rule-minus-one",
+  "level": "2",
+  "url": "sec-basic-antiderivative-rules.html#warn-power-rule-minus-one",
+  "type": "Warning",
+  "number": "1.2.2",
+  "title": "The case <span class=\"process-math\">\\(n=-1\\)<\/span>.",
+  "body": " The case  The power rule for antiderivatives does not apply when , because it would require division by zero. Instead,   "
+},
+{
+  "id": "ex-linear-inside-antiderivatives",
+  "level": "2",
+  "url": "sec-basic-antiderivative-rules.html#ex-linear-inside-antiderivatives",
+  "type": "Example",
+  "number": "1.2.3",
+  "title": "Accounting for a constant factor.",
+  "body": " Accounting for a constant factor   Find the general antiderivative of .    We know that the derivative of is . This is twice the function we want. Multiplying by compensates for this extra factor:   Therefore, the general antiderivative is    "
+},
+{
   "id": "ex-general-antiderivative",
   "level": "2",
-  "url": "sec-antiderivatives.html#ex-general-antiderivative",
+  "url": "sec-basic-antiderivative-rules.html#ex-general-antiderivative",
   "type": "Example",
-  "number": "1.1.4",
+  "number": "1.2.4",
   "title": "Finding a general antiderivative.",
-  "body": " Finding a general antiderivative   Find the general antiderivative of     We antidifferentiate term by term.  Since    and   the general antiderivative is    "
+  "body": " Finding a general antiderivative   Find the general antiderivative of   Try to find the antiderivative before reading the solution. Remember to check your answer by differentiating.    We antidifferentiate term by term.  Since    and   the general antiderivative is   We check by differentiating:    "
 },
 {
   "id": "rem-check-by-differentiating",
   "level": "2",
-  "url": "sec-antiderivatives.html#rem-check-by-differentiating",
+  "url": "sec-basic-antiderivative-rules.html#rem-check-by-differentiating",
   "type": "Remark",
-  "number": "1.1.5",
+  "number": "1.2.5",
   "title": "Checking your answer.",
   "body": " Checking your answer  A useful way to check an antiderivative is to differentiate your answer. You should recover the original function.  "
 },
@@ -86,25 +140,25 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "sec-initial-value-problems.html",
   "type": "Section",
-  "number": "1.2",
+  "number": "1.3",
   "title": "Differential Equations and Initial Value Problems",
-  "body": " Differential Equations and Initial Value Problems  Antidifferentiation can be used to solve simple differential equations.   Solving a differential equation by antidifferentiation   Find the general solution of     Rewrite the right-hand side as . Antidifferentiating gives   so      Initial value problem   An initial value problem consists of a differential equation together with a specified value of the solution at a particular point. The additional condition can be used to determine the constant of integration.     An initial value problem   Solve   subject to the initial condition     First find the general solution:   Now use the initial condition:   Therefore , and the particular solution is      A family of solutions and the solution selected by the initial condition.   Family of solution curves with the initial condition selecting one particular solution.   Several upward-opening curves represent the family for different values of . The initial condition selects the particular solution .      The initial condition selects one member of the family of general solutions, as shown in .  "
+  "body": " Differential Equations and Initial Value Problems  Antidifferentiation can be used to solve simple differential equations.   Solving a differential equation by antidifferentiation   Find the general solution of     Rewrite the right-hand side as . Antidifferentiating gives      Initial value problem   An initial value problem consists of a differential equation together with a specified value of the solution at a particular point. The additional condition can be used to determine the constant of integration.     An initial value problem   Solve   subject to the initial condition     First find the general solution:   Now use the initial condition:   Therefore , and the particular solution is      A family of solutions and the solution selected by the initial condition.   Family of solution curves with the initial condition selecting one particular solution.   Several upward-opening curves represent the family for different values of . The initial condition selects the particular solution .      The initial condition selects one member of the family of general solutions, as shown in .  "
 },
 {
   "id": "ex-simple-de",
   "level": "2",
   "url": "sec-initial-value-problems.html#ex-simple-de",
   "type": "Example",
-  "number": "1.2.1",
+  "number": "1.3.1",
   "title": "Solving a differential equation by antidifferentiation.",
-  "body": " Solving a differential equation by antidifferentiation   Find the general solution of     Rewrite the right-hand side as . Antidifferentiating gives   so    "
+  "body": " Solving a differential equation by antidifferentiation   Find the general solution of     Rewrite the right-hand side as . Antidifferentiating gives    "
 },
 {
   "id": "def-initial-value-problem",
   "level": "2",
   "url": "sec-initial-value-problems.html#def-initial-value-problem",
   "type": "Definition",
-  "number": "1.2.2",
+  "number": "1.3.2",
   "title": "Initial value problem.",
   "body": " Initial value problem   An initial value problem consists of a differential equation together with a specified value of the solution at a particular point. The additional condition can be used to determine the constant of integration.   "
 },
@@ -113,7 +167,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-initial-value-problems.html#ex-ivp-population",
   "type": "Example",
-  "number": "1.2.3",
+  "number": "1.3.3",
   "title": "An initial value problem.",
   "body": " An initial value problem   Solve   subject to the initial condition     First find the general solution:   Now use the initial condition:   Therefore , and the particular solution is    "
 },
@@ -122,7 +176,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-initial-value-problems.html#fig-ivp-family",
   "type": "Figure",
-  "number": "1.2.4",
+  "number": "1.3.4",
   "title": "",
   "body": " A family of solutions and the solution selected by the initial condition.   Family of solution curves with the initial condition selecting one particular solution.   Several upward-opening curves represent the family for different values of . The initial condition selects the particular solution .     "
 },
