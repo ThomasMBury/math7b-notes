@@ -12,13 +12,13 @@
 
     <xi:include href="./frontmatter.ptx" />
 
-    <xi:include href="./ch05-antiderivatives.ptx" />
-    <xi:include href="./ch06-definite-integrals.ptx" />
-    <xi:include href="./ch06-ftc.ptx" />
-    <xi:include href="./ch06-applications.ptx" />
-    <xi:include href="./ch07-integration-techniques.ptx" />
-    <xi:include href="./ch07-trig-integration.ptx" />
-    <xi:include href="./ch08-differential-equations.ptx" />
+    <xi:include href="./ch01-antiderivatives.ptx" />
+    <xi:include href="./ch02-definite-integrals.ptx" />
+    <xi:include href="./ch03-ftc.ptx" />
+    <xi:include href="./ch04-integration-applications.ptx" />
+    <xi:include href="./ch05-integration-techniques.ptx" />
+    <xi:include href="./ch06-trig-integration.ptx" />
+    <xi:include href="./ch07-differential-equations.ptx" />
 
     <xi:include href="./backmatter.ptx" />
 

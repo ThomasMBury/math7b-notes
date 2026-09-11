@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<chapter xml:id="ch-antiderivatives">
+    <title>Antiderivatives</title>
+
+    <section xml:id="sec-antiderivatives">
+        <title>Antiderivatives</title>
+
+        <paragraphs xml:id="par-antiderivative-introduction">
+            <title>Motivation</title>
+            <p> In differential calculus (Math 7A), we learn how to find the <em>rate of change</em>
+                (derivative) of a function. Integral calculus (Math 7B) asks the reverse question:
+                if we know a rate of change, can we recover the <em>original quantity</em>? </p>
+
+            <p>
+                Examples from the natural sciences include:
+            </p>
+
+            <ul>
+                <li>
+                    <p>growth rate <m>\to</m> population size,</p>
+                </li>
+                <li>
+                    <p>reaction rate <m>\to</m> amount of product formed,</p>
+                </li>
+                <li>
+                    <p>velocity <m>\to</m> position.</p>
+                </li>
+            </ul>
+        </paragraphs>
+
+        <paragraphs xml:id="par-derivative-review">
+            <title>A brief review of basic derivatives</title>
+
+            <p>
+                Antidifferentiation reverses differentiation. The derivative rules
+                most useful in this section are summarized below.
+            </p>
+
+            <table xml:id="tab-basic-derivatives">
+                <title>Basic derivatives</title>
+                <tabular top="minor" bottom="minor">
+                    <row bottom="minor">
+                        <cell>
+                            <m>F(x)</m>
+                        </cell>
+                        <cell>
+                            <m>F'(x)</m>
+                        </cell>
+                    </row>
+                    <row>
+                        <cell>
+                            <m>x^n</m>
+                        </cell>
+                        <cell>
+                            <m>nx^{n-1}</m>
+                        </cell>
+                    </row>
+                    <row>
+                        <cell>
+                            <m>e^x</m>
+                        </cell>
+                        <cell>
+                            <m>e^x</m>
+                        </cell>
+                    </row>
+                    <row>
+                        <cell>
+                            <m>\ln\lvert x\rvert</m>
+                        </cell>
+                        <cell>
+                            <m>1/x</m>
+                        </cell>
+                    </row>
+                    <row>
+                        <cell>
+                            <m>\sin x</m>
+                        </cell>
+                        <cell>
+                            <m>\cos x</m>
+                        </cell>
+                    </row>
+                    <row>
+                        <cell>
+                            <m>\cos x</m>
+                        </cell>
+                        <cell>
+                            <m>-\sin x</m>
+                        </cell>
+                    </row>
+                </tabular>
+            </table>
+
+            <p>
+                We will also use the constant-multiple rule and the chain rule with
+                a linear inside function. For example,
+            </p>
+
+            <me>
+                \frac{d}{dx}\sin(2x)=2\cos(2x).
+            </me>
+        </paragraphs>
+
+        <activity xml:id="act-poll-antiderivatives">
+            <title>Poll: Reversing a derivative</title>
+
+            <statement>
+                <p> Which of the following functions have derivative <m>6x^2</m>? Select all that
+                    apply. </p>
+
+                <ol marker="A">
+                    <li>
+                        <p>
+                            <m>2x^3</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>6x^3</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>2x^3+5</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>3x^2</m>
+                        </p>
+                    </li>
+                </ol>
+            </statement>
+
+            <solution>
+                <p> Both <m>2x^3</m> and <m>2x^3+5</m> have derivative <m>6x^2</m>. More generally,
+                    every function of the form <m>2x^3+C</m>, where <m>C</m> is any constant, has
+                    derivative <m>6x^2</m>. </p>
+            </solution>
+        </activity>
+
+        <definition xml:id="def-antiderivative">
+            <title>Antiderivative</title>
+            <statement>
+                <p> A function <m>F(x)</m> is an antiderivative of <m>f(x)</m> if </p>
+                <me>
+                    F'(x)=f(x).
+                </me>
+            </statement>
+        </definition>
+
+        <example xml:id="ex-antiderivative-x2">
+            <title>An antiderivative of <m>x^2</m></title>
+
+            <statement>
+                <p> Find an antiderivative of <m>f(x)=x^2</m>. </p>
+            </statement>
+
+            <solution>
+                <p> A first guess might be <m>F(x)=x^3</m>, but </p>
+
+                <me>
+                    F'(x)=3x^2,
+                </me>
+
+                <p> so this is not an antiderivative of <m>x^2</m>. Instead, consider </p>
+
+                <me>
+                    F(x)=\frac{1}{3}x^3.
+                </me>
+
+                <p>
+                    Differentiating gives
+                </p>
+
+                <me>
+                    F'(x)=\frac{1}{3}(3x^2)=x^2.
+                </me>
+
+                <p> Therefore <m>\frac{1}{3}x^3</m> is an antiderivative of <m>x^2</m>. </p>
+
+                <p>
+                    It is not the only one. Adding any constant does not change
+                    the derivative, so the general antiderivative is
+                </p>
+
+                <me>
+                    F(x)=\frac{1}{3}x^3+C,
+                </me>
+
+                <p> where <m>C</m> is an arbitrary constant. </p>
+            </solution>
+        </example>
+
+        <remark xml:id="rem-constant-of-integration">
+            <title>The constant of integration</title>
+            <p> If <m>F</m> is an antiderivative of <m>f</m>, then <m>F(x)+C</m> is also an
+                antiderivative for every constant <m>C</m>. We therefore include a constant of
+                integration when writing a general antiderivative. </p>
+        </remark>
+    </section>
+
+    <section xml:id="sec-basic-antiderivative-rules">
+        <title>Basic Antiderivative Rules</title>
+
+        <p>
+            The basic derivative rules can be read in reverse to obtain
+            antiderivative rules.
+        </p>
+
+        <table xml:id="tab-basic-antiderivatives">
+            <title>Basic antiderivative rules</title>
+            <tabular top="minor" bottom="minor">
+                <row bottom="minor">
+                    <cell>Function</cell>
+                    <cell>General antiderivative</cell>
+                    <cell>Condition</cell>
+                </row>
+                <row>
+                    <cell>
+                        <m>x^n</m>
+                    </cell>
+                    <cell>
+                        <m>\dfrac{x^{n+1}}{n+1}+C</m>
+                    </cell>
+                    <cell>
+                        <m>n\ne -1</m>
+                    </cell>
+                </row>
+                <row>
+                    <cell>
+                        <m>\dfrac{1}{x}</m>
+                    </cell>
+                    <cell>
+                        <m>\ln\lvert x\rvert+C</m>
+                    </cell>
+                    <cell>
+                        <m>x\ne 0</m>
+                    </cell>
+                </row>
+                <row>
+                    <cell>
+                        <m>e^x</m>
+                    </cell>
+                    <cell>
+                        <m>e^x+C</m>
+                    </cell>
+                    <cell />
+                </row>
+                <row>
+                    <cell>
+                        <m>\cos x</m>
+                    </cell>
+                    <cell>
+                        <m>\sin x+C</m>
+                    </cell>
+                    <cell />
+                </row>
+                <row>
+                    <cell>
+                        <m>\sin x</m>
+                    </cell>
+                    <cell>
+                        <m>-\cos x+C</m>
+                    </cell>
+                    <cell />
+                </row>
+            </tabular>
+        </table>
+        <p> Antiderivatives may be found term by term, and constant multiples may be factored out.
+            In particular, if <m>F'(x)=f(x)</m> and <m>G'(x)=g(x)</m>, then </p>
+
+        <md>
+            <mrow>
+                cf(x) &amp;\longleftrightarrow cF(x),
+            </mrow>
+            <mrow>
+                f(x)+g(x) &amp;\longleftrightarrow F(x)+G(x).
+            </mrow>
+        </md>
+
+        <p>
+            Here, the expression on the right is an antiderivative of the
+            expression on the left.
+</p>
+
+        <warning xml:id="warn-power-rule-minus-one">
+            <title>The case <m>n=-1</m></title>
+
+            <p> The power rule for antiderivatives does not apply when <m>n=-1</m>, because it would
+                require division by zero. Instead, </p>
+
+            <me>
+                \frac{1}{x}=x^{-1}
+                \qquad\text{has general antiderivative}\qquad
+                \ln\lvert x\rvert+C.
+            </me>
+        </warning>
+
+        <example xml:id="ex-linear-inside-antiderivatives">
+            <title>Accounting for a constant factor</title>
+
+            <statement>
+                <p>Find the general antiderivative of <m>f(x)=\cos(2x)</m>.</p>
+            </statement>
+
+            <solution>
+                <p> We know that the derivative of <m>\sin(2x)</m> is <m>2\cos(2x)</m>. This is
+                    twice the function we want. Multiplying by <m>1/2</m> compensates for this extra
+                    factor: </p>
+
+                <me>
+                    \frac{d}{dx}\left(\frac{1}{2}\sin(2x)\right)
+                    =\frac{1}{2}\big(2\cos(2x)\big)
+                    =\cos(2x).
+                </me>
+
+                <p>Therefore, the general antiderivative is</p>
+
+                <me>
+                    F(x)=\frac{1}{2}\sin(2x)+C.
+                </me>
+            </solution>
+        </example>
+
+        <example xml:id="ex-general-antiderivative">
+            <title>Finding a general antiderivative</title>
+
+            <statement>
+                <p>
+                    Find the general antiderivative of
+                </p>
+
+                <me>
+                    f(x)=6x^2+\cos(2x)-\frac{1}{5x}.
+                </me>
+                <p>
+                    Try to find the antiderivative before reading the solution.
+                    Remember to check your answer by differentiating.
+                </p>
+
+            </statement>
+
+            <solution>
+                <p>
+                    We antidifferentiate term by term.
+                </p>
+
+                <p>
+                    Since
+                </p>
+
+                <me>
+                    \frac{d}{dx}(2x^3)=6x^2,
+                </me>
+
+                <me>
+                    \frac{d}{dx}\left(\frac{1}{2}\sin(2x)\right)=\cos(2x),
+                </me>
+
+                <p>
+                    and
+                </p>
+
+                <me>
+                    \frac{d}{dx}\ln\lvert x\rvert=\frac{1}{x},
+                </me>
+
+                <p>
+                    the general antiderivative is
+                </p>
+
+                <me>
+                    F(x)=2x^3+\frac{1}{2}\sin(2x)
+                    -\frac{1}{5}\ln\lvert x\rvert+C.
+                </me>
+
+                <p>
+                    We check by differentiating:
+</p>
+
+                <me>
+                    F'(x)
+                    =6x^2+\cos(2x)-\frac{1}{5x}
+                    =f(x).
+</me>
+
+            </solution>
+        </example>
+
+
+        <remark xml:id="rem-check-by-differentiating">
+            <title>Checking your answer</title>
+            <p>
+                A useful way to check an antiderivative is to differentiate
+                your answer. You should recover the original function.
+            </p>
+        </remark>
+    </section>
+
+
+    <section xml:id="sec-initial-value-problems">
+        <title>Differential Equations and Initial Value Problems</title>
+
+        <p>
+            Antidifferentiation can be used to solve simple differential
+            equations.
+        </p>
+
+        <example xml:id="ex-simple-de">
+            <title>Solving a differential equation by antidifferentiation</title>
+
+            <statement>
+                <p>
+                    Find the general solution of
+                </p>
+
+                <me>
+                    \frac{dy}{dx}=\frac{3}{x^2},
+                    \qquad x\ne 0.
+                </me>
+            </statement>
+
+            <solution>
+                <p> Rewrite the right-hand side as <m>3x^{-2}</m>. Antidifferentiating gives </p>
+                <me>
+                    y=\frac{3x^{-1}}{-1}+C
+                    =-3x^{-1}+C
+                    =-\frac{3}{x}+C.
+</me>
+            </solution>
+        </example>
+
+        <definition xml:id="def-initial-value-problem">
+            <title>Initial value problem</title>
+            <statement>
+                <p>
+                    An initial value problem consists of a differential equation
+                    together with a specified value of the solution at a particular
+                    point. The additional condition can be used to determine the
+                    constant of integration.
+                </p>
+            </statement>
+        </definition>
+
+        <example xml:id="ex-ivp-population">
+            <title>An initial value problem</title>
+
+            <statement>
+                <p>
+                    Solve
+                </p>
+
+                <me>
+                    \frac{dN}{dt}=t,
+                    \qquad t\ge 0,
+                </me>
+
+                <p>
+                    subject to the initial condition
+                </p>
+
+                <me>
+                    N(0)=20.
+                </me>
+            </statement>
+
+            <solution>
+                <p>
+                    First find the general solution:
+                </p>
+
+                <me>
+                    N(t)=\frac{1}{2}t^2+C.
+                </me>
+
+                <p>
+                    Now use the initial condition:
+                </p>
+
+                <me>
+                    20=N(0)=\frac{1}{2}(0)^2+C.
+                </me>
+
+                <p> Therefore <m>C=20</m>, and the particular solution is </p>
+
+                <me>
+                    N(t)=\frac{1}{2}t^2+20.
+                </me>
+            </solution>
+        </example>
+
+        <figure xml:id="fig-ivp-family">
+            <caption>A family of solutions and the solution selected by the initial condition.</caption>
+
+            <image source="images/antiderivatives-ivp-soln.jpeg" width="60%"
+                alt="Hand-drawn sketch illustrating an antiderivative." />
+        </figure>
+
+        <p> The initial condition selects one member of the family of general solutions, as shown in <xref
+                ref="fig-ivp-family" />. </p>
+
+    </section>
+
+</chapter>

@@ -4,14 +4,12 @@
 
     <title>Formula Sheet</title>
 
-    <introduction>
-        <p>
-            The following sections provide the equations and formulas
-            that are included on the formula sheet provided during Math 007B exams.
-        </p>
-    </introduction>
+    <p>
+        The following equations and formulas are included on the formula sheet
+        provided during Math 007B exams.
+    </p>
 
-    <section xml:id="formula-basic-derivatives">
+    <paragraphs xml:id="formula-basic-derivatives">
         <title>Basic Derivatives</title>
 
         <md>
@@ -36,9 +34,9 @@
                 \frac{d}{dx}(\sec x) &amp;= \sec x\tan x.
             </mrow>
         </md>
-    </section>
+    </paragraphs>
 
-    <section xml:id="formula-trig-values">
+    <paragraphs xml:id="formula-trig-values">
         <title>Trigonometric Values in Radians</title>
 
         <table>
@@ -134,9 +132,9 @@
                 </row>
             </tabular>
         </table>
-    </section>
+    </paragraphs>
 
-    <section xml:id="formula-trig-identities">
+    <paragraphs xml:id="formula-trig-identities">
         <title>Trigonometric Identities</title>
 
         <md>
@@ -163,9 +161,9 @@
                 \cot x &amp;= \frac{1}{\tan x}.
             </mrow>
         </md>
-    </section>
+    </paragraphs>
 
-    <section xml:id="formula-double-angle">
+    <paragraphs xml:id="formula-double-angle">
         <title>Double-Angle Formulas and Variants</title>
 
         <md>
@@ -182,9 +180,9 @@
                 \sin^2x &amp;= \frac{1}{2}(1-\cos(2x)).
             </mrow>
         </md>
-    </section>
+    </paragraphs>
 
-    <section xml:id="formula-exponent-rules">
+    <paragraphs xml:id="formula-exponent-rules">
         <title>Exponent Rules</title>
 
         <md>
@@ -198,9 +196,9 @@
                 (a^m)^n &amp;= a^{mn}.
             </mrow>
         </md>
-    </section>
+    </paragraphs>
 
-    <section xml:id="formula-log-rules">
+    <paragraphs xml:id="formula-log-rules">
         <title>Logarithm Rules</title>
 
         <md>
@@ -214,6 +212,6 @@
                 \ln(a^n) &amp;= n\ln a.
             </mrow>
         </md>
-    </section>
+    </paragraphs>
 
 </appendix>
