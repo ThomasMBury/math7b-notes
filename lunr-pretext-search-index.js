@@ -25,7 +25,7 @@ var ptx_lunr_docs = [
   "type": "Preface",
   "number": "",
   "title": "Learning Outcomes",
-  "body": " Learning Outcomes  The following learning outcomes describe the knowledge and skills students are expected to develop in MATH 007B. Textbook section references refer to Calculus for Biology and Medicine by Neuhauser and Roper, 4th edition (2018), unless otherwise indicated.   Antiderivatives  ( ) Textbook: Neuhauser and Roper, Section 5.10.   State the definition of an antiderivative.   Find general antiderivatives of power, exponential, and trigonometric functions.   Find general antiderivatives of simple composite functions.  Solve initial value problems involving antiderivatives.     The Definite Integral  ( ) Textbook: Neuhauser and Roper, Section 6.1.   Interpret definite integrals geometrically as signed area.   Approximate definite integrals using Riemann sums with left endpoints.   Evaluate definite integrals using geometric reasoning.   Explain the definition of the definite integral as a limit of Riemann sums.      The Fundamental Theorem of Calculus  ( ) Textbook: Neuhauser and Roper, Section 6.2.    State and apply Part 1 of the Fundamental Theorem of Calculus.    State and apply Part 2 of the Fundamental Theorem of Calculus.      Cumulative Change  ( ) Textbook: Neuhauser and Roper, Section 6.3.1.    Use definite integrals to calculate cumulative change over an interval.   Interpret cumulative change in applications.     Average Values  ( ) Textbook: Neuhauser and Roper, Section 6.3.2.    State and explain the definition of the average value of a function over an interval.    Calculate and interpret the average value of a function over an interval.      The Mean Value Theorem  ( ) Textbook: Neuhauser and Roper, Section 6.3.3.    State, illustrate, and apply the Mean Value Theorem for integrals.      Areas  ( ) Textbook: Neuhauser and Roper, Section 6.3.4.   Calculate the area between two curves over a specified interval.   Determine appropriate limits of integration from the intersection points of two curves.    Calculate area when the upper and lower curves change over the interval.      Volumes of Solids  ( ) Textbook: Neuhauser and Roper, Section 6.3.5.    Apply the Disk Method to calculate volumes of solids of revolution about the - or -axis.    Apply the Washer Method to calculate volumes of solids of revolution about the - or -axis.      Arc Length  ( ) Textbook: Not covered in Neuhauser and Roper.   Set up and evaluate integrals for the arc length of a curve.     The Substitution Rule  ( ) Textbook: Neuhauser and Roper, Section 7.1.    Apply -substitution to evaluate indefinite and definite integrals.    Recognize integrals for which -substitution is an appropriate method.      Integration by Parts and Practicing Integration  ( ) Textbook: Neuhauser and Roper, Section 7.2.   Apply Integration by Parts to evaluate integrals.  Apply Integration by Parts repeatedly when necessary.   Combine -substitution and Integration by Parts when appropriate.    Recognize whether -substitution or Integration by Parts is an appropriate integration method.      Rational Functions and Partial Fractions  ( ) Textbook: Neuhauser and Roper, Section 7.3.    Use Partial Fraction Decomposition to integrate rational functions whose denominators contain distinct linear factors.    Use Partial Fraction Decomposition when the denominator contains repeated linear factors.    Use Partial Fraction Decomposition when the denominator contains irreducible quadratic factors.    Use polynomial long division before Partial Fraction Decomposition when appropriate.    Recognize rational-function integrals that can be evaluated without Partial Fraction Decomposition.      Improper Integrals  ( ) Textbook: Neuhauser and Roper, Section 7.4.    Recognize and evaluate improper integrals with infinite discontinuities.    Recognize and evaluate improper integrals over infinite intervals.   Determine whether an improper integral converges or diverges.   Apply the Direct Comparison Test to determine convergence or divergence.      Trigonometric Integrals  ( ) Textbook: APEX Calculus, Section 6.3.    Evaluate integrals involving powers of and .    Evaluate integrals involving powers of and .    Use trigonometric identities to rewrite integrands in a form that can be integrated.      Trigonometric Substitution  ( ) Textbook: APEX Calculus, Section 6.4.    Apply Trigonometric Substitution to integrals involving expressions of the form .    Apply Trigonometric Substitution to integrals involving expressions of the form .    Apply Trigonometric Substitution to integrals involving expressions of the form .    Recognize when an integral involving one of these expressions can be evaluated without Trigonometric Substitution.      Solving Separable Differential Equations  ( ) Textbook: Neuhauser and Roper, Section 8.1.   Recognize separable differential equations.   Find general and particular solutions to separable differential equations.      Equilibria and Their Stability  ( ) Textbook: Neuhauser and Roper, Section 8.2.    Determine the equilibria of an autonomous differential equation algebraically and graphically.    Construct and interpret a phase line for an autonomous differential equation.    Classify equilibria as stable or unstable from the direction of the vector field.    Determine the long-term behavior of solutions from a phase line.      Differential Equation Models  ( ) Textbook: Neuhauser and Roper, Section 8.3.    Formulate and analyze differential equation models arising from applications.    Interpret model parameters, solutions, equilibria, and long-term behavior in context.     "
+  "body": " Learning Outcomes  Textbooks:    Calculus for Biology and Medicine by Neuhauser and Roper, 4th edition (2018)     by Hartman (Sections 6.3 and 6.4)      5.10 Antiderivatives     Find general antiderivatives of trigonometric, exponential, and power functions.    Find general antiderivatives of simple composite functions.    Solve initial value problems.       6.1 The Definite Integral     Approximate definite integrals using Riemann sums. [ left endpoints only ]    Evaluate definite integrals using geometric area formulas.    Evaluate definite integrals using the formal definition of a definite integral.    Apply properties of definite integrals ( constant multiple, sum\/difference, switching limits, splitting ).       6.2 The Fundamental Theorem of Calculus     Apply Part 1 of the Fundamental Theorem of Calculus to find derivatives.    Apply Part 2 of the Fundamental Theorem of Calculus to evaluate definite integrals.       6.3.1 Cumulative Change     Calculate the cumulative change in a function over an interval.       6.3.2 Average Values     Calculate the average value of a function over an interval.       6.3.3 The Mean Value Theorem     Apply the Mean Value Theorem.       6.3.4 Areas     Calculate the area of the region bounded between two curves on a given interval.    Calculate the area of the region bounded between two curves based on their points of intersection.    Calculate the area of the region bounded between two curves that switch positions within an interval.       6.3.5 The Volume of a Solid     Apply the disk method to calculate the volume of a solid of revolution where the axis of rotation is or .    Apply the washer method to calculate the volume of a solid of revolution where the axis of rotation is or .       6.3.6 Arc Length     Calculate the arc length of a curve defined by a function over a given interval.       7.1 The Substitution Rule     Apply -substitution to evaluate integrals.       7.2 Integration by Parts and Practicing Integration     Apply integration by parts to evaluate integrals.    Apply integration by parts multiple times to evaluate integrals.    Apply -substitution followed by integration by parts to evaluate integrals.    Recognize when to use -substitution versus integration by parts to evaluate integrals.       7.3 Rational Functions and Partial Fractions     Apply partial fraction decomposition to evaluate integrals of rational functions when the denominator is a product of distinct linear factors.    Apply partial fraction decomposition to evaluate integrals of rational functions when the denominator contains repeated linear factors.    Apply partial fraction decomposition to evaluate integrals of rational functions when the denominator contains irreducible quadratic factors.    Apply polynomial long division and partial fraction decomposition to evaluate integrals of rational functions.    Recognize when to use -substitution versus partial fraction decomposition to evaluate integrals of rational functions.       7.4 Improper Integrals     Recognize when an integral is improper.    Evaluate improper integrals with numerical limits.    Evaluate improper integrals with infinite limits.    Apply the Direct Comparison Test to determine whether an improper integral converges or diverges.       6.3 ( APEX Calculus ) Trigonometric Integrals     Evaluate integrals of powers of and .    Evaluate integrals of powers of and .       6.4 ( APEX Calculus ) Trigonometric Substitution     Apply trigonometric substitution to evaluate integrals involving .    Apply trigonometric substitution to evaluate integrals involving .    Apply trigonometric substitution to evaluate integrals involving .    Recognize when to use -substitution versus integration by parts versus trigonometric substitution to evaluate integrals involving , , or .       8.1 Solving Separable Differential Equations     Find particular solutions to separable differential equations.       8.2 Equilibria and Their Stability     Determine the equilibria of autonomous differential equations graphically and algebraically.    Determine the stability of the equilibria of an autonomous differential equation.       8.3 Differential Equation Models     Analyze and apply mathematical models.      "
 },
 {
   "id": "sec-antiderivatives",
@@ -142,7 +142,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.3",
   "title": "Differential Equations and Initial Value Problems",
-  "body": " Differential Equations and Initial Value Problems  Antidifferentiation can be used to solve simple differential equations.   Solving a differential equation by antidifferentiation   Find the general solution of     Rewrite the right-hand side as . Antidifferentiating gives      Initial value problem   An initial value problem consists of a differential equation together with a specified value of the solution at a particular point. The additional condition can be used to determine the constant of integration.     An initial value problem   Solve   subject to the initial condition     First find the general solution:   Now use the initial condition:   Therefore , and the particular solution is      A family of solutions and the solution selected by the initial condition.   Family of solution curves with the initial condition selecting one particular solution.   Several upward-opening curves represent the family for different values of . The initial condition selects the particular solution .      The initial condition selects one member of the family of general solutions, as shown in .  "
+  "body": " Differential Equations and Initial Value Problems  Antidifferentiation can be used to solve simple differential equations.   Solving a differential equation by antidifferentiation   Find the general solution of     Rewrite the right-hand side as . Antidifferentiating gives      Initial value problem   An initial value problem consists of a differential equation together with a specified value of the solution at a particular point. The additional condition can be used to determine the constant of integration.     An initial value problem   Solve   subject to the initial condition     First find the general solution:   Now use the initial condition:   Therefore , and the particular solution is      A family of solutions and the solution selected by the initial condition.    The initial condition selects one member of the family of general solutions, as shown in .  "
 },
 {
   "id": "ex-simple-de",
@@ -178,7 +178,7 @@ var ptx_lunr_docs = [
   "type": "Figure",
   "number": "1.3.4",
   "title": "",
-  "body": " A family of solutions and the solution selected by the initial condition.   Family of solution curves with the initial condition selecting one particular solution.   Several upward-opening curves represent the family for different values of . The initial condition selects the particular solution .     "
+  "body": " A family of solutions and the solution selected by the initial condition.   "
 },
 {
   "id": "sec-accumulation",
@@ -1486,67 +1486,22 @@ var ptx_lunr_docs = [
   "body": " A fish population with restocking and mortality   Let be the fish population in a pond. Suppose fish are added at a constant rate and die at a rate proportional to the current population, with constant . Then   Find .    Separate variables:   Integrating,   Rearranging,   Exponentiating and absorbing constants,   Thus,   Apply :   so . Therefore,    "
 },
 {
-  "id": "formula-basic-derivatives",
+  "id": "formula-sheet",
   "level": "1",
-  "url": "formula-basic-derivatives.html",
-  "type": "Section",
-  "number": "A.1",
-  "title": "Basic Derivatives",
-  "body": " Basic Derivatives   "
-},
-{
-  "id": "formula-trig-values",
-  "level": "1",
-  "url": "formula-trig-values.html",
-  "type": "Section",
-  "number": "A.2",
-  "title": "Trigonometric Values in Radians",
-  "body": " Trigonometric Values in Radians   Common Sine and Cosine Values                                                                                             "
+  "url": "formula-sheet.html",
+  "type": "Appendix",
+  "number": "A",
+  "title": "Formula Sheet",
+  "body": " Formula Sheet  The following equations and formulas are included on the formula sheet provided during Math 007B exams.   Basic Derivatives     Trigonometric Values in Radians   Common Sine and Cosine Values                                                                                               Trigonometric Identities      Double-Angle Formulas and Variants     Exponent Rules     Logarithm Rules    "
 },
 {
   "id": "formula-trig-values-2",
   "level": "2",
-  "url": "formula-trig-values.html#formula-trig-values-2",
+  "url": "formula-sheet.html#formula-trig-values-2",
   "type": "Table",
-  "number": "A.2.1",
+  "number": "A.0.1",
   "title": "Common Sine and Cosine Values",
   "body": " Common Sine and Cosine Values                                                                                            "
-},
-{
-  "id": "formula-trig-identities",
-  "level": "1",
-  "url": "formula-trig-identities.html",
-  "type": "Section",
-  "number": "A.3",
-  "title": "Trigonometric Identities",
-  "body": " Trigonometric Identities    "
-},
-{
-  "id": "formula-double-angle",
-  "level": "1",
-  "url": "formula-double-angle.html",
-  "type": "Section",
-  "number": "A.4",
-  "title": "Double-Angle Formulas and Variants",
-  "body": " Double-Angle Formulas and Variants   "
-},
-{
-  "id": "formula-exponent-rules",
-  "level": "1",
-  "url": "formula-exponent-rules.html",
-  "type": "Section",
-  "number": "A.5",
-  "title": "Exponent Rules",
-  "body": " Exponent Rules   "
-},
-{
-  "id": "formula-log-rules",
-  "level": "1",
-  "url": "formula-log-rules.html",
-  "type": "Section",
-  "number": "A.6",
-  "title": "Logarithm Rules",
-  "body": " Logarithm Rules   "
 },
 {
   "id": "practice-antiderivatives",
